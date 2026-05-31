@@ -108,6 +108,28 @@ def render_page(page_dir, base, header, footer):
     return output
 
 
+def write_sitemap(outputs):
+    """Emit sitemap.xml listing every built page (apex URLs)."""
+    locs = []
+    for o in outputs:
+        loc = f"{SITE_URL}/{o}".replace("/index.html", "/")
+        locs.append(f"  <url><loc>{loc}</loc></url>")
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(locs)
+        + "\n</urlset>\n"
+    )
+    write(os.path.join(ROOT, "sitemap.xml"), xml)
+
+
+def write_robots():
+    write(
+        os.path.join(ROOT, "robots.txt"),
+        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n",
+    )
+
+
 def main():
     if not os.path.exists(LAYOUT):
         print("ERROR: missing _src/layouts/base.html", file=sys.stderr)
@@ -126,9 +148,13 @@ def main():
         if out:
             built.append(out)
 
+    write_sitemap(built)
+    write_robots()
+
     print(f"Built {len(built)} pages:")
     for o in built:
         print(f"  - {o}")
+    print("  + sitemap.xml, robots.txt")
 
 
 if __name__ == "__main__":
