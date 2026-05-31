@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing — Daniel Fox on Sound, Behavior &amp; Retail</title>
+  <meta name="description" content="Essays and research notes on how music shapes customer behavior — what the science says, and what it means for any space where people make decisions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/writing.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Writing — Daniel Fox on Sound, Behavior &amp; Retail">
+  <meta property="og:description" content="Essays and research notes on how music shapes customer behavior — what the science says, and what it means for any space where people make decisions.">
+  <meta property="og:url" content="https://danielchristopherfox.com/writing.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data -->
+  
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel&nbsp;Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <span class="eyebrow fade-up">Writing</span>
+    <h1 class="fade-up" style="font-size:clamp(2.2rem,5vw,3.4rem);">Research notes &amp; essays.</h1>
+    <p class="subhead fade-up" style="max-width:48ch;">What the science actually says about sound and behavior — written for people who'd rather see the evidence than the hype.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- PORT TARGET: each entry below is a research note derived from a YouTube breakdown
+         (transcript → cleaned essay) or a re-angled Entuned post under Daniel's personal POV.
+         These three are placeholders showing the format; real entries get added as the port runs. -->
+    <div class="grid grid-2 fade-up">
+      <div class="card">
+        <span class="kicker">Research note</span>
+        <h3>Does music actually change what people buy?</h3>
+        <p>A plain-English walk through the foundational studies on tempo, dwell, and spend — and where the evidence is strong versus oversold.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Essay</span>
+        <h3>Music has no magic. That's the good news.</h3>
+        <p>Why treating sound as a language — patterned, learnable — is what makes its effect on behavior something you can design instead of hope for.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Research note</span>
+        <h3>The tempo question, settled as far as it can be</h3>
+        <p>Slow music, fast music, and the surprisingly conditional truth about what each does on a retail floor.</p>
+      </div>
+    </div>
+    <p class="muted fade-up" style="margin-top:2rem;font-size:0.95rem;">More notes publish as the research library grows. <a href="https://www.youtube.com/@entuned">The video versions live on YouTube →</a></p>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Retail Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+
+    // Mobile nav toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

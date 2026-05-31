@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speaking — Daniel Fox on Retail Sound &amp; Behavior</title>
+  <meta name="description" content="Keynotes and talks on the behavioral science of store music: how sound moves dwell, basket size, and brand perception. Booking and topics.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/speaking.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Speaking — Daniel Fox on Retail Sound &amp; Behavior">
+  <meta property="og:description" content="Keynotes and talks on the behavioral science of store music: how sound moves dwell, basket size, and brand perception. Booking and topics.">
+  <meta property="og:url" content="https://danielchristopherfox.com/speaking.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data -->
+  
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel&nbsp;Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <span class="eyebrow fade-up">Speaking</span>
+    <h1 class="fade-up" style="font-size:clamp(2.2rem,5vw,3.4rem);">Talks on the science of the room.</h1>
+    <p class="subhead fade-up" style="max-width:48ch;">Research-backed, story-driven, and built for people who run physical space — or are simply curious how sound moves a crowd.</p>
+    <div class="hero-cta fade-up">
+      <a class="btn btn-primary" href="contact.html">Check availability</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow fade-up">Signature keynote</span>
+    <div class="talk fade-up">
+      <h3>The Soul Myth: Why Music Is a Language, and Why That's Not Cold</h3>
+      <p class="muted">Music isn't magic — it's mastered pattern. This talk makes the case that treating sound as a language doesn't diminish it; it's what lets us understand why a room full of strangers responds the same way. The most personal and the most provocative thing I argue, from the one chair that lets me argue it: a working musician's.</p>
+      <p class="room">Any stage · the memorable one</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow fade-up">Topics</span>
+    <div style="margin-top:1rem;">
+      <div class="talk fade-up">
+        <h3>The Last Unoptimized Lever: How Sound Moves the Retail Bottom Line</h3>
+        <p class="muted">Music is the one variable in the store most retailers have never tuned. What the research says it's worth — in dwell, basket size, and willingness to pay — and how to think about it as a line item, not a vibe.</p>
+        <p class="room">Retail leadership · CX & finance audiences</p>
+      </div>
+      <div class="talk fade-up">
+        <h3>Tempo, Dwell, Basket: The Behavioral Science of Store Sound</h3>
+        <p class="muted">A working tour of the actual levers — tempo, volume, genre, fit-to-customer — and what each one does to behavior, every claim tied to a study.</p>
+        <p class="room">Retail & CX practitioners · trade events</p>
+      </div>
+      <div class="talk fade-up">
+        <h3>Why You Bought That: How Sound Shapes the Choices You Don't Notice</h3>
+        <p class="muted">The everyday psychology of sound and spending — surprising, accessible, and citation-backed. Travels well beyond retail.</p>
+        <p class="room">Business & marketing audiences · podcasts</p>
+      </div>
+      <div class="talk fade-up">
+        <h3>From the Stage to the Sales Floor: A Musician's Science of Buying</h3>
+        <p class="muted">What a working musician understands about sound that the behavioral scientists miss — and what it means for any space where people make decisions.</p>
+        <p class="room">Any room · the signature crossover</p>
+      </div>
+    </div>
+    <div class="hero-cta fade-up" style="margin-top:2.5rem;">
+      <a class="btn btn-primary" href="contact.html">Invite Daniel to speak</a>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Retail Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+
+    // Mobile nav toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

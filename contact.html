@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Daniel Fox</title>
+  <meta name="description" content="Get in touch with Daniel Fox about speaking, press, podcasts, and collaboration on retail sound and customer behavior.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Daniel Fox">
+  <meta property="og:description" content="Get in touch with Daniel Fox about speaking, press, podcasts, and collaboration on retail sound and customer behavior.">
+  <meta property="og:url" content="https://danielchristopherfox.com/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data -->
+  
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel&nbsp;Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <span class="eyebrow fade-up">Contact</span>
+    <h1 class="fade-up" style="font-size:clamp(2.2rem,5vw,3.4rem);">Let's talk.</h1>
+    <p class="subhead fade-up" style="max-width:46ch;">Speaking, podcasts, press, or a problem about sound and behavior worth thinking through — the door's open.</p>
+    <p class="fade-up" style="margin-top:2rem;font-size:1.15rem;">
+      <a class="btn btn-primary" href="mailto:daniel@entuned.co">Email Daniel</a>
+    </p>
+    <p class="muted fade-up" style="margin-top:1.5rem;">For booking, a line about your event, audience, and date gets the fastest reply.</p>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="the-work.html">The Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Retail Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+
+    // Mobile nav toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>
