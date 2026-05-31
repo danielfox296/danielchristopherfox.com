@@ -27,9 +27,20 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site
-          # Copy built pages + static assets; exclude source and tooling.
-          cp -r *.html styles.css CNAME _site/ 2>/dev/null || true
-          [ -d img ] && cp -r img _site/ || true
+          # Copy the whole built site, excluding source and tooling.
+          # rsync (not a hand-picked cp list) so new output dirs like
+          # notes/ and essays/ and assets like sitemap.xml are never missed.
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_src' \
+            --exclude='_site' \
+            --exclude='build.py' \
+            --exclude='README.md' \
+            --exclude='__pycache__' \
+            --exclude='.gitignore' \
+            --exclude='.DS_Store' \
+            ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
