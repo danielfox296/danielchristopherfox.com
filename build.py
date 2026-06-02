@@ -22,7 +22,8 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "_src")
 PAGES = os.path.join(SRC, "pages")
-LAYOUT = os.path.join(SRC, "layouts", "base.html")
+LAYOUTS = os.path.join(SRC, "layouts")
+LAYOUT = os.path.join(LAYOUTS, "base.html")
 PARTIALS = os.path.join(SRC, "partials")
 
 SITE_URL = "https://danielchristopherfox.com"
@@ -56,11 +57,16 @@ def build_sections(page_dir):
     return "\n".join(parts)
 
 
-def render_page(page_dir, base, header, footer):
+def render_page(page_dir, header, footer):
     cfg_path = os.path.join(page_dir, "config.json")
     if not os.path.exists(cfg_path):
         return None
     cfg = json.loads(read(cfg_path))
+
+    # Per-page layout override (defaults to base.html). Lets a page like the
+    # home "Light" one-pager use its own shell, CSS and scripts.
+    layout_name = cfg.get("layout", "base.html")
+    base = read(os.path.join(LAYOUTS, layout_name))
 
     output = cfg["output"]
     out_path = os.path.join(ROOT, output)
@@ -135,7 +141,6 @@ def main():
         print("ERROR: missing _src/layouts/base.html", file=sys.stderr)
         sys.exit(1)
 
-    base = read(LAYOUT)
     header = load_partial("header.html")
     footer = load_partial("footer.html")
 
@@ -144,7 +149,7 @@ def main():
         page_dir = os.path.join(PAGES, name)
         if not os.path.isdir(page_dir):
             continue
-        out = render_page(page_dir, base, header, footer)
+        out = render_page(page_dir, header, footer)
         if out:
             built.append(out)
 

@@ -2,5 +2,6 @@
   "title": "Daniel Fox — Retail Music Behaviorist",
   "meta_description": "Daniel Fox studies how store music moves customer behavior and turns it into measurable sales. Musician, founder of Entuned, and researcher of retail sound.",
   "output": "index.html",
+  "layout": "light.html",
   "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\",\"description\":\"Researcher of how music shapes customer behavior in retail environments. Working musician and founder of Entuned.\",\"knowsAbout\":[\"Retail music\",\"Consumer behavior\",\"Music psychology\",\"Sound design\",\"Behavioral science\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"Entuned\",\"url\":\"https://entuned.co\"},\"sameAs\":[\"https://entuned.co\",\"https://speakwithdaniel.com\",\"https://www.youtube.com/@entuned\",\"https://www.linkedin.com/in/danielcfox/\"]}</script>"
 }
