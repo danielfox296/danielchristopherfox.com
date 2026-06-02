@@ -28,6 +28,10 @@ PARTIALS = os.path.join(SRC, "partials")
 
 SITE_URL = "https://danielchristopherfox.com"
 
+# Google Analytics 4 measurement ID (gtag.js). Injected into every page via the
+# shared head partial ({{ga_id}}). Property: danielchristopherfox.com.
+GA_MEASUREMENT_ID = "G-S2LCQFZ9SG"
+
 # Shared structured-data blocks. Every note/essay re-used the same author and
 # publisher Person; define them once and inject at render time so configs only
 # carry the per-page fields (headline/description/about).
@@ -140,6 +144,7 @@ def render_page(page_dir, header, footer, head_meta):
     # unique to the partial; fill it from SITE_URL here.
     page = page.replace("{{head_meta}}", head_meta)
     page = page.replace("{{og_image}}", html.escape(f"{SITE_URL}/og-default.png", quote=True))
+    page = page.replace("{{ga_id}}", GA_MEASUREMENT_ID)
     page = page.replace("{{title}}", html.escape(cfg.get("title", ""), quote=True))
     page = page.replace(
         "{{meta_description}}",
