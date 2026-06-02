@@ -1,0 +1,17 @@
+{
+  "title": "Every Room Is Already Scored — Daniel Fox",
+  "meta_description": "Sound is the input in a physical space that moves people the most and gets chosen on purpose the least. Retail is where you can see the receipt. The mechanism runs everywhere, and it is about to get designed.",
+  "output": "essays/every-room-is-already-scored.html",
+  "schema": {
+    "type": "Article",
+    "headline": "Every Room Is Already Scored",
+    "description": "Sound is the most behaviorally active input in a physical space and the least deliberately chosen. Retail makes it measurable; the mechanism runs in every room, and adaptive audio is about to make it designable.",
+    "about": [
+      "Music and behavior",
+      "Sound design",
+      "Consumer behavior",
+      "Environmental psychology",
+      "Generative music"
+    ]
+  }
+}
