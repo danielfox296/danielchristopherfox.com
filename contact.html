@@ -71,9 +71,9 @@
     <form id="contactForm" class="contact-form fade-up" action="#" method="POST">
       <!-- Formsubmit config. The destination endpoint is assembled at runtime (see
            the script below) so the address is never plaintext in the page source. -->
-      <input type="hidden" name="_subject" value="New inquiry — danielchristopherfox.com">
+      <input type="hidden" name="_subject" value="New inquiry from danielchristopherfox.com">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://danielchristopherfox.com/thanks.html">
       <!-- honeypot: bots fill this, humans don't see it -->
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
@@ -124,7 +124,7 @@
     // plaintext, nothing a scraper can harvest).
     (function () {
       var f = document.getElementById('contactForm');
-      if (f) { f.setAttribute('action', 'https://formsubmit.co/' + atob('ZGFuaWVsY2hyaXN0b3BoZXJmb3hAZ21haWwuY29t')); }
+      if (f) { f.setAttribute('action', 'https://formsubmit.co/' + atob('ZGFuaWVsQGVudHVuZWQuY28=')); }
     })();
   </script>
 </section>
