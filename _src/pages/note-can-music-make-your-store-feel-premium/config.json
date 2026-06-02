@@ -2,5 +2,15 @@
   "title": "Can music make your store feel more expensive? — Daniel Fox",
   "meta_description": "Customers can't always judge quality directly, so they read signals, and music is a strong one. Genre, volume, and brand fit each move how expensive a store feels and what people think your products are worth.",
   "output": "notes/can-music-make-your-store-feel-premium.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Can music make your store feel more expensive?\",\"description\":\"How music acts as a quality signal, raising perceived value, brand prestige, and purchase intent through affect transfer.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/notes/can-music-make-your-store-feel-premium.html\",\"about\":[\"Retail music\",\"Perceived value\",\"Brand prestige\",\"Consumer behavior\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "Can music make your store feel more expensive?",
+    "description": "How music acts as a quality signal, raising perceived value, brand prestige, and purchase intent through affect transfer.",
+    "about": [
+      "Retail music",
+      "Perceived value",
+      "Brand prestige",
+      "Consumer behavior"
+    ]
+  }
 }

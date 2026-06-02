@@ -24,6 +24,8 @@ _src/
   partials/footer.html    ← shared footer
   pages/<name>/
     config.json           ← title, meta_description, output, optional "schema"
+                            ("schema" may be a structured dict — build.py
+                             assembles the JSON-LD from it)
     sections/*.html       ← body fragments, concatenated in filename order
 styles.css                ← global stylesheet (gold-forward, Entuned-adjacent)
 CNAME                     ← danielchristopherfox.com
@@ -31,7 +33,8 @@ build.py                  ← the generator (stdlib only, no deps)
 ```
 
 Pages live at: `index.html` (home), `the-work.html`, `writing.html`,
-`speaking.html`, `contact.html`.
+`speaking.html`, `contact.html`, plus longer pieces under `notes/` and
+`essays/` (a page's `output` field sets its built path).
 
 ## Wired values (filled 2026-05-31)
 

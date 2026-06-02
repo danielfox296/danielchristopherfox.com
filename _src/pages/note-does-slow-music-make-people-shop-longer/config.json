@@ -2,5 +2,15 @@
   "title": "Does slow music make people shop longer? — Daniel Fox",
   "meta_description": "Slow music increasing sales is the most repeated claim in retail. It traces to one 1982 supermarket study, and what it actually showed was about pace and dwell time, with conditions the slogan skips.",
   "output": "notes/does-slow-music-make-people-shop-longer.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Does slow music make people shop longer?\",\"description\":\"What the famous 1982 slow-music study actually showed about pace and dwell time, and where it does and doesn't hold.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/notes/does-slow-music-make-people-shop-longer.html\",\"about\":[\"Retail music\",\"Dwell time\",\"Music tempo\",\"Consumer behavior\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "Does slow music make people shop longer?",
+    "description": "What the famous 1982 slow-music study actually showed about pace and dwell time, and where it does and doesn't hold.",
+    "about": [
+      "Retail music",
+      "Dwell time",
+      "Music tempo",
+      "Consumer behavior"
+    ]
+  }
 }

@@ -12,6 +12,7 @@
   --dark: #1A1712;          /* warm near-black */
   --text: #1F1C15;          /* warm ink */
   --text-muted: rgba(31, 28, 21, 0.64);
+  --text-soft: rgba(31, 28, 21, 0.54);  /* mid foreground level (home one-pager) */
   --text-faint: rgba(31, 28, 21, 0.42);
   --accent: #2E7D46;        /* confident single green */
   --accent-light: #3a9a57;
@@ -154,6 +155,13 @@ p:last-child { margin-bottom: 0; }
 .footer-links a { color: var(--text-muted); font-size: 0.9rem; }
 .footer-links a:hover { color: var(--accent); }
 .footer-fine { color: var(--text-faint); font-size: 0.82rem; }
+
+/* ---------- Utilities ---------- */
+/* Small single-purpose helpers that replace high-frequency repeated
+   inline styles across the inner-page section fragments. */
+.page-title { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+.measure    { max-width: 52ch; }
+.flush-top  { padding-top: 0; }
 
 /* ---------- Animations ---------- */
 .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }

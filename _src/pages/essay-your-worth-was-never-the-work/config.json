@@ -2,5 +2,15 @@
   "title": "Your worth was never the work — Daniel Fox",
   "meta_description": "Creators feel real threat from AI. Underneath it is a category error: confusing worth with fluency in a language. Pulling them apart is what dissolves the fear.",
   "output": "essays/your-worth-was-never-the-work.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Your worth was never the work\",\"description\":\"Why AI reads as an attack on the self, and the distinction between worth and fluency that dissolves the threat.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/essays/your-worth-was-never-the-work.html\",\"about\":[\"Creativity\",\"AI\",\"Identity\",\"Music\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "Your worth was never the work",
+    "description": "Why AI reads as an attack on the self, and the distinction between worth and fluency that dissolves the threat.",
+    "about": [
+      "Creativity",
+      "AI",
+      "Identity",
+      "Music"
+    ]
+  }
 }

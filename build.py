@@ -28,6 +28,38 @@ PARTIALS = os.path.join(SRC, "partials")
 
 SITE_URL = "https://danielchristopherfox.com"
 
+# Shared structured-data blocks. Every note/essay re-used the same author and
+# publisher Person; define them once and inject at render time so configs only
+# carry the per-page fields (headline/description/about).
+SCHEMA_AUTHOR = {
+    "@type": "Person",
+    "name": "Daniel Christopher Fox",
+    "alternateName": "Daniel Fox",
+    "jobTitle": "Retail Music Behaviorist",
+    "url": SITE_URL,
+}
+SCHEMA_PUBLISHER = {"@type": "Person", "name": "Daniel Christopher Fox"}
+
+
+def build_schema(schema, canonical):
+    """Render a structured schema dict into a <script type="application/ld+json">
+    block. `schema` is {type, headline, description, about:[...]}; author,
+    publisher and mainEntityOfPage(=canonical) are injected from module constants.
+    Output is compact (no spaces) to match the hand-written strings it replaces.
+    """
+    data = {
+        "@context": "https://schema.org",
+        "@type": schema["type"],
+        "headline": schema["headline"],
+        "description": schema["description"],
+        "author": SCHEMA_AUTHOR,
+        "publisher": SCHEMA_PUBLISHER,
+        "mainEntityOfPage": canonical,
+        "about": schema.get("about", []),
+    }
+    payload = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
+    return f'<script type="application/ld+json">{payload}</script>'
+
 
 def read(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -57,7 +89,7 @@ def build_sections(page_dir):
     return "\n".join(parts)
 
 
-def render_page(page_dir, header, footer):
+def render_page(page_dir, header, footer, head_meta):
     cfg_path = os.path.join(page_dir, "config.json")
     if not os.path.exists(cfg_path):
         return None
@@ -93,9 +125,21 @@ def render_page(page_dir, header, footer):
     canonical = f"{SITE_URL}/{output}".replace("/index.html", "/")
 
     content = build_sections(page_dir)
-    schema = cfg.get("schema", "")
+
+    # Polymorphic schema: a dict is structured data we render here (notes/essays);
+    # a str is a verbatim <script> block (the home Person schema); absent -> none.
+    raw_schema = cfg.get("schema", "")
+    if isinstance(raw_schema, dict):
+        schema = build_schema(raw_schema, canonical)
+    else:
+        schema = raw_schema
 
     page = base
+    # Inject the shared <head> partial first so its {{title}}/{{canonical}}/etc.
+    # tokens get filled by the substitutions below. {{og_image}} is the one token
+    # unique to the partial; fill it from SITE_URL here.
+    page = page.replace("{{head_meta}}", head_meta)
+    page = page.replace("{{og_image}}", html.escape(f"{SITE_URL}/og-default.png", quote=True))
     page = page.replace("{{title}}", html.escape(cfg.get("title", ""), quote=True))
     page = page.replace(
         "{{meta_description}}",
@@ -143,13 +187,14 @@ def main():
 
     header = load_partial("header.html")
     footer = load_partial("footer.html")
+    head_meta = load_partial("head.html")
 
     built = []
     for name in sorted(os.listdir(PAGES)):
         page_dir = os.path.join(PAGES, name)
         if not os.path.isdir(page_dir):
             continue
-        out = render_page(page_dir, header, footer)
+        out = render_page(page_dir, header, footer, head_meta)
         if out:
             built.append(out)
 

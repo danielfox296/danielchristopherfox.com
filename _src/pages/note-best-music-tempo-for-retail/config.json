@@ -2,5 +2,15 @@
   "title": "What's the right music tempo for a retail store? — Daniel Fox",
   "meta_description": "Conventional advice says slow music lifts sales. The largest study ever run found no overall tempo effect. What tempo actually does depends on musical key, how crowded the store is, and who's in it.",
   "output": "notes/best-music-tempo-for-retail.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What's the right music tempo for a retail store?\",\"description\":\"What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/notes/best-music-tempo-for-retail.html\",\"about\":[\"Retail music\",\"Music tempo\",\"Dwell time\",\"Consumer behavior\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "What's the right music tempo for a retail store?",
+    "description": "What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.",
+    "about": [
+      "Retail music",
+      "Music tempo",
+      "Dwell time",
+      "Consumer behavior"
+    ]
+  }
 }

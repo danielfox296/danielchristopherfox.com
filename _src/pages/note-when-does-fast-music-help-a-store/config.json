@@ -2,5 +2,15 @@
   "title": "When does fast music help a store? — Daniel Fox",
   "meta_description": "Fast music isn't worse or better than slow. The research shows it speeds turnover, can lift impulse buying, and can backfire into stress — depending on how crowded the store is and what you want customers to do.",
   "output": "notes/when-does-fast-music-help-a-store.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"When does fast music help a store (and when does it backfire)?\",\"description\":\"What the research shows about fast-tempo music, turnover, impulse buying, and the point where arousal tips into stress.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/notes/when-does-fast-music-help-a-store.html\",\"about\":[\"Retail music\",\"Music tempo\",\"Table turnover\",\"Impulse buying\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "When does fast music help a store (and when does it backfire)?",
+    "description": "What the research shows about fast-tempo music, turnover, impulse buying, and the point where arousal tips into stress.",
+    "about": [
+      "Retail music",
+      "Music tempo",
+      "Table turnover",
+      "Impulse buying"
+    ]
+  }
 }

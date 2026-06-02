@@ -1,0 +1,16 @@
+{
+  "title": "The Fool's Errand — Daniel Fox",
+  "meta_description": "A working musician on why generative AI offends artists, why that grievance is real and structural, and why saying it shouldn't exist is a losing bet.",
+  "output": "essays/the-fools-errand.html",
+  "schema": {
+    "type": "Article",
+    "headline": "The Fool's Errand",
+    "description": "Why generative AI offends artists, why the grievance is structural, and why arguing it shouldn't exist is a losing bet.",
+    "about": [
+      "AI",
+      "Intellectual property",
+      "Creativity",
+      "Technology"
+    ]
+  }
+}

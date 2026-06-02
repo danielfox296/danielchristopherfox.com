@@ -2,5 +2,15 @@
   "title": "Soul Is an Artifact, Not a Substance — Daniel Fox",
   "meta_description": "A machine wrote a song that made me cry. What we call soul is a set of learnable artifacts, and admitting that is harder on the ego than on the music.",
   "output": "essays/what-we-call-soul.html",
-  "schema": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Soul Is an Artifact, Not a Substance\",\"description\":\"What we call soul is a set of learnable artifacts that signal vulnerability, and admitting it costs the ego more than the music.\",\"author\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\",\"alternateName\":\"Daniel Fox\",\"jobTitle\":\"Retail Music Behaviorist\",\"url\":\"https://danielchristopherfox.com\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Daniel Christopher Fox\"},\"mainEntityOfPage\":\"https://danielchristopherfox.com/essays/what-we-call-soul.html\",\"about\":[\"AI music\",\"Creativity\",\"Music\",\"Authenticity\"]}</script>"
+  "schema": {
+    "type": "Article",
+    "headline": "Soul Is an Artifact, Not a Substance",
+    "description": "What we call soul is a set of learnable artifacts that signal vulnerability, and admitting it costs the ego more than the music.",
+    "about": [
+      "AI music",
+      "Creativity",
+      "Music",
+      "Authenticity"
+    ]
+  }
 }
