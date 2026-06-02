@@ -62,12 +62,71 @@
   <div class="container">
     <span class="eyebrow fade-up">Contact</span>
     <h1 class="fade-up page-title">Let's talk.</h1>
-    <p class="subhead fade-up" style="max-width:46ch;">Speaking, podcasts, press, or a problem about sound and behavior worth thinking through. The door's open.</p>
-    <p class="fade-up" style="margin-top:2rem;font-size:1.15rem;">
-      <a class="btn btn-primary" href="mailto:daniel@entuned.co">Email Daniel</a>
-    </p>
-    <p class="muted fade-up" style="margin-top:1.5rem;">For booking, a line about your event, audience, and date gets the fastest reply.</p>
+    <p class="subhead fade-up measure">Speaking, podcasts, press, or a problem about sound and behavior worth thinking through. The door's open. For booking, a line about your audience, venue, and date gets the fastest reply.</p>
   </div>
+</section>
+
+<section class="section flush-top">
+  <div class="container">
+    <form id="contactForm" class="contact-form fade-up" action="#" method="POST">
+      <!-- Formsubmit config. The destination endpoint is assembled at runtime (see
+           the script below) so the address is never plaintext in the page source. -->
+      <input type="hidden" name="_subject" value="New inquiry — danielchristopherfox.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_next" value="https://danielchristopherfox.com/thanks.html">
+      <!-- honeypot: bots fill this, humans don't see it -->
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="organization">Organization <span class="opt">optional</span></label>
+          <input id="organization" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="topic">What's this about?</label>
+          <select id="topic" name="topic">
+            <option>Speaking / booking</option>
+            <option>Podcast / press</option>
+            <option>Advisory / consulting</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="event">Event &amp; date <span class="opt">if booking</span></label>
+        <input id="event" name="event_and_date" type="text" placeholder="Audience, venue, approximate date">
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </div>
+  <script>
+    // Build the Formsubmit endpoint at load time so the destination address
+    // is never present as readable text in the page source (no mailto, no
+    // plaintext, nothing a scraper can harvest).
+    (function () {
+      var f = document.getElementById('contactForm');
+      if (f) { f.setAttribute('action', 'https://formsubmit.co/' + atob('ZGFuaWVsY2hyaXN0b3BoZXJmb3hAZ21haWwuY29t')); }
+    })();
+  </script>
 </section>
 
   </main>
