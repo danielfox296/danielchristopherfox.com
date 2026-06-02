@@ -8,9 +8,10 @@
 
 <section class="section flush-top">
   <div class="container">
-    <form id="contactForm" class="contact-form fade-up" action="#" method="POST">
-      <!-- Formsubmit config. The destination endpoint is assembled at runtime (see
-           the script below) so the address is never plaintext in the page source. -->
+    <form class="contact-form fade-up" action="https://formsubmit.co/67eb23418e8cffdf649d454194f4fcb1" method="POST">
+      <!-- Formsubmit config. The action uses Formsubmit's random alias for
+           daniel@entuned.co, so the destination address never appears in the
+           page source and cannot be derived from it. -->
       <input type="hidden" name="_subject" value="New inquiry from danielchristopherfox.com">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -58,13 +59,4 @@
       <button class="btn btn-primary" type="submit">Send</button>
     </form>
   </div>
-  <script>
-    // Build the Formsubmit endpoint at load time so the destination address
-    // is never present as readable text in the page source (no mailto, no
-    // plaintext, nothing a scraper can harvest).
-    (function () {
-      var f = document.getElementById('contactForm');
-      if (f) { f.setAttribute('action', 'https://formsubmit.co/' + atob('ZGFuaWVsQGVudHVuZWQuY28=')); }
-    })();
-  </script>
 </section>
