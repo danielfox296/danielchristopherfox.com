@@ -224,18 +224,12 @@ section { position: relative; }
    <img> tags in when the photography is ready.
    ============================================================= */
 
-/* ---- hero portrait placeholder (monogram on warm panel) ---- */
-.hero-portrait .portrait-ph {
-  display: flex; align-items: center; justify-content: center;
-  width: 100%; aspect-ratio: 4 / 5;
-  background:
-    radial-gradient(120% 120% at 30% 20%, rgba(46,125,70,0.10), transparent 60%),
-    linear-gradient(150deg, var(--bg), var(--bg-2));
+/* ---- hero portrait ---- */
+.hero-portrait .portrait-img {
+  display: block; width: 100%; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: center 22%;
   border: 1px solid var(--border-soft);
   box-shadow: 0 30px 70px -30px rgba(31,28,21,0.5);
-  font-family: var(--font-serif); font-style: italic; font-weight: 500;
-  font-size: clamp(64px, 9vw, 116px); letter-spacing: -0.04em;
-  color: var(--text-faint); user-select: none;
 }
 
 /* ---- photo-break background panel (dark band carries the quote) ---- */
@@ -258,5 +252,5 @@ section { position: relative; }
 .warl-more:hover { gap: 14px; }
 
 @media (max-width: 880px) {
-  .hero-portrait .portrait-ph { aspect-ratio: 16 / 11; }
+  .hero-portrait .portrait-img { aspect-ratio: 16 / 11; }
 }
