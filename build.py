@@ -39,8 +39,29 @@ SCHEMA_AUTHOR = {
     "@type": "Person",
     "name": "Daniel Christopher Fox",
     "alternateName": "Daniel Fox",
-    "jobTitle": "Retail Music Behaviorist",
+    "jobTitle": ["Music Behaviorist", "Retail Music Behaviorist"],
     "url": SITE_URL,
+    "description": (
+        "Music behaviorist. A working music producer and multi-instrumentalist who "
+        "studies how music shapes what people do, proven on the retail floor where the "
+        "effect is measured. Founder of Entuned."
+    ),
+    "knowsAbout": [
+        "How music affects customer behavior",
+        "Music and behavior",
+        "Retail music",
+        "Music psychology",
+        "Consumer behavior",
+        "Store atmospherics",
+        "Sensory marketing",
+        "Generative music",
+    ],
+    "sameAs": [
+        "https://entuned.co",
+        "https://speakwithdaniel.com",
+        "https://www.youtube.com/@entuned",
+        "https://www.linkedin.com/in/danielcfox/",
+    ],
 }
 SCHEMA_PUBLISHER = {"@type": "Person", "name": "Daniel Christopher Fox"}
 
