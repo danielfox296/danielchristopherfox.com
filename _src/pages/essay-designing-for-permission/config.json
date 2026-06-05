@@ -1,0 +1,17 @@
+{
+  "title": "Designing for Permission — Daniel Fox",
+  "meta_description": "The right sound in a room takes the friction out of what a person already wants to do, so they do it more easily. That is permission. It is also the line between this work and manipulation.",
+  "output": "essays/designing-for-permission.html",
+  "schema": {
+    "type": "Article",
+    "headline": "Designing for Permission",
+    "description": "A room can remove the friction between a person and the thing they already want to do. That is permission, not persuasion, and respect for a person's agency is the line that separates it from manipulation.",
+    "about": [
+      "Music and behavior",
+      "Sound design",
+      "Consumer behavior",
+      "Retail music",
+      "Music psychology"
+    ]
+  }
+}

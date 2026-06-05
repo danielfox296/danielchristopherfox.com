@@ -1,0 +1,17 @@
+{
+  "title": "Permission to Move — Daniel Fox",
+  "meta_description": "On the sales floor, music gives a person permission to buy. In a public park, it gives permission to move and to connect. Dizzy Charlie's is the same idea at the scale of a whole community.",
+  "output": "essays/music-in-the-public-square.html",
+  "schema": {
+    "type": "Article",
+    "headline": "Permission to Move",
+    "description": "Daniel Fox turned a jazz booking agency into public-space activation, designing a summer concert series so overlapping music pulled overlapping people who mixed and came back.",
+    "about": [
+      "Music and behavior",
+      "Consumer behavior",
+      "Environmental psychology",
+      "Retail music",
+      "Music psychology"
+    ]
+  }
+}

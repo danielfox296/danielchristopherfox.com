@@ -1,0 +1,17 @@
+{
+  "title": "Two and a Half Buttons — Daniel Fox",
+  "meta_description": "A person holds several versions of themselves at once: a need, an identity, a value. Touch enough of those at the same time and the person feels met. Music is one of those buttons, sometimes only half of one.",
+  "output": "essays/two-and-a-half-buttons.html",
+  "schema": {
+    "type": "Article",
+    "headline": "Two and a Half Buttons",
+    "description": "A shopper carries a need, an identity, and a value at the same time. Touch enough of them at once and they feel met. Music is one of those buttons, sometimes only half.",
+    "about": [
+      "Music and behavior",
+      "Consumer behavior",
+      "Retail music",
+      "Music psychology",
+      "Sound design"
+    ]
+  }
+}
