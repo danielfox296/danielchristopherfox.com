@@ -99,8 +99,7 @@ section { position: relative; }
 .portrait-cap { display: block; margin-top: 16px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
 
 /* ---- section heading block ---- */
-.lead { display: flex; align-items: baseline; gap: 22px; padding-top: clamp(80px, 12vw, 168px); margin-bottom: clamp(48px, 7vw, 96px); }
-.lead-no { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--accent); letter-spacing: 0.04em; }
+.lead { padding-top: clamp(80px, 12vw, 168px); margin-bottom: clamp(48px, 7vw, 96px); }
 .lead h2 { font-size: clamp(40px, 6.4vw, 76px); letter-spacing: -0.035em; }
 
 /* ---- building / Entuned ---- */
@@ -226,7 +225,7 @@ section { position: relative; }
 
 /* ---- hero portrait ---- */
 .hero-portrait .portrait-img {
-  display: block; width: 100%; aspect-ratio: 4 / 5;
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
   object-fit: cover; object-position: center 22%;
   border: 1px solid var(--border-soft);
   box-shadow: 0 30px 70px -30px rgba(31,28,21,0.5);
