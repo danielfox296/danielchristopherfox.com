@@ -1,0 +1,17 @@
+{
+  "title": "The Rooms That Can't Say No — Daniel Fox",
+  "meta_description": "As it becomes possible to score any room in real time, the highest-stakes rooms are the ones where people can't leave or say no. A music behaviorist's case for a permission ethic, with an honest look at what the research does and does not support.",
+  "output": "essays/the-rooms-that-cant-say-no.html",
+  "schema": {
+    "type": "Article",
+    "headline": "The Rooms That Can't Say No",
+    "description": "Behavioral music is heading into hospitals, care homes, classrooms, and transit. A case for a permission-based ethic in the rooms where people can least leave or consent, grounded honestly in what the research supports.",
+    "about": [
+      "Music and behavior",
+      "Sound design",
+      "Environmental psychology",
+      "Music psychology",
+      "Generative music"
+    ]
+  }
+}
