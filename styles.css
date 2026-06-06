@@ -1,31 +1,39 @@
-/* daniel-site — global theme, aligned to the "Light" brand design.
-   Warm-paper editorial: warm bone grounds (no cold white), warm ink,
-   one confident green accent, magenta as rare punctuation. Manrope for
-   display, Inter for body, Newsreader for serif emphasis. The home page
-   ("Light" one-pager) ships its own light.css; this stylesheet carries the
-   same language across the inner pages (writing, notes, essays, etc.). */
+/* daniel-site — global theme, "Hey" (v4).
+   Fresh system modeled on the aliabdaal.com architecture: cream grounds
+   (never cold white), plum-black ink (never pure black), pastel pops that
+   always carry ink text (spring green / butter / pink), pill buttons,
+   Fraunces serif for headings + emphasis, Manrope for everything else.
+   The home page ("Hey" one-pager) ships its own light.css; this stylesheet
+   carries the same language across the inner pages (writing, notes, essays). */
 
 :root {
-  --bg: #F7F2E8;            /* primary warm bone */
-  --bg-2: #EFE9DA;          /* deeper warm grey band / alt */
-  --bg-card: #FBF7EE;       /* raised card on paper */
-  --dark: #1A1712;          /* warm near-black */
-  --text: #1F1C15;          /* warm ink */
-  --text-muted: rgba(31, 28, 21, 0.64);
-  --text-soft: rgba(31, 28, 21, 0.54);  /* mid foreground level (home one-pager) */
-  --text-faint: rgba(31, 28, 21, 0.42);
-  --accent: #2E7D46;        /* confident single green */
+  --bg: #FAF6F0;            /* primary cream */
+  --bg-2: #F2EBE1;          /* deeper warm sand band / alt */
+  --bg-card: #FFFCF6;       /* raised card on cream */
+  --dark: #221B29;          /* plum-black */
+  --text: #261E2D;          /* plum ink */
+  --text-muted: rgba(38, 30, 45, 0.66);
+  --text-soft: rgba(38, 30, 45, 0.55);  /* mid foreground level (home one-pager) */
+  --text-faint: rgba(38, 30, 45, 0.42);
+  --accent: #2E7D46;        /* green for text/links (identity carryover) */
   --accent-light: #3a9a57;
-  --accent-2: #C4347A;      /* magenta, rare punctuation */
+  --accent-2: #C03A78;      /* deep pink, rare punctuation */
+  --pop: #93D9A6;           /* spring green fill — primary action */
+  --pop-hover: #7ECD96;
+  --pop-butter: #FFD66B;    /* butter — underlines, highlights */
+  --pop-pink: #F5A8C0;      /* pink — rare punctuation fill */
   --gold: #b1832f;          /* legacy decorative accent */
-  --border: rgba(31, 28, 21, 0.14);
-  --border-soft: rgba(31, 28, 21, 0.08);
+  --border: rgba(38, 30, 45, 0.14);
+  --border-soft: rgba(38, 30, 45, 0.08);
+  --font-head: 'Fraunces', Georgia, serif;
   --font-display: 'Manrope', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-serif: 'Newsreader', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
   --maxw: 1080px;
   --maxw-text: 64ch;
 }
+
+::selection { background: rgba(255,214,107,0.55); }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -43,10 +51,10 @@ body {
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 1.6rem; }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  font-family: var(--font-head);
+  font-weight: 550;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
   color: var(--text);
 }
 
@@ -68,7 +76,7 @@ p:last-child { margin-bottom: 0; }
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(247, 242, 232, 0.85);
+  background: rgba(250, 246, 240, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -77,7 +85,7 @@ p:last-child { margin-bottom: 0; }
 .wordmark b { color: var(--accent); }
 .wordmark:hover { color: var(--text); }
 .nav-links { display: flex; gap: 2.1rem; }
-.nav-links a { font-size: 0.84rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+.nav-links a { font-size: 0.95rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0; }
 .nav-links a:hover { color: var(--accent); }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; line-height: 1; }
 
@@ -88,7 +96,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 8rem 0 6rem; }
-.hero h1 { font-size: clamp(2.7rem, 6.2vw, 4.8rem); font-weight: 800; letter-spacing: -0.04em; line-height: 0.98; }
+.hero h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); font-weight: 550; letter-spacing: -0.02em; line-height: 1.06; }
 .hero .subhead { font-size: clamp(1.12rem, 2.1vw, 1.4rem); color: var(--text-muted); max-width: 44ch; margin-top: 1.6rem; font-weight: 400; line-height: 1.6; }
 .hero .hero-cta { margin-top: 2.6rem; display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
@@ -99,10 +107,10 @@ p:last-child { margin-bottom: 0; }
   transition: all .2s ease; cursor: pointer; border: 1px solid transparent;
   letter-spacing: 0.01em;
 }
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-light); color: #fff; }
+.btn-primary { background: var(--pop); color: var(--text); }
+.btn-primary:hover { background: var(--pop-hover); color: var(--text); }
 .btn-outline { border-color: var(--border); color: var(--text); }
-.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-outline:hover { border-color: var(--text); background: var(--pop-butter); color: var(--text); }
 
 /* ---------- Thesis / pull ---------- */
 .thesis {
@@ -119,11 +127,11 @@ p:last-child { margin-bottom: 0; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .card {
   background: var(--bg-card); border: 1px solid var(--border-soft);
-  border-radius: 14px; padding: 2rem;
+  border-radius: 20px; padding: 2rem;
   transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.card:hover { border-color: var(--border); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(31,28,21,0.06); }
-.card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+.card:hover { border-color: var(--border); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(38,30,45,0.06); }
+.card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; }
 .card p { font-size: 0.97rem; color: var(--text-muted); }
 .card .kicker { font-family: var(--font-body); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.7rem; }
 
@@ -136,8 +144,8 @@ p:last-child { margin-bottom: 0; }
 /* ---------- Speaker bio (Speaking page) ---------- */
 /* Two-column on desktop: portrait headshot + short bio. Collapses to one column under 720px. */
 .bio { display: grid; grid-template-columns: 260px 1fr; gap: 2.4rem; align-items: start; margin-top: 1.4rem; }
-.bio-photo { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 0.5rem; box-shadow: 0 12px 30px rgba(31,28,21,0.06); }
-.bio-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; }
+.bio-photo { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 0.5rem; box-shadow: 0 12px 30px rgba(38,30,45,0.06); }
+.bio-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 15px; }
 .bio-name { font-size: 1.7rem; font-weight: 700; margin-bottom: 0.2rem; }
 .bio-role { font-family: var(--font-body); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.1rem; }
 .bio-text p { margin-bottom: 1rem; }
@@ -147,7 +155,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ---------- YouTube embed ---------- */
-.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 16px 40px rgba(31,28,21,0.07); }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 16px 40px rgba(38,30,45,0.07); }
 .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /* ---------- Prose ---------- */

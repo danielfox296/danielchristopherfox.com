@@ -1,44 +1,54 @@
 /* =============================================================
-   danielchristopherfox.com — "Light"  (v3)
-   Personal brand. Warm-paper editorial. One confident green,
-   magenta as rare punctuation, an editorial serif italic for
-   emphasis, and a Chladni cymatics field as the signature visual.
-   Fully responsive. Visual-language axes are CSS vars so the
-   Tweaks panel can re-skin without touching markup.
+   danielchristopherfox.com — "Hey"  (v4)
+   Fresh system modeled on the aliabdaal.com architecture:
+   cream grounds (never cold white), plum-black ink (never pure
+   black), a trio of pastel pops that always carry ink text
+   (spring green / butter / pink), full-pill buttons, Fraunces
+   serif for headings + emphasis, Manrope for everything else,
+   and one hand-drawn butter squiggle as the playful signature.
+   The Chladni cymatics field stays as the brand visual.
    ============================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;0,6..72,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* ---- warm paper grounds (no cold white) ---- */
-  --surround:  #E4DECF;            /* page behind the frame (home-only) */
-  --bg:        #F7F2E8;            /* primary warm bone */
-  --bg-2:      #EFE9DA;            /* deeper warm grey band */
-  --dark:      #1A1712;            /* warm near-black closing band */
+  /* ---- cream grounds ---- */
+  --surround:  #EFE7DB;            /* page behind the frame (home-only) */
+  --bg:        #FAF6F0;            /* primary cream */
+  --bg-2:      #F2EBE1;            /* deeper warm sand band */
+  --dark:      #221B29;            /* plum-black closing band */
 
-  /* ---- warm ink foreground ---- */
-  --text:        #1F1C15;
-  --head:        #2A261D;          /* home-only heading ink */
-  --text-muted:  rgba(31,28,21,0.74);
-  --text-soft:   rgba(31,28,21,0.54);
-  --text-faint:  rgba(31,28,21,0.38);
-  --border:      rgba(31,28,21,0.16);
-  --border-soft: rgba(31,28,21,0.09);
+  /* ---- plum-black ink foreground ---- */
+  --text:        #261E2D;
+  --head:        #261E2D;          /* home-only heading ink */
+  --text-muted:  rgba(38,30,45,0.74);
+  --text-soft:   rgba(38,30,45,0.55);
+  --text-faint:  rgba(38,30,45,0.38);
+  --border:      rgba(38,30,45,0.16);
+  --border-soft: rgba(38,30,45,0.09);
 
   /* ---- cream foreground for the dark band (home-only) ---- */
-  --cream:     #EFE7D6;
-  --cream-dim: rgba(239,231,214,0.66);
-  --cream-faint: rgba(239,231,214,0.36);
+  --cream:     #F4EDE2;
+  --cream-dim: rgba(244,237,226,0.66);
+  --cream-faint: rgba(244,237,226,0.36);
 
-  /* ---- visual-language axes (Tweaks override these) ---- */
-  --accent:    #2E7D46;            /* confident single green */
-  --accent-2:  #C4347A;            /* magenta, rare punctuation */
+  /* ---- pastel pops: fills/underlines only, always ink text on top ---- */
+  --pop:        #93D9A6;           /* spring green — primary action */
+  --pop-butter: #FFD66B;           /* butter — squiggles, highlights */
+  --pop-pink:   #F5A8C0;           /* pink — rare punctuation */
 
+  /* ---- deep ink-safe accents for text on cream ---- */
+  --accent:    #2E7D46;            /* green for text/links (identity carryover) */
+  --accent-2:  #C03A78;            /* deep pink, rare punctuation */
+
+  --font-head:    'Fraunces', Georgia, serif;
   --font-display: 'Manrope', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-serif:   'Newsreader', Georgia, serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+  --font-serif:   'Fraunces', Georgia, serif;
   --ease:    cubic-bezier(.4, 0, .2, 1); /* home-only */
 }
+
+::selection { background: rgba(255,214,107,0.55); }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -52,14 +62,17 @@ body {
 
 .page { width: 100%; max-width: 1280px; margin: 0 auto; position: relative; }
 
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.035em; line-height: 0.95; margin: 0; color: var(--head); }
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 550; letter-spacing: -0.018em; line-height: 1.04; margin: 0; color: var(--head); }
 p { margin: 0; line-height: 1.65; }
 a { color: inherit; text-decoration: none; }
 
 .eyebrow { font-family: var(--font-body); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.22em; }
 
-/* ---- emphasized words render identically to surrounding text (no type signal) ---- */
-.emph { font: inherit; color: inherit; font-style: inherit; font-weight: inherit; letter-spacing: inherit; }
+/* ---- emphasized words: italic + hand-drawn butter squiggle (the one doodle) ---- */
+.emph { font: inherit; color: inherit; font-style: italic; font-weight: inherit; letter-spacing: inherit;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='9' viewBox='0 0 44 9'%3E%3Cpath d='M1 6.5 Q 6.5 1.5 12 5 T 23 5 T 34 5 T 43 4' fill='none' stroke='%23FFD66B' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left bottom / 44px 9px;
+  padding-bottom: 0.14em;
+}
 
 /* ---- section scaffold ---- */
 section { position: relative; }
@@ -69,11 +82,11 @@ section { position: relative; }
 .nav { display: flex; align-items: center; justify-content: space-between; height: clamp(84px, 11vw, 128px); }
 .word { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
 .word b { color: var(--accent); }
-.navtoggle { display: none; background: none; border: 1px solid var(--border); color: var(--text);
+.navtoggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); border-radius: 999px;
   font-family: var(--font-body); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
   padding: 9px 16px; cursor: pointer; }
 .navlinks { display: flex; gap: clamp(20px, 3vw, 48px); }
-.navlinks a { font-size: 15px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.10em; transition: color .2s var(--ease); }
+.navlinks a { font-size: 16px; font-weight: 600; color: var(--text-muted); letter-spacing: 0; transition: color .2s var(--ease); }
 .navlinks a:hover, .navlinks a.active { color: var(--accent); }
 
 /* ---- hero ---- */
@@ -82,7 +95,7 @@ section { position: relative; }
 .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(40px, 6vw, 96px); align-items: center;
   padding-top: clamp(28px, 6vw, 80px); }
 .hero-copy .eyebrow { color: var(--accent-2); display: block; }
-.hero h1 { margin-top: clamp(28px, 4vw, 56px); font-size: clamp(46px, 8.2vw, 104px); line-height: 0.98; letter-spacing: -0.04em; }
+.hero h1 { margin-top: clamp(28px, 4vw, 56px); font-size: clamp(42px, 7.4vw, 92px); line-height: 1.05; letter-spacing: -0.022em; }
 .hero h1 .emph { white-space: nowrap; }
 .hero p.sub { margin-top: clamp(28px, 3.4vw, 52px); max-width: 540px; font-size: clamp(18px, 1.5vw, 22px); line-height: 1.6; color: var(--text-muted); font-weight: 400; }
 .hero-now { display: flex; align-items: center; gap: 12px; margin-top: clamp(28px, 3.2vw, 48px);
@@ -94,8 +107,8 @@ section { position: relative; }
 
 /* ---- hero portrait ---- */
 .hero-portrait { position: relative; }
-.hero-portrait image-slot { display: block; width: 100%; aspect-ratio: 4 / 5;
-  box-shadow: 0 30px 70px -30px rgba(31,28,21,0.5); }
+.hero-portrait image-slot { display: block; width: 100%; aspect-ratio: 4 / 5; border-radius: 26px;
+  box-shadow: 0 24px 60px -28px rgba(38,30,45,0.45); }
 .portrait-cap { display: block; margin-top: 16px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
 
 /* ---- section heading block ---- */
@@ -114,8 +127,8 @@ section { position: relative; }
 .meta-row .v { font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1; margin-top: 10px; letter-spacing: -0.02em; color: var(--head); }
 
 /* ---- cymatics plate ---- */
-.plate { margin: 0; position: relative; aspect-ratio: 1 / 1; width: 100%;
-  background: radial-gradient(120% 120% at 50% 40%, rgba(31,28,21,0.035), transparent 70%);
+.plate { margin: 0; position: relative; aspect-ratio: 1 / 1; width: 100%; border-radius: 28px; overflow: hidden;
+  background: radial-gradient(120% 120% at 50% 40%, rgba(38,30,45,0.035), transparent 70%);
   border: 1px solid var(--border-soft); }
 .plate .cymatics { display: block; width: 100%; height: 100%; --cy-ink: var(--accent); }
 .plate figcaption { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between;
@@ -164,8 +177,8 @@ section { position: relative; }
 .contact h2 { color: var(--cream); font-size: clamp(48px, 8.4vw, 108px); line-height: 0.95; letter-spacing: -0.04em; }
 .contact .mail { display: inline-block; margin-top: clamp(36px, 5vw, 64px); font-family: var(--font-display); font-weight: 800;
   font-size: clamp(22px, 2.6vw, 30px); padding-bottom: 12px; color: var(--cream);
-  border-bottom: 3px solid var(--accent-2); transition: border-color .25s var(--ease), color .25s var(--ease); }
-.contact .mail:hover { border-bottom-color: var(--accent); }
+  border-bottom: 3px solid var(--pop-butter); transition: border-color .25s var(--ease), color .25s var(--ease); }
+.contact .mail:hover { border-bottom-color: var(--pop); }
 .footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
   padding: clamp(36px, 5vw, 64px) clamp(22px, 6vw, 120px) clamp(48px, 6vw, 80px);
   border-top: 1px solid rgba(239,231,214,0.14); position: relative; z-index: 2; }
@@ -202,7 +215,7 @@ section { position: relative; }
 }
 @media (max-width: 620px) {
   .navlinks { position: absolute; top: 72px; right: clamp(22px, 6vw, 120px); flex-direction: column; gap: 18px;
-    background: var(--bg); padding: 22px 26px; border: 1px solid var(--border); box-shadow: 0 24px 50px -20px rgba(31,28,21,0.4);
+    background: var(--bg); padding: 22px 26px; border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 24px 50px -20px rgba(38,30,45,0.4);
     z-index: 30; display: none; }
   .nav.open .navlinks { display: flex; }
   .navtoggle { display: inline-block; }
@@ -227,8 +240,8 @@ section { position: relative; }
 .hero-portrait .portrait-img {
   display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
   object-fit: cover; object-position: center 22%;
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 30px 70px -30px rgba(31,28,21,0.5);
+  border: 1px solid var(--border-soft); border-radius: 26px;
+  box-shadow: 0 24px 60px -28px rgba(38,30,45,0.45);
 }
 
 /* ---- photo-break background panel (dark band carries the quote) ---- */
@@ -236,8 +249,8 @@ section { position: relative; }
   display: block; width: 100%; height: clamp(320px, 56vh, 560px);
   position: relative; z-index: 1;
   background:
-    radial-gradient(140% 120% at 78% 30%, rgba(46,125,70,0.16), transparent 60%),
-    linear-gradient(120deg, #14110d, #211d16);
+    radial-gradient(140% 120% at 78% 30%, rgba(147,217,166,0.16), transparent 60%),
+    linear-gradient(120deg, #191322, #251D2E);
 }
 
 /* ---- "all writing" link beneath the selected list ---- */
