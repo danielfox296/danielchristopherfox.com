@@ -174,7 +174,7 @@ section { position: relative; }
 .contact { background: var(--dark); color: var(--cream); }
 .contact .inner { padding-top: clamp(80px, 12vw, 168px); padding-bottom: clamp(56px, 8vw, 96px); }
 .contact-eye { color: var(--accent); display: block; margin-bottom: clamp(28px, 4vw, 48px); }
-.contact h2 { color: var(--cream); font-size: clamp(48px, 8.4vw, 108px); line-height: 0.95; letter-spacing: -0.04em; }
+.contact h2 { color: var(--cream); font-size: clamp(46px, 8vw, 102px); line-height: 1.12; letter-spacing: -0.022em; }
 .contact .mail { display: inline-block; margin-top: clamp(36px, 5vw, 64px); font-family: var(--font-display); font-weight: 800;
   font-size: clamp(22px, 2.6vw, 30px); padding-bottom: 12px; color: var(--cream);
   border-bottom: 3px solid var(--pop-butter); transition: border-color .25s var(--ease), color .25s var(--ease); }
