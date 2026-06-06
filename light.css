@@ -71,7 +71,7 @@ a { color: inherit; text-decoration: none; }
 /* ---- emphasized words: italic + hand-drawn butter squiggle (the one doodle) ---- */
 .emph { font: inherit; color: inherit; font-style: italic; font-weight: inherit; letter-spacing: inherit;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='9' viewBox='0 0 44 9'%3E%3Cpath d='M1 6.5 Q 6.5 1.5 12 5 T 23 5 T 34 5 T 43 4' fill='none' stroke='%23FFD66B' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left bottom / 44px 9px;
-  padding-bottom: 0.14em;
+  padding-bottom: 0.02em;
 }
 
 /* ---- section scaffold ---- */
