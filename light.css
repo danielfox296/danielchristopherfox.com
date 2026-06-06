@@ -88,6 +88,10 @@ section { position: relative; }
 .navlinks { display: flex; gap: clamp(20px, 3vw, 48px); }
 .navlinks a { font-size: 16px; font-weight: 600; color: var(--text-muted); letter-spacing: 0; transition: color .2s var(--ease); }
 .navlinks a:hover, .navlinks a.active { color: var(--accent); }
+.navlinks .cta { background: var(--pop); color: var(--text); border-radius: 999px; padding: 10px 20px; font-weight: 700;
+  transition: background .2s var(--ease); }
+.navlinks .cta:hover { background: #7ECD96; color: var(--text); }
+@media (max-width: 980px) and (min-width: 621px) { .navlinks .cta { display: none; } }
 
 /* ---- hero ---- */
 .hero { background: var(--bg); }

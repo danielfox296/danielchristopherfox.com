@@ -213,7 +213,9 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ---------- Animations ---------- */
-.fade-up { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+/* Soft entrance only — short travel + quick settle so content never
+   reads as missing on a fast scroll. */
+.fade-up { opacity: 0.01; transform: translateY(10px); transition: opacity .45s ease, transform .45s ease; }
 .fade-up.in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
@@ -230,6 +232,64 @@ p:last-child { margin-bottom: 0; }
   .section { padding: 4.5rem 0; }
   .hero { padding: 5rem 0 4rem; }
 }
+
+/* =============================================================
+   v4.1 components — editorial two-column prose, cymatics
+   thumbnails, subscribe band, nav CTA. (Abdaal-pattern pass.)
+   ============================================================= */
+
+/* ---------- Two-column editorial prose ----------
+   On wide screens the article becomes a 2-col grid: h2s drop into
+   the left rail beside the section they introduce; body copy holds
+   a comfortable measure on the right. Figures span both. */
+@media (min-width: 1060px) {
+  .prose { display: grid; grid-template-columns: 250px minmax(0, 62ch); column-gap: 4rem; max-width: none; }
+  .prose > * { grid-column: 2; min-width: 0; }
+  .prose > h2 { grid-column: 1; font-size: 1.35rem; line-height: 1.3; letter-spacing: -0.01em; margin: 0.35rem 0 0; }
+  .prose > h2::after { content: ""; display: block; width: 44px; height: 9px; margin-top: 12px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='9' viewBox='0 0 44 9'%3E%3Cpath d='M1 6.5 Q 6.5 1.5 12 5 T 23 5 T 34 5 T 43 4' fill='none' stroke='%23FFD66B' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat; }
+  .prose > figure, .prose > .video-embed { grid-column: 1 / -1; }
+}
+@media (max-width: 1059.98px) { .prose > h2 { margin-top: 2.6rem; } }
+.prose figure { margin: 2.4rem 0; }
+.prose figure img { display: block; width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--border-soft); }
+.prose figcaption { font-size: 0.85rem; color: var(--text-soft); margin-top: 0.75rem; }
+
+/* ---------- Cymatics title mark (essays / notes / guides) ---------- */
+.hero .container { position: relative; }
+.cym-mark { position: absolute; right: 1.6rem; top: 50%; transform: translateY(-50%); width: clamp(110px, 14vw, 190px);
+  opacity: 0.85; pointer-events: none; }
+@media (max-width: 900px) { .cym-mark { display: none; } }
+
+/* ---------- Writing index: thumbnail cards + category colors ---------- */
+.card .thumb { display: block; width: 76px; height: 76px; margin-bottom: 1rem; }
+.kicker-guide { color: var(--gold) !important; }
+.kicker-essay { color: var(--accent-2) !important; }
+.kicker-note  { color: var(--accent) !important; }
+.card-feature { display: grid; grid-template-columns: 1fr 180px; gap: 2.2rem; align-items: center; }
+.card-feature .thumb { width: 100%; height: auto; margin: 0; }
+@media (max-width: 700px) { .card-feature { grid-template-columns: 1fr; } .card-feature .thumb { width: 120px; } }
+
+/* ---------- Subscribe band (Entuned Substack) ---------- */
+.subscribe-band { background: var(--bg-2); border: 1px solid var(--border-soft); border-radius: 24px;
+  padding: clamp(1.8rem, 4vw, 3.2rem); display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2.6rem; align-items: center; }
+.subscribe-band h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); margin-bottom: 0.7rem; }
+.subscribe-band p { color: var(--text-muted); max-width: 42ch; }
+.subscribe-band .embed { width: 100%; height: 130px; border: 0; border-radius: 14px; overflow: hidden; background: transparent; }
+.subscribe-fine { font-size: 0.8rem; color: var(--text-faint); margin-top: 0.6rem; }
+@media (max-width: 760px) { .subscribe-band { grid-template-columns: 1fr; gap: 1.4rem; } }
+
+/* ---------- About hero: portrait beside intro ---------- */
+.about-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.about-photo { margin: 0; }
+.about-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%;
+  border-radius: 26px; border: 1px solid var(--border-soft); box-shadow: 0 24px 60px -28px rgba(38,30,45,0.45); }
+.about-photo figcaption { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-faint); margin-top: 0.9rem; }
+@media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } .about-photo { max-width: 320px; order: -1; } }
+
+/* ---------- Nav CTA pill ---------- */
+.btn-nav { padding: 0.55rem 1.2rem; font-size: 0.85rem; margin-left: 1.6rem; white-space: nowrap; }
+@media (max-width: 980px) { .btn-nav { display: none; } }
 
 /* ---------- Video embed (dual-home video posts) ---------- */
 .video-embed {
