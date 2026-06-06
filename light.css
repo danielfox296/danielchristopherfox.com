@@ -119,6 +119,18 @@ section { position: relative; }
 .lead { padding-top: clamp(80px, 12vw, 168px); margin-bottom: clamp(48px, 7vw, 96px); }
 .lead h2 { font-size: clamp(40px, 6.4vw, 76px); letter-spacing: -0.035em; }
 
+/* ---- two-column section split (heading rail left, content right) ---- */
+.split { display: grid; grid-template-columns: minmax(220px, 0.72fr) 1.28fr; column-gap: clamp(36px, 5vw, 88px); align-items: start; }
+.split .lead.split-head { margin-bottom: clamp(32px, 5vw, 56px); }
+.split .split-head h2 { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.08; }
+.split .split-eye { display: block; color: var(--accent); margin-bottom: 18px; }
+.split .split-body { padding-top: clamp(84px, 12.5vw, 176px); min-width: 0; }
+@media (max-width: 880px) {
+  .split { grid-template-columns: 1fr; }
+  .split .lead.split-head { margin-bottom: 0; }
+  .split .split-body { padding-top: clamp(36px, 6vw, 56px); }
+}
+
 /* ---- building / Entuned ---- */
 .building { background: var(--bg-2); }
 .building .inner { padding-bottom: clamp(80px, 12vw, 184px); }
