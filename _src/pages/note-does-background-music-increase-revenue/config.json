@@ -1,16 +1,19 @@
 {
   "title": "Does background music really increase revenue? — Daniel Fox",
-  "meta_description": "The effect sizes are large: roughly 15% more per check from turning the volume down, 40% more bar revenue from slower tempo, $4,600 a day in a supermarket. What the revenue research shows, and the conditions behind it.",
+  "meta_description": "The effect sizes are large: roughly 15% more per check from turning the volume down, 40% more bar revenue from slower tempo, $4,600 a day in a supermarket, 12% from tempo and key together. What the revenue research shows, and the conditions behind it.",
   "output": "notes/does-background-music-increase-revenue.html",
+  "date_published": "2026-05-31",
+  "date_modified": "2026-06-06",
   "schema": {
     "type": "Article",
     "headline": "Does background music really increase revenue?",
-    "description": "What a 140-store study revealed about music and revenue: no universal tempo effect, but a real one moderated by store type and customer relationship.",
+    "description": "What field experiments on real transactions show about background music and revenue: volume, tempo, musical key, and the crowding condition that flips the answer.",
     "about": [
       "Retail music",
       "Revenue",
-      "Consumer behavior",
-      "Loyalty"
+      "Customer spending",
+      "Music tempo",
+      "Consumer behavior"
     ]
   }
 }

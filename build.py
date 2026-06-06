@@ -18,6 +18,7 @@ import html
 import json
 import os
 import sys
+from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "_src")
@@ -66,11 +67,13 @@ SCHEMA_AUTHOR = {
 SCHEMA_PUBLISHER = {"@type": "Person", "name": "Daniel Christopher Fox"}
 
 
-def build_schema(schema, canonical):
+def build_schema(schema, canonical, date_published=None, date_modified=None):
     """Render a structured schema dict into a <script type="application/ld+json">
     block. `schema` is {type, headline, description, about:[...]}; author,
-    publisher and mainEntityOfPage(=canonical) are injected from module constants.
-    Output is compact (no spaces) to match the hand-written strings it replaces.
+    publisher and mainEntityOfPage(=canonical) are injected from module constants,
+    dates (ISO strings) from the page config's top-level date_published /
+    date_modified. Output is compact (no spaces) to match the hand-written
+    strings it replaces.
     """
     data = {
         "@context": "https://schema.org",
@@ -82,6 +85,9 @@ def build_schema(schema, canonical):
         "mainEntityOfPage": canonical,
         "about": schema.get("about", []),
     }
+    if date_published:
+        data["datePublished"] = date_published
+        data["dateModified"] = date_modified or date_published
     payload = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
     return f'<script type="application/ld+json">{payload}</script>'
 
@@ -132,7 +138,9 @@ def render_page(page_dir, header, footer, head_meta):
     if not os.path.abspath(out_path).startswith(ROOT):
         raise ValueError(f"Refusing to write outside repo root: {output}")
 
-    # Redirect stub (meta-refresh), skips the full layout.
+    # Redirect stub (meta-refresh), skips the full layout. Returns None so the
+    # stub stays out of the sitemap (it's noindex; listing it would contradict
+    # the robots directive).
     if "redirect_to" in cfg:
         dest = html.escape(cfg["redirect_to"], quote=True)
         stub = (
@@ -143,7 +151,8 @@ def render_page(page_dir, header, footer, head_meta):
             f"<body>Redirecting to <a href=\"{dest}\">{dest}</a>.</body></html>"
         )
         write(out_path, stub)
-        return output
+        print(f"  - {output} (redirect -> {cfg['redirect_to']})")
+        return None
 
     depth = output.count("/")
     nav_prefix = "../" * depth
@@ -155,7 +164,10 @@ def render_page(page_dir, header, footer, head_meta):
     # a str is a verbatim <script> block (the home Person schema); absent -> none.
     raw_schema = cfg.get("schema", "")
     if isinstance(raw_schema, dict):
-        schema = build_schema(raw_schema, canonical)
+        schema = build_schema(
+            raw_schema, canonical,
+            cfg.get("date_published"), cfg.get("date_modified"),
+        )
     else:
         schema = raw_schema
 
@@ -177,6 +189,16 @@ def render_page(page_dir, header, footer, head_meta):
     page = page.replace("{{header}}", header)
     page = page.replace("{{footer}}", footer)
     page = page.replace("{{content}}", content)
+    # Visible date label, available to content (so it must come after {{content}}).
+    # "Updated" once the page has been revised, "Published" until then.
+    dp, dm = cfg.get("date_published"), cfg.get("date_modified")
+    if dp:
+        shown = dm if (dm and dm != dp) else dp
+        verb = "Updated" if (dm and dm != dp) else "Published"
+        label = f"{verb} {date.fromisoformat(shown).strftime('%B %Y')}"
+    else:
+        label = ""
+    page = page.replace("{{updated_display}}", label)
     # nav_prefix LAST — header/footer partials and content may contain it too.
     page = page.replace("{{nav_prefix}}", nav_prefix)
 

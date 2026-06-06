@@ -1,7 +1,9 @@
 {
   "title": "What is dwell time, and why does it predict sales? — Daniel Fox",
-  "meta_description": "Dwell time — how long a customer stays — predicts spending better than almost any other retail metric. Here's what the research says about using music to control it, and when longer isn't better.",
+  "meta_description": "Dwell time is how long a customer stays, and it predicts spending better than almost any other retail metric. Here's what the research says about using music to control it, and when longer isn't better.",
   "output": "notes/what-is-dwell-time-in-retail.html",
+  "date_published": "2026-05-31",
+  "date_modified": "2026-05-31",
   "schema": {
     "type": "Article",
     "headline": "What is dwell time, and why does it predict sales?",
