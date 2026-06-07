@@ -14,14 +14,14 @@
   </script>
 
   <title>Does music actually affect retail sales, or is it a myth? — Daniel Fox</title>
-  <meta name="description" content="Yes, the research is strong, but it&#x27;s conditional. From a 38% supermarket swing to a 140-store study that found no overall effect, here&#x27;s the honest answer on whether store music moves sales.">
+  <meta name="description" content="Yes, the research is strong, but it&#x27;s conditional. A 38% supermarket swing, 15% higher checks from lower volume, 40% more bar revenue from slow tempo, and a 140-store study that found no overall effect. The honest answer on whether store music moves sales.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://danielchristopherfox.com/notes/does-music-affect-retail-sales.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Does music actually affect retail sales, or is it a myth? — Daniel Fox">
-  <meta property="og:description" content="Yes, the research is strong, but it&#x27;s conditional. From a 38% supermarket swing to a 140-store study that found no overall effect, here&#x27;s the honest answer on whether store music moves sales.">
+  <meta property="og:description" content="Yes, the research is strong, but it&#x27;s conditional. A 38% supermarket swing, 15% higher checks from lower volume, 40% more bar revenue from slow tempo, and a 140-store study that found no overall effect. The honest answer on whether store music moves sales.">
   <meta property="og:url" content="https://danielchristopherfox.com/notes/does-music-affect-retail-sales.html">
   <meta property="og:site_name" content="Daniel Fox">
   <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../styles.css">
 
   <!-- Structured data -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Does music actually affect retail sales, or is it a myth?","description":"The honest answer on whether store music moves sales: real but conditional, from a 38% supermarket effect to a 140-store null result.","author":{"@type":"Person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"url":"https://danielchristopherfox.com","description":"Music behaviorist. A working music producer and multi-instrumentalist who studies how music shapes what people do, proven on the retail floor where the effect is measured. Founder of Entuned.","knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music"],"sameAs":["https://entuned.co","https://speakwithdaniel.com","https://www.youtube.com/@entuned","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/notes/does-music-affect-retail-sales.html","about":["Retail music","Retail sales","Consumer behavior","Music tempo"],"datePublished":"2026-05-31","dateModified":"2026-06-06"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Does music actually affect retail sales, or is it a myth?","description":"The honest answer on whether store music moves sales: real but conditional, from a 38% supermarket effect to a 140-store null result.","author":{"@type":"Person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"url":"https://danielchristopherfox.com","description":"Music behaviorist. A working music producer and multi-instrumentalist who studies how music shapes what people do, proven on the retail floor where the effect is measured. Founder of Entuned.","knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music"],"sameAs":["https://entuned.co","https://speakwithdaniel.com","https://www.youtube.com/@entuned","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/notes/does-music-affect-retail-sales.html","about":["Retail music","Retail sales","Revenue","Consumer behavior","Music tempo"],"datePublished":"2026-05-31","dateModified":"2026-06-06"}</script>
 </head>
 <body>
   <header class="site-header">
@@ -74,6 +74,21 @@
       var target = (a.getAttribute('href') || '').split('/').pop();
       if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
     });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
   })();
 </script>
 
@@ -84,7 +99,7 @@
     <img class="cym-mark" src="../assets/cym/does-music-affect-retail-sales.svg" alt="" aria-hidden="true">
     <span class="eyebrow fade-up">Research note &middot; Updated June 2026</span>
     <h1 class="fade-up page-title">Does music actually affect retail sales, or is it a myth?</h1>
-    <p class="subhead fade-up measure">Yes, conditionally. In 1982 one variable moved sales 38 percent. The largest study ever run found no overall effect. The reconciliation between those two numbers is the actual answer.</p>
+    <p class="subhead fade-up measure">Yes, conditionally. One supermarket moved sales 38 percent on tempo alone, a quieter dining room lifted checks about 15 percent, and the largest study ever run found no overall effect. The reconciliation between those numbers is the actual answer.</p>
   </div>
 </section>
 
@@ -94,7 +109,11 @@
       <p class="lead">In 1982, a researcher changed nothing in a supermarket except the music, and sales went up 38 percent. Almost $2 million a year for that store, from one variable. Before anyone starts blasting lo-fi in the aisles, that number has a problem, and the problem is more interesting than the statistic.</p>
 
       <h2>The study that started it</h2>
-      <p>The experiment ran nine weeks, published in the Journal of Marketing, rotating three conditions: no music, slow tempo around 60 beats per minute, and fast around 108. With slow music, shoppers literally walked slower, about 19 seconds slower per aisle. That extra time meant more products noticed, more in the cart, and about $4,600 more in daily sales. The researcher interviewed over 200 shoppers afterward. None had noticed. They couldn't even say whether music had been playing. The music wasn't persuading anyone. It was adjusting their internal clock.</p>
+      <p>The experiment ran nine weeks, published in the Journal of Marketing, rotating three conditions: no music, slow tempo around 60 beats per minute, and fast around 108. With slow music, shoppers literally walked slower, about 19 seconds slower per aisle. That extra time meant more products noticed, more in the cart, and about $4,600 more in daily sales: $16,700 on slow days against $12,100 on fast. The researcher interviewed over 200 shoppers afterward. None had noticed. They couldn't even say whether music had been playing. The music wasn't persuading anyone. It was adjusting their internal clock.</p>
+
+      <h2>What the effect sizes actually look like</h2>
+      <p>Restaurants show the same scale. A field experiment in Perceptual and Motor Skills had a restaurant simply turn the volume down. Not the genre, not the tempo. Softer. The average check rose about $35 a head, roughly 15 percent, pure revenue from a volume knob. A study in the Journal of Consumer Research found slow tempo kept diners 11 minutes longer, which turned into about three more drinks per table and roughly 40 percent more bar revenue, while food bills stayed flat. Set those next to the supermarket's $4,600 a day and the range comes into focus: when the effect shows up, it shows up in double digits.</p>
+      <p>Every one of those figures comes from people buying more or staying longer. There's a second path, where the transaction count holds flat and the average ticket rises because the music shifts which version of the thing people reach for. That research gets its own note: <a href="../notes/can-music-make-customers-pay-more.html">can the right music make customers pay more?</a></p>
 
       <h2>The study that disagrees</h2>
       <p>If that were the whole story, every store would pipe in slow jazz and call it a day. In 2025, a team at the University of Amsterdam ran the largest music-and-retail experiment ever, 140 stores, six weeks, real sales tied to actual transactions. The headline: no overall effect. Slow music did not reliably raise sales across 140 stores. The 1982 finding that launched an industry didn't replicate at scale. But segment the data and a pattern appears. Slow music did increase spending among loyalty members, the engaged customers already paying attention to the environment. Casual shoppers, no response. The effect is real. It just isn't universal. It depends on who's in the store.</p>
@@ -108,7 +127,7 @@
       <h2>The honest answer</h2>
       <p>Three things the research supports. Playing music is table stakes, and silence leaves the easy eight minutes of dwell on the floor. The simple prescriptions don't hold, "just play slow music" fell apart across 140 stores. And the mechanism is emotional, set in the first five minutes, not rational. Music affects sales. The difference isn't whether you play it. It's whether you got the how right.</p>
 
-      <p>This is one piece of a larger question. The full field guide to <a href="../store-music-and-customer-behavior.html">store music and customer behavior</a> lays the research out in order.</p>
+      <p>This is one piece of a larger question. Most of these numbers run through time on the floor, covered in <a href="../notes/what-is-dwell-time-in-retail.html">what is dwell time, and why does it predict sales?</a> The full field guide to <a href="../store-music-and-customer-behavior.html">store music and customer behavior</a> lays the research out in order.</p>
     </div>
   </div>
 </section>
@@ -126,7 +145,31 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
+    <div class="video-wrap fade-up" style="margin-top:1.2rem;">
+      <iframe
+        src="https://www.youtube.com/embed/V_yig1H1yH8"
+        title="Can Background Music Actually Increase Revenue? (140-Store Study)"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-wrap fade-up" style="margin-top:1.2rem;">
+      <iframe
+        src="https://www.youtube.com/embed/oV3mba_qgxc"
+        title="Can Music Make Customers Spend MORE? (43,000 Transactions)"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
     <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>This is the work I do for stores.</strong> At Entuned I fit original music to a store's actual customers and measure it against a matched control — the practical version of everything above.</p>
+      <a class="btn btn-primary" href="https://entuned.co" data-cta="note-entuned">See how Entuned works</a>
+      <a class="btn btn-outline" href="../store-music-and-customer-behavior.html" data-cta="note-pillar">Read the full field guide</a>
+    </aside>
   </div>
 </section>
 

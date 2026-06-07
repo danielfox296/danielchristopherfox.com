@@ -287,6 +287,18 @@ p:last-child { margin-bottom: 0; }
 .about-photo figcaption { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-faint); margin-top: 0.9rem; }
 @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } .about-photo { max-width: 320px; order: -1; } }
 
+/* ---------- End-of-article CTA block (per-intent) ---------- */
+.cta-block { background: var(--bg-2); border: 1px solid var(--border-soft); border-radius: 20px;
+  padding: 1.8rem 2rem; margin: 3rem 0 0; max-width: 62ch; }
+.cta-block p { margin: 0 0 1.1rem; color: var(--text-muted); }
+.cta-block strong { color: var(--text); }
+.cta-block .btn { margin-right: 0.7rem; margin-bottom: 0.5rem; }
+
+/* ---------- Proof block (verbatim quotes only) ---------- */
+.proof { border-left: 3px solid var(--pop-butter); padding: 0.4rem 0 0.4rem 1.4rem; margin: 2.2rem 0; max-width: 60ch; }
+.proof blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--text); }
+.proof .attr { display: block; margin-top: 0.7rem; font-size: 0.85rem; color: var(--text-soft); font-family: var(--font-body); font-style: normal; }
+
 /* ---------- Nav CTA pill ---------- */
 .btn-nav { padding: 0.55rem 1.2rem; font-size: 0.85rem; margin-left: 1.6rem; white-space: nowrap; }
 @media (max-width: 920px) { .btn-nav { display: none; } }

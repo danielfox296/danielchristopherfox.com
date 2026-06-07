@@ -74,6 +74,21 @@
       var target = (a.getAttribute('href') || '').split('/').pop();
       if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
     });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
   })();
 </script>
 
@@ -113,6 +128,14 @@
 
       <p>Retail is the same act at a smaller scale. Permission to buy on the floor, permission to move in the square, one mechanism from the shelf to the public street. Anything that can move a room of people the way the right sound can is not a neutral thing, and the only honest way to hold it is to point it at what the people in the room already want and stop there. So watch yourself the next time a room makes something easy. Notice whether it cleared the way to what you wanted, or talked you into what it wanted. You will know which one it was, and you got to decide either way.</p>
     </div>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>If this landed,</strong> the newsletter is where the thinking continues, and the talks are where it gets argued in person.</p>
+      <a class="btn btn-primary" href="https://entuned.substack.com/subscribe" data-cta="essay-subscribe">Get the newsletter</a>
+      <a class="btn btn-outline" href="../speaking.html" data-cta="essay-speaking">About the talks</a>
+    </aside>
   </div>
 </section>
 

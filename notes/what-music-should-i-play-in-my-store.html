@@ -74,6 +74,21 @@
       var target = (a.getAttribute('href') || '').split('/').pop();
       if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
     });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
   })();
 </script>
 
@@ -84,7 +99,7 @@
     <img class="cym-mark" src="../assets/cym/what-music-should-i-play-in-my-store.svg" alt="" aria-hidden="true">
     <span class="eyebrow fade-up">Research note &middot; Updated June 2026</span>
     <h1 class="fade-up page-title">What music should I actually play in my store?</h1>
-    <p class="subhead fade-up measure">Almost every answer names a genre. The research answer is fit: music your customers actually like that matches what the store is. Preference was the only variable that reached statistical significance.</p>
+    <p class="subhead fade-up measure">Not a genre. Across the controlled tests, customer preference was the only variable to reach statistical significance: music your customers actually like, fit to what the store is. Here is how to find yours.</p>
   </div>
 </section>
 
@@ -127,6 +142,14 @@
         allowfullscreen></iframe>
     </div>
     <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>This is the work I do for stores.</strong> At Entuned I fit original music to a store's actual customers and measure it against a matched control — the practical version of everything above.</p>
+      <a class="btn btn-primary" href="https://entuned.co" data-cta="note-entuned">See how Entuned works</a>
+      <a class="btn btn-outline" href="../store-music-and-customer-behavior.html" data-cta="note-pillar">Read the full field guide</a>
+    </aside>
   </div>
 </section>
 

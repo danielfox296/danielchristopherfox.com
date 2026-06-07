@@ -1,18 +1,4 @@
 {
-  "title": "Does background music make customers browse longer? — Daniel Fox",
-  "meta_description": "Browsing isn't random. Music directs where shoppers look and what they reach for, from the famous French-vs-German wine study to how tempo shapes the path customers take through a store.",
   "output": "notes/does-music-make-customers-browse-longer.html",
-  "date_published": "2026-05-31",
-  "date_modified": "2026-06-06",
-  "schema": {
-    "type": "Article",
-    "headline": "Does background music make customers browse longer?",
-    "description": "How music guides browsing behavior: what shoppers notice, what they reach for, and how long they spend in each section.",
-    "about": [
-      "Retail music",
-      "Browsing behavior",
-      "Dwell time",
-      "Consumer behavior"
-    ]
-  }
+  "redirect_to": "https://danielchristopherfox.com/notes/does-slow-music-make-people-shop-longer.html"
 }

@@ -74,6 +74,21 @@
       var target = (a.getAttribute('href') || '').split('/').pop();
       if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
     });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
   })();
 </script>
 
@@ -113,6 +128,14 @@
 
       <p>Anything that can move a room full of people the way the right music can is not neutral, and calling it background does not make it neutral. It makes it unexamined. The work I care about is naming the lever out loud and measuring what it actually does, in real rooms, receipts in hand. So listen to whatever is playing where you are sitting right now. Someone aimed it at you, or no one did, and you walked in either way.</p>
     </div>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>If this landed,</strong> the newsletter is where the thinking continues, and the talks are where it gets argued in person.</p>
+      <a class="btn btn-primary" href="https://entuned.substack.com/subscribe" data-cta="essay-subscribe">Get the newsletter</a>
+      <a class="btn btn-outline" href="../speaking.html" data-cta="essay-speaking">About the talks</a>
+    </aside>
   </div>
 </section>
 
