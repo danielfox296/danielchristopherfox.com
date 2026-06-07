@@ -44,8 +44,8 @@ SCHEMA_AUTHOR = {
     "url": SITE_URL,
     "description": (
         "Music behaviorist. A working music producer and multi-instrumentalist who "
-        "studies how music shapes what people do, proven on the retail floor where the "
-        "effect is measured. Founder of Entuned."
+        "studies how music shapes what people do, grounded in the research. "
+        "Founder of Entuned."
     ),
     "knowsAbout": [
         "How music affects customer behavior",
