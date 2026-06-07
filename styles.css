@@ -86,7 +86,7 @@ p:last-child { margin-bottom: 0; }
 .wordmark:hover { color: var(--text); }
 .nav-links { display: flex; gap: 2.1rem; }
 .nav-links a { font-size: 0.95rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0; }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; line-height: 1; }
 
 /* ---------- Sections ---------- */

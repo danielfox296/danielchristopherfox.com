@@ -13,3 +13,22 @@
     </nav>
   </div>
 </header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+  })();
+</script>

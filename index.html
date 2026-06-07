@@ -37,23 +37,46 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"url":"https://danielchristopherfox.com","description":"Music behaviorist. A working music producer and multi-instrumentalist who studies how music shapes what people do, proven on the retail floor where the effect is measured. Founder of Entuned.","knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music"],"worksFor":{"@type":"Organization","name":"Entuned","url":"https://entuned.co"},"sameAs":["https://entuned.co","https://speakwithdaniel.com","https://www.youtube.com/@entuned","https://www.linkedin.com/in/danielcfox/"]}</script>
 </head>
 <body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+  })();
+</script>
+
+
   <div class="page">
     <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="inner">
-    <nav class="nav">
-      <a class="word" href="#top">Daniel Fox</a>
-      <button class="navtoggle" aria-label="Menu">Menu</button>
-      <div class="navlinks">
-        <a href="#building">Building</a>
-        <a href="#track">Track record</a>
-        <a href="#writing">Writing</a>
-        <a href="about.html">About</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="#contact">Start a conversation</a>
-      </div>
-    </nav>
-
     <div class="hero-grid" id="top">
       <div class="hero-copy">
         <span class="eyebrow">Music Behaviorist · Founder, Entuned</span>
@@ -178,10 +201,14 @@
   </div>
   <div class="footer">
     <div class="l">
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
       <a href="https://entuned.co" rel="me">Entuned</a>
       <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
       <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
-      <a href="contact.html">Contact</a>
     </div>
     <div class="c">© 2026 Daniel Christopher Fox · danielchristopherfox.com</div>
   </div>

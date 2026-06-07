@@ -41,25 +41,5 @@
     }
   }
 
-  /* ---------- nav: mobile toggle + active-on-scroll ---------- */
-  var nav = document.querySelector('.nav');
-  var toggle = document.querySelector('.navtoggle');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
-    nav.querySelectorAll('.navlinks a').forEach(function (a) {
-      a.addEventListener('click', function () { nav.classList.remove('open'); });
-    });
-  }
-  var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
-  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  if ('IntersectionObserver' in window && sections.filter(Boolean).length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var id = '#' + e.target.id;
-        links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === id); });
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    sections.forEach(function (s) { if (s) spy.observe(s); });
-  }
+  /* nav lives in the shared header partial now (see _src/partials/header.html) */
 })();
