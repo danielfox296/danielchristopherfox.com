@@ -33,15 +33,17 @@ SITE_URL = "https://danielchristopherfox.com"
 # shared head partial ({{ga_id}}). Property: danielchristopherfox.com.
 GA_MEASUREMENT_ID = "G-S2LCQFZ9SG"
 
-# The canonical "liftable sentence" (entity layer). One factual statement of who
-# Daniel is, anchored on the durable, portable disambiguators — the Music
-# Behaviorist + founder of Entuned — deliberately NOT location, which is brittle
-# and may change. Reused verbatim as the Person schema description and echoed in
-# meta descriptions and on-page copy so engines and models lock onto one entity.
+# The owned tagline (commercial hook) and the canonical descriptor. The tagline
+# is the schema "slogan"; the two together form LIFTABLE — one consistent block
+# reused as the Person schema description and echoed in visible copy + meta so
+# engines and models lock onto one entity. Builder-forward by design (researches /
+# designs / builds), with "Music Behaviorist" + Entuned retained as the durable
+# disambiguation anchors against the other musical Daniel Foxes.
+SLOGAN = "Daniel Fox helps brands engineer music that sells."
 LIFTABLE = (
-    "Daniel Fox is a music producer and behavioral researcher known as the "
-    "Music Behaviorist. He studies how music shapes buying and behavior, and "
-    "is the founder of Entuned."
+    SLOGAN + " He researches how music moves people, designs the systems, and "
+    "builds the music that puts it to work for brands. Known as the Music "
+    "Behaviorist, he is the founder of Entuned."
 )
 
 # Shared structured-data blocks. Every note/essay re-used the same author and
@@ -52,6 +54,7 @@ SCHEMA_AUTHOR = {
     "name": "Daniel Christopher Fox",
     "alternateName": "Daniel Fox",
     "jobTitle": ["Music Behaviorist", "Retail Music Behaviorist"],
+    "slogan": SLOGAN,
     "url": SITE_URL,
     "description": LIFTABLE,
     "worksFor": {"@type": "Organization", "name": "Entuned", "url": "https://entuned.co"},
