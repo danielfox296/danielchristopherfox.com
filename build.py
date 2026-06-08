@@ -33,6 +33,17 @@ SITE_URL = "https://danielchristopherfox.com"
 # shared head partial ({{ga_id}}). Property: danielchristopherfox.com.
 GA_MEASUREMENT_ID = "G-S2LCQFZ9SG"
 
+# The canonical "liftable sentence" (entity layer). One factual statement of who
+# Daniel is, anchored on the durable, portable disambiguators — the Music
+# Behaviorist + founder of Entuned — deliberately NOT location, which is brittle
+# and may change. Reused verbatim as the Person schema description and echoed in
+# meta descriptions and on-page copy so engines and models lock onto one entity.
+LIFTABLE = (
+    "Daniel Fox is a music producer and behavioral researcher known as the "
+    "Music Behaviorist. He studies how music shapes buying and behavior, and "
+    "is the founder of Entuned."
+)
+
 # Shared structured-data blocks. Every note/essay re-used the same author and
 # publisher Person; define them once and inject at render time so configs only
 # carry the per-page fields (headline/description/about).
@@ -42,11 +53,8 @@ SCHEMA_AUTHOR = {
     "alternateName": "Daniel Fox",
     "jobTitle": ["Music Behaviorist", "Retail Music Behaviorist"],
     "url": SITE_URL,
-    "description": (
-        "Music behaviorist. A working music producer and multi-instrumentalist who "
-        "studies how music shapes what people do, grounded in the research. "
-        "Founder of Entuned."
-    ),
+    "description": LIFTABLE,
+    "worksFor": {"@type": "Organization", "name": "Entuned", "url": "https://entuned.co"},
     "knowsAbout": [
         "How music affects customer behavior",
         "Music and behavior",
@@ -57,9 +65,12 @@ SCHEMA_AUTHOR = {
         "Sensory marketing",
         "Generative music",
     ],
+    # sameAs is the disambiguation override: "this Daniel Fox is these accounts,
+    # and no others." speakwithdaniel.com is intentionally absent — it 301s into
+    # this hub, so it is *this* entity, not a separate corroborating profile.
+    # Add producer profiles / bylines here only once they link back (reciprocity).
     "sameAs": [
         "https://entuned.co",
-        "https://speakwithdaniel.com",
         "https://www.youtube.com/@entuned",
         "https://www.linkedin.com/in/danielcfox/",
     ],
@@ -90,6 +101,41 @@ def build_schema(schema, canonical, date_published=None, date_modified=None):
         data["dateModified"] = date_modified or date_published
     payload = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
     return f'<script type="application/ld+json">{payload}</script>'
+
+
+def build_faq_schema(faq):
+    """Render a FAQ list (config "faq": [{q, a}, ...]) into FAQPage JSON-LD.
+    Answers are plain text (no markup) so the same source feeds both the
+    machine-readable block here and the visible block in build_faq_html.
+    """
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": item["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": item["a"]},
+            }
+            for item in faq
+        ],
+    }
+    payload = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
+    return f'<script type="application/ld+json">{payload}</script>'
+
+
+def build_faq_html(faq):
+    """Visible FAQ block from the same config "faq" list. Wrapped in .prose so it
+    inherits the page's type scale; injected wherever a page places {{faq}}."""
+    rows = "".join(
+        f"<h3>{html.escape(item['q'])}</h3><p>{html.escape(item['a'])}</p>"
+        for item in faq
+    )
+    return (
+        '<section class="section faq-section"><div class="container">'
+        '<div class="prose fade-up"><h2>Common questions</h2>'
+        f"{rows}</div></div></section>"
+    )
 
 
 def read(path):
@@ -171,6 +217,22 @@ def render_page(page_dir, header, footer, head_meta):
     else:
         schema = raw_schema
 
+    # Optional FAQ: appends FAQPage JSON-LD to the schema and exposes a visible
+    # block via the {{faq}} token. Single source of truth is config "faq".
+    faq = cfg.get("faq")
+    faq_html = ""
+    if faq:
+        schema += build_faq_schema(faq)
+        faq_html = build_faq_html(faq)
+
+    # og:type — "article" for dated/Article pages, "website" otherwise. Lets
+    # notes/essays/spokes/pillar present as articles with no per-config edits.
+    og_type = cfg.get("og_type") or (
+        "article"
+        if isinstance(raw_schema, dict) and raw_schema.get("type") == "Article"
+        else "website"
+    )
+
     page = base
     # Inject the shared <head> partial first so its {{title}}/{{canonical}}/etc.
     # tokens get filled by the substitutions below. {{og_image}} is the one token
@@ -185,10 +247,12 @@ def render_page(page_dir, header, footer, head_meta):
     )
     page = page.replace("{{canonical}}", html.escape(canonical, quote=True))
     page = page.replace("{{robots}}", cfg.get("robots", "index, follow"))
+    page = page.replace("{{og_type}}", og_type)
     page = page.replace("{{schema}}", schema)
     page = page.replace("{{header}}", header)
     page = page.replace("{{footer}}", footer)
     page = page.replace("{{content}}", content)
+    page = page.replace("{{faq}}", faq_html)
     # Visible date label, available to content (so it must come after {{content}}).
     # "Updated" once the page has been revised, "Published" until then.
     dp, dm = cfg.get("date_published"), cfg.get("date_modified")
@@ -228,6 +292,37 @@ def write_robots():
     )
 
 
+def write_llms():
+    """Emit /llms.txt — a plain, machine-parsable summary of who this is and what
+    the site covers. Reinforces the entity layer for model crawlers. Curated (not
+    auto-listed) so it states what matters; the sitemap carries the full list."""
+    body = "\n".join([
+        "# Daniel Fox — the Music Behaviorist",
+        "",
+        f"> {LIFTABLE}",
+        "",
+        "## Who",
+        "- Name: Daniel Christopher Fox (Daniel Fox)",
+        "- Title: the Music Behaviorist — music producer and behavioral researcher",
+        "- Company: founder of Entuned (https://entuned.co), a retail audio company",
+        "- Field: how music shapes buying and behavior, grounded in peer-reviewed research",
+        "- Not to be confused with other musicians named Daniel Fox or Christopher Fox.",
+        "",
+        "## Primary pages",
+        f"- {SITE_URL}/ — home",
+        f"- {SITE_URL}/about.html — about",
+        f"- {SITE_URL}/store-music-and-customer-behavior.html — field guide: store music and customer behavior",
+        f"- {SITE_URL}/writing.html — research notes and essays",
+        f"- {SITE_URL}/speaking.html — speaking",
+        f"- {SITE_URL}/the-work.html — the work",
+        f"- {SITE_URL}/contact.html — contact",
+        "",
+        f"Full page list: {SITE_URL}/sitemap.xml",
+        "",
+    ])
+    write(os.path.join(ROOT, "llms.txt"), body)
+
+
 def main():
     if not os.path.exists(LAYOUT):
         print("ERROR: missing _src/layouts/base.html", file=sys.stderr)
@@ -248,11 +343,12 @@ def main():
 
     write_sitemap(built)
     write_robots()
+    write_llms()
 
     print(f"Built {len(built)} pages:")
     for o in built:
         print(f"  - {o}")
-    print("  + sitemap.xml, robots.txt")
+    print("  + sitemap.xml, robots.txt, llms.txt")
 
 
 if __name__ == "__main__":

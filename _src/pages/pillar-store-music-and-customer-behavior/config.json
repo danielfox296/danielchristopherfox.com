@@ -14,5 +14,23 @@
       "Store atmospherics",
       "Music and behavior"
     ]
-  }
+  },
+  "faq": [
+    {
+      "q": "Does store music actually affect retail sales?",
+      "a": "Sometimes, and only under the right conditions. Milliman's 1982 supermarket study found slow music lifted daily sales about 38 percent, but a 2025 study of roughly 140 Dutch stores found the overall tempo effect came back near zero. Music moves sales when it fits the store, the brand, and the customer, not because any single tempo or genre works everywhere."
+    },
+    {
+      "q": "What does store music actually change?",
+      "a": "Pace and dwell. Volume sets how fast people move through a space; tempo sets how long they are willing to stay. Slower, quieter music tends to keep people in the room longer, which shows up as larger baskets and higher average transactions, usually without anyone consciously noticing the music."
+    },
+    {
+      "q": "Can music make a store feel more premium?",
+      "a": "Partly, yes. In controlled studies, classical music moved shoppers toward more expensive wine, and matching music to a product's origin (French versus German music) shifted which bottles sold. Music is one of the few premium signals a screen cannot reproduce, which makes it worth owning in a physical store."
+    },
+    {
+      "q": "What music should a store play?",
+      "a": "Music that customers like, that fits the brand, and whose emotional tone matches the experience, all at once. Across the controlled tests, customer preference was the only variable to reach statistical significance. There is no single right genre; fit is specific to the room, the season, and the time of day."
+    }
+  ]
 }
