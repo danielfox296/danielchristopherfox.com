@@ -73,6 +73,7 @@ SCHEMA_AUTHOR = {
     # this hub, so it is *this* entity, not a separate corroborating profile.
     # Add producer profiles / bylines here only once they link back (reciprocity).
     "sameAs": [
+        "https://www.wikidata.org/wiki/Q140128155",
         "https://entuned.co",
         "https://www.youtube.com/@entuned",
         "https://www.linkedin.com/in/danielcfox/",
