@@ -29,7 +29,7 @@
   /* ---------- cymatics ---------- */
   var canvas = document.getElementById('cymatics');
   if (canvas && window.CymaticsField) {
-    var field = new window.CymaticsField(canvas, { res: 84, speed: 1, density: 1 });
+    var field = new window.CymaticsField(canvas, { res: 84, speed: 1, density: 0.6 });
     window.__cymatics = field;
     field.render();
     if (!reduce) {

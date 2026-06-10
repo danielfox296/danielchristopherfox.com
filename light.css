@@ -103,8 +103,11 @@ section { position: relative; }
 }
 
 /* ---- hero ---- */
-.hero { background: var(--bg); }
+.hero { background: var(--bg); overflow: hidden; }
 .hero .inner { padding-bottom: clamp(72px, 12vw, 168px); }
+/* cymatics as a faint topographic field behind the hero copy (legibility wins) */
+.hero-cymatics { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;
+  --cy-ink: var(--accent); opacity: 0.12; pointer-events: none; }
 .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(40px, 6vw, 96px); align-items: center;
   padding-top: clamp(28px, 6vw, 80px); }
 .hero-copy .eyebrow { color: var(--accent-2); display: block; }
