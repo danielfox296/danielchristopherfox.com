@@ -1,0 +1,34 @@
+{
+  "title": "There Are Exactly 8 Ways Music Makes You Feel Something — Daniel Fox",
+  "meta_description": "How does music actually make you feel something — not which songs are sad or happy, but the mechanism? The psychologist Patrik Juslin spent years on…",
+  "output": "notes/how-music-makes-you-feel-something.html",
+  "date_published": "2026-06-14",
+  "date_modified": "2026-06-14",
+  "schema": {
+    "type": "Article",
+    "headline": "There Are Exactly 8 Ways Music Makes You Feel Something",
+    "description": "How does music actually make you feel something — not which songs are sad or happy, but the mechanism? The psychologist Patrik Juslin spent years on exactly that, and his answer is weirdly specific: there aren't a hundred ways music moves you.",
+    "about": [
+      "How Music Makes You Feel",
+      "Why Music Is Emotional",
+      "Brecvema",
+      "Juslin Music Emotion",
+      "Mechanisms Of Musical Emotion",
+      "Psychology Of Music"
+    ]
+  },
+  "faq": [
+    {
+      "q": "How does music actually make you feel something?",
+      "a": "Through more than one route at once. Patrik Juslin's BRECVEMA framework (2013) lays out eight distinct mechanisms — brain stem reflex, rhythmic entrainment, evaluative conditioning, emotional contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment. The same song can fire several at the same time, which is why a strong musical moment feels like one big wave but is really several engines arriving together."
+    },
+    {
+      "q": "Are there really exactly eight? That seems suspiciously tidy.",
+      "a": "Hold the word \"exactly\" loosely — and the video says so. The strong, well-supported claim is that music induces emotion through multiple distinct, separately testable mechanisms (that grades an A). The precise count of eight is Juslin's organizing scheme, not a settled fact; other researchers split or merge them differently. The shape of the answer is solid; the exact tally is still argued."
+    },
+    {
+      "q": "What do I do with this?",
+      "a": "Next time music hits you hard, try to name which engine fired — the memory, the beat in your chest, or the chord you didn't see coming. And if you design spaces, notice which mechanism your room is reaching for: most reach for the cheapest one by accident (a familiar pop song on memory and conditioning, nothing else). Choosing the engine on purpose is the work I do: danielchristopherfox.com Evidence grade for this one: A. Full citation in the description."
+    }
+  ]
+}
