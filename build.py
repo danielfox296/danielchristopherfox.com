@@ -271,6 +271,12 @@ def render_page(page_dir, header, footer, head_meta):
     page = page.replace("{{nav_prefix}}", nav_prefix)
 
     write(out_path, page)
+    # A page can opt out of the sitemap while still building and staying
+    # reachable by direct URL (e.g. published but intentionally delisted until
+    # an embedded video goes live). Returning None keeps it out of the sitemap.
+    if not cfg.get("in_sitemap", True):
+        print(f"  - {output} (built, excluded from sitemap)")
+        return None
     return output
 
 
