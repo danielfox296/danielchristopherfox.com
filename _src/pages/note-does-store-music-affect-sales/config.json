@@ -1,0 +1,34 @@
+{
+  "title": "Does store music actually affect sales? — Daniel Fox",
+  "meta_description": "Yes, but it's smaller and stranger than the headline. The 1982 study found a 38% swing on tempo alone; a 32-study meta-analysis says the real effect is small-to-moderate. Graded B: real but conditional, working on your pace, not your willpower.",
+  "output": "notes/does-store-music-affect-sales.html",
+  "date_published": "2026-06-14",
+  "date_modified": "2026-06-14",
+  "schema": {
+    "type": "Article",
+    "headline": "Does store music actually affect sales?",
+    "description": "Four decades of register-tape research on whether background music moves sales: real and replicated, but small-to-moderate and conditional on fit. The lever is pace, not persuasion. Graded B.",
+    "about": [
+      "Retail music",
+      "Store music",
+      "Retail sales",
+      "Music tempo",
+      "Consumer behavior",
+      "Music psychology"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So does store music actually affect sales, or not?",
+      "a": "It does, but the effect is smaller than the famous number implies. Milliman's 1982 grocery study found slow-tempo days rang up about 38% more, but that's one store in one stretch of days. When Garlin and Owen (2006) pooled 32 studies and 148 effect sizes, the real, repeatable effect came out small-to-moderate: robust in direction, modest in size. That's why this grades a B: real and replicated, but conditional."
+    },
+    {
+      "q": "If it's real, why can't I just play slow music and make more money?",
+      "a": "Because the effect lives or dies on fit. Turley and Milliman's (2000) review of about 60 studies is blunt: the effect depends on whether the music suits the room, whether people notice it, and who is actually shopping. Wrong music for the crowd and the lever barely moves. There is no single right tempo or genre to reach for."
+    },
+    {
+      "q": "What is actually doing the work, then?",
+      "a": "Pace, not persuasion. Slow music slows your feet, and a longer trip means a fuller basket. It is a metronome for the body, not a mood switch, which is why shoppers in the studies behaved differently and still could not say what was playing."
+    }
+  ]
+}
