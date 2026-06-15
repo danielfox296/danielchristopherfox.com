@@ -1,0 +1,34 @@
+{
+  "title": "How Do You Increase Dwell Time in a Store? — Daniel Fox",
+  "meta_description": "How do you get people to stay longer in a store — not visit more often, but linger on a single trip, because the longer someone is on the floor the more…",
+  "output": "notes/how-to-increase-dwell-time-in-a-store.html",
+  "date_published": "2026-06-15",
+  "date_modified": "2026-06-15",
+  "schema": {
+    "type": "Article",
+    "headline": "How Do You Increase Dwell Time in a Store?",
+    "description": "How do you get people to stay longer in a store — not visit more often, but linger on a single trip, because the longer someone is on the floor the more they tend to see and buy? Retailers call it dwell time, and they spend a fortune chasing it with layout, signage, and staff placement.",
+    "about": [
+      "How To Increase Dwell Time",
+      "Dwell Time Retail",
+      "Store Music Dwell Time",
+      "Music Tempo Shoppers",
+      "Background Music Retail",
+      "Milliman 1982"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So can music actually make people stay longer in a store?",
+      "a": "Yes — but honestly, smaller and more conditionally than the famous number implies. Milliman's 1982 supermarket experiment found slow-tempo days lingered and rang up ~38% more, but that's one store over one stretch of days. When Garlin & Owen (2006) pooled 32 studies and 148 measured effects, the repeatable effect came out small-to-moderate — real and consistent in direction, modest in size. That's why I grade this a B."
+    },
+    {
+      "q": "If it's real, can't I just drop a slow playlist into every store?",
+      "a": "That's the trap on the vendor's slide. The effect lives or dies on fit — Garlin & Owen found it gets stronger the more familiar and liked the music is, and people prefer some music over none. There's no single slow playlist that lifts dwell on its own, and the right pace at 11am on a quiet floor isn't the right pace at 6pm with a line building. Set-and-forget is exactly why it fails."
+    },
+    {
+      "q": "What's actually doing the work, then?",
+      "a": "Pace, not persuasion. Music is a metronome for the body — slow the tempo, feet slow down, the trip gets longer, and that longer trip is dwell. But watch which dwell you're buying: a comfortable browser ends at the register, while someone stuck, lost, or waiting is just trapped — and the dwell report counts both the same. Run any change against a control or you'll fool yourself. Figuring out what your room is doing to the people in it is the work I do: danielchristopherfox.com Evidence grade for this one: B. Full citations in the description."
+    }
+  ]
+}

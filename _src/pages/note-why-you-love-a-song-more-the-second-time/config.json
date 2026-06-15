@@ -1,0 +1,34 @@
+{
+  "title": "Why You Love a Song More the Second Time — Daniel Fox",
+  "meta_description": "Why do you love a brand-new song more the second time you hear it? It did nothing for you on the first pass — and a few plays later you can't turn it off.…",
+  "output": "notes/why-you-love-a-song-more-the-second-time.html",
+  "date_published": "2026-06-15",
+  "date_modified": "2026-06-15",
+  "schema": {
+    "type": "Article",
+    "headline": "Why You Love a Song More the Second Time",
+    "description": "Why do you love a brand-new song more the second time you hear it? It did nothing for you on the first pass — and a few plays later you can't turn it off.",
+    "about": [
+      "Why You Love A Song More The Second Time",
+      "Music Psychology",
+      "Music And The Brain",
+      "Prediction Reward",
+      "David Huron Sweet Anticipation",
+      "Leonard Meyer Expectation"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So why do I love a song more the second time?",
+      "a": "Because the second time, your brain can predict it. Meyer argued back in 1956 that musical feeling comes from expectation — the play between what you expect and what you get. Huron (2006) built the engine under that idea: your brain hands out a reward for predicting what comes next and being right, separate from whether the note itself is pretty. You can only predict a song you've heard before, which is why the first listen was never going to be the good one."
+    },
+    {
+      "q": "Isn't it just that I'm more familiar with it?",
+      "a": "That's part of it, but familiarity only ever climbs — and your love for a song goes up and then back down. The songs you've worn out are the ones you skip. So plain familiarity can't be the engine. Prediction reward can: it explains both the rise (your guesses start landing) and the fall (total overexposure kills the payoff)."
+    },
+    {
+      "q": "How solid is this, really?",
+      "a": "Honestly — it's a coherent mechanism, not a measured effect. Meyer's book predates modern methods, and Huron's ITPRA is a book-length synthesis, not one decisive trial. The downstream neuroscience is real (Salimpoor's team in 2011 found dopamine releasing during the anticipation of a musical peak, before the peak lands), but the headline idea is a well-built explanation rather than a proven law. That's why I won't oversell it. Evidence grade for this one: B. Full citations in the description."
+    }
+  ]
+}

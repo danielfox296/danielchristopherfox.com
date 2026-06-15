@@ -1,0 +1,34 @@
+{
+  "title": "Why Do Some People Get Chills From Music and Others Don't? — Daniel Fox",
+  "meta_description": "Why do some people get chills from music and other people feel nothing? You know the moment — a song hits a certain point and a shiver runs up the back of…",
+  "output": "notes/why-some-people-get-chills-from-music.html",
+  "date_published": "2026-06-15",
+  "date_modified": "2026-06-15",
+  "schema": {
+    "type": "Article",
+    "headline": "Why Do Some People Get Chills From Music and Others Don't?",
+    "description": "Why do some people get chills from music and other people feel nothing? You know the moment — a song hits a certain point and a shiver runs up the back of your neck, your arms prickle, something in your chest goes tight for a second.",
+    "about": [
+      "Why Do Some People Get Chills From Music",
+      "Music Chills",
+      "Frisson",
+      "Musical Chills",
+      "Goosebumps From Music",
+      "Music And The Brain"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So why do some people get chills and others feel nothing?",
+      "a": "Two parts. The *what*: Blood & Zatorre (2001) scanned people listening to the song that reliably gives them chills and watched the reward system fire — ventral striatum, midbrain, orbitofrontal cortex, the same circuitry as food, sex, and drugs — while fear-and-unease regions like the amygdala quieted down. The *why-you*: Nusbaum & Silvia (2011) ran people through the Big Five and found only one trait predicts chills — openness to experience. Not agreeableness, not how much you happen to like music. Openness."
+    },
+    {
+      "q": "Does it mean I love music less if I never get chills?",
+      "a": "No. The chill isn't a measure of how much you enjoy music — it's a measure of how deep you go into it. Think of a song as a building with a lot of rooms. Most people stand in the lobby; high-openness listeners walk the halls and track the moment the music sets something up and pays it off. That payoff is what feeds the reward system. It's mostly attention, not a fixed setting."
+    },
+    {
+      "q": "How solid is this?",
+      "a": "The brain-scan side is grade-A, well-replicated neuroscience. The personality side is real but lighter — a single good study on a modest sample, self-reported, correlational, explaining a slice of the difference between people, not all of it. Evidence grade for this one: B. Full citations in the description."
+    }
+  ]
+}

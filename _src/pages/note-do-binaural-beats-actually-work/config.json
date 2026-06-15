@@ -1,0 +1,34 @@
+{
+  "title": "Do Binaural Beats Actually Work? — Daniel Fox",
+  "meta_description": "Do binaural beats actually work? You put on headphones, play two slightly different tones — one in each ear — and the claim is your brainwaves sync up so…",
+  "output": "notes/do-binaural-beats-actually-work.html",
+  "date_published": "2026-06-15",
+  "date_modified": "2026-06-15",
+  "schema": {
+    "type": "Article",
+    "headline": "Do Binaural Beats Actually Work?",
+    "description": "Do binaural beats actually work? You put on headphones, play two slightly different tones — one in each ear — and the claim is your brainwaves sync up so you focus harder or stress less.",
+    "about": [
+      "Do Binaural Beats Work",
+      "Binaural Beats",
+      "Binaural Beats Focus",
+      "Binaural Beats Anxiety",
+      "Binaural Beats Research",
+      "Binaural Beats Science"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So do binaural beats actually work, or not?",
+      "a": "It splits depending on what you want from them. Garcia-Argibay's 2019 meta-analysis (22 studies, 35 effect sizes) found a real overall effect — Hedges' g around 0.45, medium. But pull it apart and the anxiety effect is the strongest (g≈0.69, slow theta/delta beats before a stressful task), while attention (g≈0.32) and memory (g≈0.22) are small. That's why I grade this one as a split."
+    },
+    {
+      "q": "Will they make me focus and lock in?",
+      "a": "Honestly, the research doesn't have your back there yet. That's the claim most people buy these tracks for, and it's the part wobbling hardest. Robison and his team ran a careful, well-powered test built specifically to check the attention claim and found rather strong evidence against it — no reliable boost to sustained attention."
+    },
+    {
+      "q": "If the calm is real, what's actually doing it?",
+      "a": "Probably not brainwave \"entrainment.\" When researchers look for that lock in the EEG, the evidence is thin — Chaieb's 2015 review says the syncing mechanism is assumed more than demonstrated. It likely works like a steady drone, the way a fan or rain sound takes the edge off arousal, which is exactly why the calming effect is the robust one. If you think about how sound shapes how people feel in a space, that's the work I do: danielchristopherfox.com Evidence grade for this one: B−/D split. Full citations in the description."
+    }
+  ]
+}

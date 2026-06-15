@@ -1,0 +1,34 @@
+{
+  "title": "The Mozart Effect Is a Myth — Here's What Happened — Daniel Fox",
+  "meta_description": "Does listening to Mozart make you smarter? You've probably heard that it does — play classical music to a baby and you build a sharper brain, put the…",
+  "output": "notes/mozart-effect-myth.html",
+  "date_published": "2026-06-15",
+  "date_modified": "2026-06-15",
+  "schema": {
+    "type": "Article",
+    "headline": "The Mozart Effect Is a Myth — Here's What Happened",
+    "description": "Does listening to Mozart make you smarter? You've probably heard that it does — play classical music to a baby and you build a sharper brain, put the right sonata on before an exam and you score higher.",
+    "about": [
+      "Mozart Effect",
+      "Does Mozart Make You Smarter",
+      "Mozart Effect Myth",
+      "Music Psychology",
+      "Classical Music Brain",
+      "Music And The Brain"
+    ]
+  },
+  "faq": [
+    {
+      "q": "So does Mozart actually make you smarter, or not?",
+      "a": "Not in the way the headline says. The original 1993 study (Rauscher, Shaw & Ky, Nature) found a small bump on one spatial-reasoning task in thirty-six students that was gone in about fifteen minutes — Rauscher herself later said it never showed Mozart makes you smarter. When Pietschnig and colleagues (2010) pooled nearly forty studies and more than three thousand people, the Mozart-specific advantage basically vanished once you compared it against any other stimulating thing (d dropped from ~0.37 vs. silence to ~0.15). That's why the popular claim grades an F."
+    },
+    {
+      "q": "If the lab effect was real, why does the \"myth\" label still apply?",
+      "a": "Because two different claims got tangled. The short-term arousal-and-mood bump is real — lively music can lift your alertness for a stretch, and that can carry into a task. What's false is the specific, durable, makes-you-smarter-for-life version that got sold to a generation of parents. The narrow lab blip was real. The cultural claim built on top of it was not."
+    },
+    {
+      "q": "What was actually doing the work, then?",
+      "a": "Arousal and mood — not Mozart. A lively piece of music warms up the brain the same way coffee or a good story does. The moment you put Mozart next to anything else that perks you up, the two come out even. The active ingredient was being a bit more alert than the people sitting in silence. If you want to think clearly about what music is really doing to people in a room, that's the work I do: danielchristopherfox.com Evidence grade for this one: F. Full citations in the description."
+    }
+  ]
+}
