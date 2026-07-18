@@ -153,10 +153,11 @@
 </section>
 
 <section class="section faq-section"><div class="container"><div class="prose fade-up"><h2>Common questions</h2><h3>So why do I love a song more the second time?</h3><p>Because the second time, your brain can predict it. Meyer argued back in 1956 that musical feeling comes from expectation — the play between what you expect and what you get. Huron (2006) built the engine under that idea: your brain hands out a reward for predicting what comes next and being right, separate from whether the note itself is pretty. You can only predict a song you&#x27;ve heard before, which is why the first listen was never going to be the good one.</p><h3>Isn&#x27;t it just that I&#x27;m more familiar with it?</h3><p>That&#x27;s part of it, but familiarity only ever climbs — and your love for a song goes up and then back down. The songs you&#x27;ve worn out are the ones you skip. So plain familiarity can&#x27;t be the engine. Prediction reward can: it explains both the rise (your guesses start landing) and the fall (total overexposure kills the payoff).</p><h3>How solid is this, really?</h3><p>Honestly — it&#x27;s a coherent mechanism, not a measured effect. Meyer&#x27;s book predates modern methods, and Huron&#x27;s ITPRA is a book-length synthesis, not one decisive trial. The downstream neuroscience is real (Salimpoor&#x27;s team in 2011 found dopamine releasing during the anticipation of a musical peak, before the peak lands), but the headline idea is a well-built explanation rather than a proven law. That&#x27;s why I won&#x27;t oversell it. Evidence grade for this one: B. Full citations in the description.</p></div></div></section>
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/mozart-effect-myth.html"><span class="kicker kicker-note">Research note</span><h3>The Mozart Effect Is a Myth — Here&#x27;s What Happened</h3><p>Does listening to Mozart make you smarter? You&#x27;ve probably heard that it does — play classical music to a baby and you build a sharper brain, put the right sonata on before an exam and you score higher.</p></a><a class="card" href="../notes/does-store-music-affect-sales.html"><span class="kicker kicker-note">Research note</span><h3>Does store music actually affect sales?</h3><p>Four decades of register-tape research on whether background music moves sales: real and replicated, but small-to-moderate and conditional on fit. The lever is pace, not persuasion. Graded B.</p></a><a class="card" href="../notes/why-some-people-get-chills-from-music.html"><span class="kicker kicker-note">Research note</span><h3>Why Do Some People Get Chills From Music and Others Don&#x27;t?</h3><p>Why do some people get chills from music and other people feel nothing? You know the moment — a song hits a certain point and a shiver runs up the back of your neck, your arms prickle, something in your chest goes tight for a second.</p></a></div></div></section>
 
 <section class="section">
   <div class="container">
-    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 </section>
 
@@ -212,7 +213,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

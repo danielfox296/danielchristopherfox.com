@@ -153,10 +153,11 @@
 </section>
 
 <section class="section faq-section"><div class="container"><div class="prose fade-up"><h2>Common questions</h2><h3>So do binaural beats actually work, or not?</h3><p>It splits depending on what you want from them. Garcia-Argibay&#x27;s 2019 meta-analysis (22 studies, 35 effect sizes) found a real overall effect — Hedges&#x27; g around 0.45, medium. But pull it apart and the anxiety effect is the strongest (g≈0.69, slow theta/delta beats before a stressful task), while attention (g≈0.32) and memory (g≈0.22) are small. That&#x27;s why I grade this one as a split.</p><h3>Will they make me focus and lock in?</h3><p>Honestly, the research doesn&#x27;t have your back there yet. That&#x27;s the claim most people buy these tracks for, and it&#x27;s the part wobbling hardest. Robison and his team ran a careful, well-powered test built specifically to check the attention claim and found rather strong evidence against it — no reliable boost to sustained attention.</p><h3>If the calm is real, what&#x27;s actually doing it?</h3><p>Probably not brainwave &quot;entrainment.&quot; When researchers look for that lock in the EEG, the evidence is thin — Chaieb&#x27;s 2015 review says the syncing mechanism is assumed more than demonstrated. It likely works like a steady drone, the way a fan or rain sound takes the edge off arousal, which is exactly why the calming effect is the robust one. If you think about how sound shapes how people feel in a space, that&#x27;s the work I do: danielchristopherfox.com Evidence grade for this one: B−/D split. Full citations in the description.</p></div></div></section>
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/does-music-affect-retail-sales.html"><img class="thumb" src="../assets/cym/does-music-affect-retail-sales.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Does music actually affect retail sales, or is it a myth?</h3><p>The honest answer on whether store music moves sales: real but conditional, from a 38% supermarket effect to a 140-store null result.</p></a><a class="card" href="../notes/does-music-influence-shoppers-subconsciously.html"><img class="thumb" src="../assets/cym/does-music-influence-shoppers-subconsciously.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Does store music influence shoppers without them noticing?</h3><p>How music shapes shopper behavior below conscious awareness, through priming, emotion, and time perception.</p></a><a class="card" href="../notes/does-slow-music-make-people-shop-longer.html"><img class="thumb" src="../assets/cym/does-slow-music-make-people-shop-longer.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Does slow music make people shop longer?</h3><p>What the famous 1982 slow-music study actually showed about pace and dwell time, and where it does and doesn&#x27;t hold.</p></a></div></div></section>
 
 <section class="section">
   <div class="container">
-    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 </section>
 
@@ -212,7 +213,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

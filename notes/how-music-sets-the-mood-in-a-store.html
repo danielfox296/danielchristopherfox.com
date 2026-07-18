@@ -141,7 +141,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
-    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 
   <div class="container">
@@ -163,6 +163,7 @@
   </ol>
 </section>
 
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/is-your-music-driving-customers-away.html"><img class="thumb" src="../assets/cym/is-your-music-driving-customers-away.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Is your store&#x27;s music driving customers out the door?</h3><p>How mismatched and overly loud music shortens dwell time and pushes customers to leave faster.</p></a><a class="card" href="../notes/music-that-triggers-impulse-buying.html"><img class="thumb" src="../assets/cym/music-that-triggers-impulse-buying.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What kind of music triggers impulse buying?</h3><p>How arousing, pleasant music lowers self-control and increases spontaneous purchases, with the supporting research.</p></a><a class="card" href="../notes/what-is-dwell-time-in-retail.html"><img class="thumb" src="../assets/cym/what-is-dwell-time-in-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What is dwell time, and why does it predict sales?</h3><p>Dwell time predicts retail spending. How music controls it, and when longer dwell signals frustration instead of interest.</p></a></div></div></section>
   </main>
 
   <section class="section-tight">
@@ -213,7 +214,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

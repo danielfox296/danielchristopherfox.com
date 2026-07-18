@@ -1,0 +1,17 @@
+{
+  "title": "Research notes: how music moves behavior — Daniel Fox",
+  "meta_description": "Every research note in one place. How store music moves sales, dwell time, and spending, how premium a store feels, and the psychology of chills, tempo, and taste. Each note graded against the peer-reviewed evidence.",
+  "output": "notes/index.html",
+  "schema": {
+    "type": "CollectionPage",
+    "headline": "Research notes: how music moves behavior",
+    "description": "The full library of research notes on how music shapes what people do, on the retail floor and off it. Answer-first, graded against the peer-reviewed evidence, with sources on every note.",
+    "about": [
+      "Retail music",
+      "Music psychology",
+      "Consumer behavior",
+      "Store atmospherics",
+      "Music and behavior"
+    ]
+  }
+}

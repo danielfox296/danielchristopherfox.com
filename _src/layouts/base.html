@@ -37,7 +37,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

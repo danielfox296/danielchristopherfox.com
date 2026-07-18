@@ -141,7 +141,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
-    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 
   <div class="container">
@@ -163,6 +163,7 @@
   </ol>
 </section>
 
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/what-is-dwell-time-in-retail.html"><img class="thumb" src="../assets/cym/what-is-dwell-time-in-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What is dwell time, and why does it predict sales?</h3><p>Dwell time predicts retail spending. How music controls it, and when longer dwell signals frustration instead of interest.</p></a><a class="card" href="../notes/best-music-tempo-for-retail.html"><img class="thumb" src="../assets/cym/best-music-tempo-for-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What&#x27;s the right music tempo for a retail store?</h3><p>What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.</p></a><a class="card" href="../notes/how-music-affects-customer-behavior.html"><img class="thumb" src="../assets/cym/how-music-affects-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>How does music affect customer behavior in retail?</h3><p>What controlled studies show about how store music changes dwell time, product choice, and spend.</p></a></div></div></section>
   </main>
 
   <section class="section-tight">
@@ -213,7 +214,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

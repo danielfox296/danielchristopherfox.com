@@ -152,10 +152,11 @@
 </section>
 
 <section class="section faq-section"><div class="container"><div class="prose fade-up"><h2>Common questions</h2><h3>So can music actually make people stay longer in a store?</h3><p>Yes — but honestly, smaller and more conditionally than the famous number implies. Milliman&#x27;s 1982 supermarket experiment found slow-tempo days lingered and rang up ~38% more, but that&#x27;s one store over one stretch of days. When Garlin &amp; Owen (2006) pooled 32 studies and 148 measured effects, the repeatable effect came out small-to-moderate — real and consistent in direction, modest in size. That&#x27;s why I grade this a B.</p><h3>If it&#x27;s real, can&#x27;t I just drop a slow playlist into every store?</h3><p>That&#x27;s the trap on the vendor&#x27;s slide. The effect lives or dies on fit — Garlin &amp; Owen found it gets stronger the more familiar and liked the music is, and people prefer some music over none. There&#x27;s no single slow playlist that lifts dwell on its own, and the right pace at 11am on a quiet floor isn&#x27;t the right pace at 6pm with a line building. Set-and-forget is exactly why it fails.</p><h3>What&#x27;s actually doing the work, then?</h3><p>Pace, not persuasion. Music is a metronome for the body — slow the tempo, feet slow down, the trip gets longer, and that longer trip is dwell. But watch which dwell you&#x27;re buying: a comfortable browser ends at the register, while someone stuck, lost, or waiting is just trapped — and the dwell report counts both the same. Run any change against a control or you&#x27;ll fool yourself. Figuring out what your room is doing to the people in it is the work I do: danielchristopherfox.com Evidence grade for this one: B. Full citations in the description.</p></div></div></section>
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/how-to-make-a-store-feel-premium.html"><span class="kicker kicker-note">Research note</span><h3>How Do You Make a Store Feel Premium?</h3><p>How do you make a store feel premium? Every answer comes back to something you can see — lighting, fixtures, materials, staff.</p></a><a class="card" href="../notes/is-your-music-driving-customers-away.html"><img class="thumb" src="../assets/cym/is-your-music-driving-customers-away.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Is your store&#x27;s music driving customers out the door?</h3><p>How mismatched and overly loud music shortens dwell time and pushes customers to leave faster.</p></a><a class="card" href="../notes/mozart-effect-myth.html"><span class="kicker kicker-note">Research note</span><h3>The Mozart Effect Is a Myth — Here&#x27;s What Happened</h3><p>Does listening to Mozart make you smarter? You&#x27;ve probably heard that it does — play classical music to a baby and you build a sharper brain, put the right sonata on before an exam and you score higher.</p></a></div></div></section>
 
 <section class="section">
   <div class="container">
-    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 </section>
 
@@ -211,7 +212,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

@@ -142,6 +142,123 @@ def build_faq_html(faq):
     )
 
 
+def collect_notes():
+    """Scan every note config once (output notes/*.html, redirect stubs and the
+    index hub excluded) so the related-notes blocks and the /notes/ hub grid are
+    generated from the same single source: each note's own config."""
+    notes = []
+    for name in sorted(os.listdir(PAGES)):
+        cfg_path = os.path.join(PAGES, name, "config.json")
+        if not os.path.exists(cfg_path):
+            continue
+        cfg = json.loads(read(cfg_path))
+        out = cfg.get("output", "")
+        if (
+            not out.startswith("notes/")
+            or out == "notes/index.html"
+            or "redirect_to" in cfg
+        ):
+            continue
+        schema = cfg.get("schema") or {}
+        notes.append({
+            "slug": os.path.basename(out)[: -len(".html")],
+            "output": out,
+            "headline": schema.get("headline") or cfg.get("title", ""),
+            "description": schema.get("description", ""),
+            "about": {t.strip().lower() for t in schema.get("about", [])},
+            "date": cfg.get("date_published", ""),
+            "related": cfg.get("related"),
+        })
+    return notes
+
+
+# The cornerstone pillar every note points up to. Keeps the pillar → spoke →
+# note cluster crawlable from the bottom as well as the top.
+CORNERSTONE = {
+    "slug": "store-music-and-customer-behavior",
+    "href": "{{nav_prefix}}store-music-and-customer-behavior.html",
+    "kicker": ("Field guide", "kicker-guide"),
+    "headline": "Store music and customer behavior: what the research shows",
+    "description": (
+        "Forty years of studies on how store music moves dwell, basket size, "
+        "spend, and how premium a store feels."
+    ),
+}
+
+
+def note_card(href, slug, kicker, kicker_class, headline, description):
+    """One writing-index-style card. Thumb included only when the cymatics SVG
+    for the slug actually exists."""
+    thumb = ""
+    if os.path.exists(os.path.join(ROOT, "assets", "cym", f"{slug}.svg")):
+        thumb = (
+            f'<img class="thumb" src="{{{{nav_prefix}}}}assets/cym/{slug}.svg" '
+            'alt="" aria-hidden="true">'
+        )
+    return (
+        f'<a class="card" href="{href}">{thumb}'
+        f'<span class="kicker {kicker_class}">{html.escape(kicker)}</span>'
+        f"<h3>{html.escape(headline)}</h3>"
+        f"<p>{html.escape(description)}</p></a>"
+    )
+
+
+def build_related_html(current, notes):
+    """The "Keep reading" block appended to every note: the cornerstone pillar
+    plus the three most-related notes. Related = config "related" slugs when
+    present, else the notes sharing the most schema "about" tags (deterministic:
+    overlap desc, slug asc)."""
+    others = [n for n in notes if n["slug"] != current["slug"]]
+    if current.get("related"):
+        by_slug = {n["slug"]: n for n in others}
+        picks = [by_slug[s] for s in current["related"] if s in by_slug][:3]
+    else:
+        # Jaccard rather than raw overlap so tag-heavy notes don't win every
+        # comparison; ties rotate alphabetically starting after the current
+        # slug so the same note doesn't absorb every tie-break sitewide.
+        def score(n):
+            union = len(current["about"] | n["about"]) or 1
+            return len(current["about"] & n["about"]) / union
+        picks = sorted(
+            others,
+            key=lambda n: (-score(n), n["slug"] <= current["slug"], n["slug"]),
+        )[:3]
+    cards = [note_card(
+        CORNERSTONE["href"], CORNERSTONE["slug"],
+        CORNERSTONE["kicker"][0], CORNERSTONE["kicker"][1],
+        CORNERSTONE["headline"], CORNERSTONE["description"],
+    )]
+    for n in picks:
+        cards.append(note_card(
+            f"{{{{nav_prefix}}}}{n['output']}",
+            n["slug"], "Research note", "kicker-note",
+            n["headline"], n["description"],
+        ))
+    return (
+        '<section class="section"><div class="container">'
+        '<span class="eyebrow fade-up">Keep reading</span>'
+        '<div class="grid grid-2 fade-up" style="margin-top:1.2rem;">'
+        + "".join(cards)
+        + "</div></div></section>"
+    )
+
+
+def build_notes_grid(notes):
+    """Full card grid for the /notes/ index hub, newest first. No fade-up on
+    the grid: the observer needs 12% of an element visible, and a 20+-card
+    grid is too tall to ever reach that, so it would stay invisible."""
+    ordered = sorted(notes, key=lambda n: (n["date"], n["slug"]), reverse=True)
+    cards = [
+        note_card(
+            f"{{{{nav_prefix}}}}{n['output']}",
+            n["slug"], "Research note", "kicker-note",
+            n["headline"], n["description"],
+        )
+        for n in ordered
+    ]
+    return '<div class="grid grid-2">' + "".join(cards) + "</div>"
+
+
 def read(path):
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
@@ -170,7 +287,7 @@ def build_sections(page_dir):
     return "\n".join(parts)
 
 
-def render_page(page_dir, header, footer, head_meta):
+def render_page(page_dir, header, footer, head_meta, notes):
     cfg_path = os.path.join(page_dir, "config.json")
     if not os.path.exists(cfg_path):
         return None
@@ -209,6 +326,15 @@ def render_page(page_dir, header, footer, head_meta):
     canonical = f"{SITE_URL}/{output}".replace("/index.html", "/")
 
     content = build_sections(page_dir)
+
+    # Every note gets a "Keep reading" block (cornerstone + 3 related notes),
+    # injected after the FAQ unless the page places {{related}} itself.
+    is_note = output.startswith("notes/") and output != "notes/index.html"
+    if is_note and "{{related}}" not in content:
+        if "{{faq}}" in content:
+            content = content.replace("{{faq}}", "{{faq}}\n{{related}}", 1)
+        else:
+            content += "\n{{related}}"
 
     # Polymorphic schema: a dict is structured data we render here (notes/essays);
     # a str is a verbatim <script> block (the home Person schema); absent -> none.
@@ -257,6 +383,14 @@ def render_page(page_dir, header, footer, head_meta):
     page = page.replace("{{footer}}", footer)
     page = page.replace("{{content}}", content)
     page = page.replace("{{faq}}", faq_html)
+    related_html = ""
+    if is_note:
+        current = next((n for n in notes if n["output"] == output), None)
+        if current:
+            related_html = build_related_html(current, notes)
+    page = page.replace("{{related}}", related_html)
+    if "{{notes_grid}}" in page:
+        page = page.replace("{{notes_grid}}", build_notes_grid(notes))
     # Visible date label, available to content (so it must come after {{content}}).
     # "Updated" once the page has been revised, "Published" until then.
     dp, dm = cfg.get("date_published"), cfg.get("date_modified")
@@ -277,15 +411,18 @@ def render_page(page_dir, header, footer, head_meta):
     if not cfg.get("in_sitemap", True):
         print(f"  - {output} (built, excluded from sitemap)")
         return None
-    return output
+    return (output, cfg.get("date_modified") or cfg.get("date_published"))
 
 
-def write_sitemap(outputs):
-    """Emit sitemap.xml listing every built page (apex URLs)."""
+def write_sitemap(entries):
+    """Emit sitemap.xml listing every built page (apex URLs). Entries are
+    (output, lastmod-or-None); lastmod comes from the page's date_modified /
+    date_published so engines can see which pages changed."""
     locs = []
-    for o in outputs:
+    for o, lastmod in entries:
         loc = f"{SITE_URL}/{o}".replace("/index.html", "/")
-        locs.append(f"  <url><loc>{loc}</loc></url>")
+        tail = f"<lastmod>{lastmod}</lastmod>" if lastmod else ""
+        locs.append(f"  <url><loc>{loc}</loc>{tail}</url>")
     xml = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -323,6 +460,7 @@ def write_llms():
         f"- {SITE_URL}/about.html — about",
         f"- {SITE_URL}/store-music-and-customer-behavior.html — field guide: store music and customer behavior",
         f"- {SITE_URL}/writing.html — research notes and essays",
+        f"- {SITE_URL}/notes/ — the full research-note library",
         f"- {SITE_URL}/speaking.html — speaking",
         f"- {SITE_URL}/the-work.html — the work",
         f"- {SITE_URL}/contact.html — contact",
@@ -342,12 +480,14 @@ def main():
     footer = load_partial("footer.html")
     head_meta = load_partial("head.html")
 
+    notes = collect_notes()
+
     built = []
     for name in sorted(os.listdir(PAGES)):
         page_dir = os.path.join(PAGES, name)
         if not os.path.isdir(page_dir):
             continue
-        out = render_page(page_dir, header, footer, head_meta)
+        out = render_page(page_dir, header, footer, head_meta, notes)
         if out:
             built.append(out)
 
@@ -356,7 +496,7 @@ def main():
     write_llms()
 
     print(f"Built {len(built)} pages:")
-    for o in built:
+    for o, _ in built:
         print(f"  - {o}")
     print("  + sitemap.xml, robots.txt, llms.txt")
 

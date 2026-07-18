@@ -152,10 +152,11 @@
 </section>
 
 <section class="section faq-section"><div class="container"><div class="prose fade-up"><h2>Common questions</h2><h3>So does Mozart actually make you smarter, or not?</h3><p>Not in the way the headline says. The original 1993 study (Rauscher, Shaw &amp; Ky, Nature) found a small bump on one spatial-reasoning task in thirty-six students that was gone in about fifteen minutes — Rauscher herself later said it never showed Mozart makes you smarter. When Pietschnig and colleagues (2010) pooled nearly forty studies and more than three thousand people, the Mozart-specific advantage basically vanished once you compared it against any other stimulating thing (d dropped from ~0.37 vs. silence to ~0.15). That&#x27;s why the popular claim grades an F.</p><h3>If the lab effect was real, why does the &quot;myth&quot; label still apply?</h3><p>Because two different claims got tangled. The short-term arousal-and-mood bump is real — lively music can lift your alertness for a stretch, and that can carry into a task. What&#x27;s false is the specific, durable, makes-you-smarter-for-life version that got sold to a generation of parents. The narrow lab blip was real. The cultural claim built on top of it was not.</p><h3>What was actually doing the work, then?</h3><p>Arousal and mood — not Mozart. A lively piece of music warms up the brain the same way coffee or a good story does. The moment you put Mozart next to anything else that perks you up, the two come out even. The active ingredient was being a bit more alert than the people sitting in silence. If you want to think clearly about what music is really doing to people in a room, that&#x27;s the work I do: danielchristopherfox.com Evidence grade for this one: F. Full citations in the description.</p></div></div></section>
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/why-you-love-a-song-more-the-second-time.html"><span class="kicker kicker-note">Research note</span><h3>Why You Love a Song More the Second Time</h3><p>Why do you love a brand-new song more the second time you hear it? It did nothing for you on the first pass — and a few plays later you can&#x27;t turn it off.</p></a><a class="card" href="../notes/why-some-people-get-chills-from-music.html"><span class="kicker kicker-note">Research note</span><h3>Why Do Some People Get Chills From Music and Others Don&#x27;t?</h3><p>Why do some people get chills from music and other people feel nothing? You know the moment — a song hits a certain point and a shiver runs up the back of your neck, your arms prickle, something in your chest goes tight for a second.</p></a><a class="card" href="../notes/does-store-music-affect-sales.html"><span class="kicker kicker-note">Research note</span><h3>Does store music actually affect sales?</h3><p>Four decades of register-tape research on whether background music moves sales: real and replicated, but small-to-moderate and conditional on fit. The lever is pace, not persuasion. Graded B.</p></a></div></div></section>
 
 <section class="section">
   <div class="container">
-    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 </section>
 
@@ -211,7 +212,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)

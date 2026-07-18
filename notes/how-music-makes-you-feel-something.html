@@ -151,10 +151,11 @@
 </section>
 
 <section class="section faq-section"><div class="container"><div class="prose fade-up"><h2>Common questions</h2><h3>How does music actually make you feel something?</h3><p>Through more than one route at once. Patrik Juslin&#x27;s BRECVEMA framework (2013) lays out eight distinct mechanisms — brain stem reflex, rhythmic entrainment, evaluative conditioning, emotional contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment. The same song can fire several at the same time, which is why a strong musical moment feels like one big wave but is really several engines arriving together.</p><h3>Are there really exactly eight? That seems suspiciously tidy.</h3><p>Hold the word &quot;exactly&quot; loosely — and the video says so. The strong, well-supported claim is that music induces emotion through multiple distinct, separately testable mechanisms (that grades an A). The precise count of eight is Juslin&#x27;s organizing scheme, not a settled fact; other researchers split or merge them differently. The shape of the answer is solid; the exact tally is still argued.</p><h3>What do I do with this?</h3><p>Next time music hits you hard, try to name which engine fired — the memory, the beat in your chest, or the chord you didn&#x27;t see coming. And if you design spaces, notice which mechanism your room is reaching for: most reach for the cheapest one by accident (a familiar pop song on memory and conditioning, nothing else). Choosing the engine on purpose is the work I do: danielchristopherfox.com Evidence grade for this one: A. Full citation in the description.</p></div></div></section>
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/how-music-sets-the-mood-in-a-store.html"><img class="thumb" src="../assets/cym/how-music-sets-the-mood-in-a-store.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>How does music set the mood in a store?</h3><p>The pleasure-arousal mechanism behind store atmosphere, and how emotional fit between music and space affects spending.</p></a><a class="card" href="../notes/how-to-increase-dwell-time-in-a-store.html"><span class="kicker kicker-note">Research note</span><h3>How Do You Increase Dwell Time in a Store?</h3><p>How do you get people to stay longer in a store — not visit more often, but linger on a single trip, because the longer someone is on the floor the more they tend to see and buy? Retailers call it dwell time, and they spend a fortune chasing it with layout, signage, and staff placement.</p></a><a class="card" href="../notes/how-to-make-a-store-feel-premium.html"><span class="kicker kicker-note">Research note</span><h3>How Do You Make a Store Feel Premium?</h3><p>How do you make a store feel premium? Every answer comes back to something you can see — lighting, fixtures, materials, staff.</p></a></div></div></section>
 
 <section class="section">
   <div class="container">
-    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../writing.html">&larr; All research notes</a></p>
+    <p class="muted fade-up" style="margin-top:0.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
   </div>
 </section>
 
@@ -210,7 +211,10 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
       els.forEach(function (e) { io.observe(e); });
     })();
     // (Mobile nav toggle + active-page state live in the shared header partial.)
