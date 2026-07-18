@@ -1,18 +1,34 @@
 {
   "title": "Does store music influence shoppers without them noticing? — Daniel Fox",
-  "meta_description": "In the famous wine study, 86 percent of shoppers swore the music didn't affect them, and the sales data said otherwise. How music shapes behavior below conscious awareness — priming, emotion, and time perception.",
+  "meta_description": "In the famous wine study, 86 percent of shoppers swore the music didn't affect them while it drove a 5-to-1 sales swing. I coded ten landmark field experiments: exactly two ever asked the shoppers, and both found the same gap.",
   "output": "notes/does-music-influence-shoppers-subconsciously.html",
   "date_published": "2026-05-31",
-  "date_modified": "2026-05-31",
+  "date_modified": "2026-07-18",
   "schema": {
     "type": "Article",
     "headline": "Does store music influence shoppers without them noticing?",
-    "description": "How music shapes shopper behavior below conscious awareness, through priming, emotion, and time perception.",
+    "description": "How music shapes shopper behavior below conscious awareness, through priming, emotion, and time perception. Includes an original coding of the field's landmark experiments: across ten field studies from 1966 to 2019, Fox found exactly two that asked shoppers about the music afterward, and both found behavior moving while awareness stayed flat.",
     "about": [
       "Retail music",
       "Musical priming",
       "Consumer psychology",
-      "Subconscious influence"
+      "Subconscious influence",
+      "Awareness gap",
+      "Field experiments"
     ]
-  }
+  },
+  "faq": [
+    {
+      "q": "Do shoppers know when store music is influencing them?",
+      "a": "Mostly no, in the two field experiments that measured it. In the 1999 wine study, only 1 of 44 questioned buyers spontaneously named the music as a reason for their choice, and only 6 of 44 said yes when asked directly, while the music drove a five-to-one swing in what sold. In Milliman's 1982 supermarket study, exit interviews found shoppers recalled music at statistically identical rates whether slow, fast, or no music was playing."
+    },
+    {
+      "q": "How many store-music studies have actually asked shoppers about the music?",
+      "a": "Daniel Fox coded ten landmark field experiments from 1966 to 2019, in supermarkets, restaurants, bars, and a wine cellar, and found exactly two that asked shoppers about the music afterward: Milliman 1982 and North 1999. Both found the same gap between measured behavior and what shoppers could report."
+    },
+    {
+      "q": "Does this mean store music is subliminal manipulation?",
+      "a": "The studies don't support that word. Milliman wrote that shoppers were \"something less than totally conscious\" of the music rather than completely unaware, and the wine-study authors flag that some customers may simply not have wanted to admit the influence. The defensible claim is the gap: behavior moved measurably while self-reported awareness stayed near zero."
+    }
+  ]
 }
