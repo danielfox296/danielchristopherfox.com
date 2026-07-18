@@ -1,0 +1,40 @@
+{
+  "title": "Do I need a license to play music in my business? — Daniel Fox",
+  "meta_description": "Probably. About $324/yr to ASCAP and $312/yr to BMI at a small store's 2026 rates, or $19 to $54 a month bundled. The one real exemption: broadcast radio in small premises.",
+  "output": "notes/do-i-need-a-license-to-play-music-in-my-business.html",
+  "date_published": "2026-07-18",
+  "date_modified": "2026-07-18",
+  "related": [
+    "can-i-play-spotify-in-my-store",
+    "what-music-should-i-play-in-my-store",
+    "how-music-affects-customer-behavior"
+  ],
+  "schema": {
+    "type": "Article",
+    "headline": "Do I need a license to play music in my business?",
+    "description": "Playing recorded music to customers is a public performance under US copyright law, licensed by four organizations. What it actually costs at published 2026 rates, how the bundled business services work, and the one genuine exemption for broadcast radio in smaller premises, sourced from the statutes and license agreements.",
+    "about": [
+      "Music licensing",
+      "Retail music",
+      "Public performance",
+      "ASCAP",
+      "BMI",
+      "Store music",
+      "Small business"
+    ]
+  },
+  "faq": [
+    {
+      "q": "How much does it cost to legally play music in a small store?",
+      "a": "At 2026 rates, ASCAP's retail license starts at $324 a year and BMI's at $311.71 for a store under 2,000 square feet; SESAC and GMR quote individually. Most small stores instead use a business streaming service that bundles all the licensing, from $18.95 a month (Pandora CloudCover) to $29 or more (Soundtrack)."
+    },
+    {
+      "q": "Is my store exempt if it's under 2,000 square feet?",
+      "a": "Only for broadcasts. The federal exemption lets premises under 2,000 square feet (3,750 for food and drink) play FCC-licensed radio or TV to customers without a license, subject to speaker limits and no cover charge. Playlists, CDs, and streaming services are outside the exemption at any size."
+    },
+    {
+      "q": "Can I get sued for playing unlicensed music in my business?",
+      "a": "Yes. Copyright holders can seek statutory damages of $750 to $30,000 per song, rising to $150,000 per song for willful infringement. PROs routinely pursue businesses, and the per-song math is what makes the exposure serious."
+    }
+  ]
+}

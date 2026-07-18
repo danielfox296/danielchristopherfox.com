@@ -1,0 +1,39 @@
+{
+  "title": "Can I play Spotify in my store? — Daniel Fox",
+  "meta_description": "No. Spotify's terms limit accounts to personal, non-commercial use, and its support page says so plainly. What being legal actually costs a store, from the primary sources.",
+  "output": "notes/can-i-play-spotify-in-my-store.html",
+  "date_published": "2026-07-18",
+  "date_modified": "2026-07-18",
+  "related": [
+    "do-i-need-a-license-to-play-music-in-my-business",
+    "what-music-should-i-play-in-my-store",
+    "does-store-music-affect-sales"
+  ],
+  "schema": {
+    "type": "Article",
+    "headline": "Can I play Spotify in my store?",
+    "description": "Spotify's terms limit consumer accounts to personal, non-commercial use, and the support page prohibits business playback outright. The two separate exposures a consumer account creates in a store, and what the legal routes actually cost, sourced from the statutes and rate schedules.",
+    "about": [
+      "Retail music",
+      "Music licensing",
+      "Spotify",
+      "Public performance",
+      "Store music",
+      "Small business"
+    ]
+  },
+  "faq": [
+    {
+      "q": "Can I play Spotify in my store if I have a Premium account?",
+      "a": "No. Premium changes the ads and the audio quality, and the terms stay the same: personal, non-commercial use. Spotify's support page says directly that you can't play Spotify from a business and points commercial users to Soundtrack, a licensed business service."
+    },
+    {
+      "q": "What happens if a store plays Spotify anyway?",
+      "a": "Two separate exposures. Copyright law lets courts award $750 to $30,000 per song performed without a license, up to $150,000 per song for willful infringement. And business playback breaks Spotify's terms of use, so the account itself can be revoked. A PRO license addresses the first exposure and leaves the second in place."
+    },
+    {
+      "q": "What is the cheapest legal way to play music in a store?",
+      "a": "For most small stores, a business streaming service. Pandora CloudCover is $18.95 a month per location, SiriusXM Music for Business is $26.95, Soundtrack starts at $29 per zone, and each bundles the performance licensing. A store under 2,000 square feet can also play FCC-licensed broadcast radio over a small speaker setup with no license at all, though that covers radio only."
+    }
+  ]
+}
