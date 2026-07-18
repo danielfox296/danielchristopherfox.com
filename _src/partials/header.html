@@ -40,6 +40,8 @@
       if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
       else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
       else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
       else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
     });
     var form = document.querySelector('.contact-form');
