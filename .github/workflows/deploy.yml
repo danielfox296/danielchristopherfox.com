@@ -19,6 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      # BEFORE build — post-deploy the live sitemap equals the new one, so a
+      # later fetch would always diff empty. This snapshot makes the
+      # changed-only IndexNow ping meaningful.
+      - name: Snapshot live sitemap (IndexNow baseline)
+        run: |
+          curl -fsS --max-time 30 https://danielchristopherfox.com/sitemap.xml \
+            -o /tmp/live-sitemap.xml \
+            || echo "live sitemap unavailable — IndexNow will submit all URLs"
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -44,6 +52,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+      # Runs at the end of the build job (the deploy job is a separate runner
+      # with no checkout or /tmp carryover). The ping therefore fires ~a
+      # minute before Pages finishes publishing — accepted: engines fetch
+      # asynchronously, well after the deploy lands. Changed-only vs the
+      # pre-build snapshot; the script swallows its own errors.
+      - name: Ping IndexNow (changed URLs only)
+        run: python3 _tools/indexnow.py --baseline /tmp/live-sitemap.xml
 
   deploy:
     needs: build
