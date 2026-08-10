@@ -71,6 +71,7 @@ CATEGORIES = {
             "two-and-a-half-buttons",
             "what-we-call-soul",
             "your-worth-was-never-the-work",
+            "the-basis-of-practical-intellect",
         ],
     },
     "note": {
