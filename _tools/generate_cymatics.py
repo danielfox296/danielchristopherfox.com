@@ -94,6 +94,7 @@ CATEGORIES = {
             "what-is-dwell-time-in-retail",
             "what-music-should-i-play-in-my-store",
             "when-does-fast-music-help-a-store",
+            "why-is-restaurant-music-so-loud",
         ],
     },
 }

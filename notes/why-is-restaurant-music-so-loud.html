@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>Why is restaurant music so loud? — Daniel Fox</title>
+  <meta name="description" content="Operators turn the music up to turn tables faster. The one field experiment that measured restaurant volume found the tab ran about 16 percent higher when the volume came down.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/notes/why-is-restaurant-music-so-loud.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why is restaurant music so loud? — Daniel Fox">
+  <meta property="og:description" content="Operators turn the music up to turn tables faster. The one field experiment that measured restaurant volume found the tab ran about 16 percent higher when the volume came down.">
+  <meta property="og:url" content="https://danielchristopherfox.com/notes/why-is-restaurant-music-so-loud.html">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why is restaurant music so loud?","description":"What the field research says about restaurant volume, why the turn-tables-faster theory does not survive the one experiment that tested it, and where the studies still disagree.","author":{"@type":"Person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","worksFor":{"@type":"Organization","name":"Entuned","url":"https://entuned.co"},"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/notes/why-is-restaurant-music-so-loud.html","about":["Restaurant music","Music volume","Consumer behavior","Environmental psychology"],"datePublished":"2026-08-24","dateModified":"2026-08-24"}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="../contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <img class="cym-mark" src="../assets/cym/why-is-restaurant-music-so-loud.svg" alt="" aria-hidden="true">
+    <span class="eyebrow fade-up">Research note &middot; Published August 2026</span>
+    <h1 class="fade-up page-title">Why is restaurant music so loud?</h1>
+    <p class="subhead fade-up measure">Because operators believe a loud room turns tables faster. The one field experiment that put a number on restaurant volume found the tab ran about 16 percent higher when the volume came down.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose fade-up">
+      <p class="lead">Nobody in a restaurant is measuring the music. Owners set the level, designers specify the hard surfaces that make it carry, and managers nudge it up over the course of a night without writing anything down. The volume is a decision, made by people, and almost never checked against what it does to the check.</p>
+
+      <h2>The theory operators are running on</h2>
+      <p>Ask why the room is loud and you get a version of the same answer: energy, and turnover. A loud room reads as busy, a busy room reads as good, and people who cannot hear each other finish and leave. More parties through the same forty seats.</p>
+      <p>That theory has one testable half. Loud music really does shorten how long people stay. The half nobody checks is whether the shorter visit is worth more money.</p>
+
+      <h2>The one experiment that put a number on it</h2>
+      <p>In 2003, Lammers ran a field experiment at an oceanside restaurant in Ventura, California, across 80 sets of patrons. Each group got either soft rock or classical radio, played at either a loud or a soft level. The measure was the tab.</p>
+      <p>Soft volume produced a mean tab of $21.63. Loud volume produced $18.57. That is about a 16 percent difference on the same food, in the same room, from a knob.</p>
+      <p>The second finding is the one people skip. Genre made no difference at all. Soft rock and classical performed the same. The dial that moved money in that room was loudness, and the dial everyone argues about did nothing.</p>
+
+      <h2>Loud does move people, just not toward spending</h2>
+      <p>The turnover half of the theory has held up since 1966, when Smith and Curnow played music at different volumes in a supermarket. Louder music shortened the visit. It left the amount spent untouched.</p>
+      <p>Read those two studies together and the picture is unglamorous. Turning the music up buys you exits. It does not buy you tickets. If the seats are full and there is a line at the door, you are selling minutes and the exit is the product. If there is no line, you have shortened the visit and collected less for it.</p>
+
+      <h2>Where the studies disagree</h2>
+      <p>I said genre did nothing. In a different room, it did something.</p>
+      <p>North, Shilcock and Hargreaves ran classical, pop, and silence across 18 evenings in a British restaurant in 2003 and tracked spend per head line by line. Classical produced higher spending than both pop and no music, with the effect showing up on starters, coffee, total food and overall spend. Pop and silence performed about the same as each other, which is its own small insult to whoever built the playlist.</p>
+      <p>So one restaurant study says style is irrelevant and another says style is the whole effect. Both are real, both are published, and neither has been run enough times in enough rooms to settle it. What separates them is probably the rooms: a casual oceanside restaurant and a British restaurant serving a coursed menu are not asking their guests for the same thing. Volume and style are two different dials, and the honest position is that we know more about the first than the second.</p>
+
+      <h2>What has actually held up: time</h2>
+      <p>The finding that keeps replicating is not about volume at all. Milliman put slow-tempo music in a restaurant in 1986 and diners stayed about 11 minutes longer. Bar revenue rose roughly 40 percent. Food spend stayed flat. The extra minutes turned into drinks and nothing else.</p>
+      <p>Caldwell and Hibbert got the time half again in 1999 with a tighter design, jazz from a single artist so that style could not confound tempo, and found slow music produced significantly longer dining. Their spending gains did not track the extra time. It was two tables and a conference paper, so hold it loosely, but the shape matches: slow music reliably buys minutes, and the minutes only convert where there is something to sell into them.</p>
+      <p>A restaurant with a bar has that something. A counter-service room at lunch does not.</p>
+
+      <h2>The actual point</h2>
+      <p>A loud dining room is a real strategy with a real price. You are choosing to sell fewer minutes per party, and that choice pays only if another party is already waiting to buy the seat. Most rooms that are loud are not that busy, most nights.</p>
+      <p>The version of this question I get asked most is what to play. The evidence says start with how loud, because that is the setting with the clearest number attached and the one anybody can change tonight. If you want the rest of how sound moves people through a space, the field guide on <a href="../store-music-and-customer-behavior.html">store music and customer behavior</a> covers the retail side of the same mechanics.</p>
+      <p>And none of these studies followed the party that decided, in the parking lot, not to come back.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section flush-top">
+  <div class="container">
+    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>I read this literature for a living.</strong> If you run rooms where sound is doing something to the people in them and nobody has checked what, that is the conversation.</p>
+      <a class="btn btn-primary" href="../contact.html" data-cta="note-contact">Start a conversation</a>
+    </aside>
+  </div>
+</section>
+
+<section class="note-sources">
+  <h2>Sources</h2>
+  <ol>
+    <li>Lammers, H. B. (2003). "An Oceanside Field Experiment on Background Music Effects on the Restaurant Tab." Perceptual and Motor Skills, 96(3), 1025&ndash;1026. <a href="https://pubmed.ncbi.nlm.nih.gov/12831285/" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Smith, P. C., &amp; Curnow, R. (1966). "'Arousal Hypothesis' and the Effects of Music on Purchasing Behavior." Journal of Applied Psychology, 50(3), 255&ndash;256. DOI: 10.1037/h0023326 <a href="https://pubmed.ncbi.nlm.nih.gov/5936035/" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>North, A. C., Shilcock, A., &amp; Hargreaves, D. J. (2003). "The Effect of Musical Style on Restaurant Customers' Spending." Environment and Behavior, 35(5), 712&ndash;718. DOI: 10.1177/0013916503254749 <a href="https://doi.org/10.1177/0013916503254749" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Milliman, R. E. (1986). "The Influence of Background Music on the Behavior of Restaurant Patrons." Journal of Consumer Research, 13(2), 286&ndash;289. DOI: 10.1086/209068 <a href="https://doi.org/10.1086/209068" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Caldwell, C., &amp; Hibbert, S. (1999). "Play That One Again: The Effect of Music Tempo on Consumer Behaviour in a Restaurant." European Advances in Consumer Research, 4, 58&ndash;62. <a href="https://www.acrwebsite.org/volumes/11375/volumes/e04/E-04" target="_blank" rel="noopener noreferrer">View source</a></li>
+  </ol>
+</section>
+
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/best-music-tempo-for-retail.html"><img class="thumb" src="../assets/cym/best-music-tempo-for-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What&#x27;s the right music tempo for a retail store?</h3><p>What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.</p></a><a class="card" href="../notes/can-music-change-what-people-buy.html"><img class="thumb" src="../assets/cym/can-music-change-what-people-buy.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Can store music change which products people pick?</h3><p>How musical priming steers product choice toward congruent categories, and why awareness doesn&#x27;t cancel the effect.</p></a><a class="card" href="../notes/can-music-make-your-store-feel-premium.html"><img class="thumb" src="../assets/cym/can-music-make-your-store-feel-premium.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Can music make your store feel more expensive?</h3><p>How music acts as a quality signal, raising perceived value, brand prestige, and purchase intent through affect transfer.</p></a></div></div></section>
+  </main>
+
+  <section class="section-tight">
+  <div class="container">
+    <div class="subscribe-band fade-up">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Retail music, from the floor.</h2>
+        <p>A producer's notes on what your store sounds like and what it's costing you. Research read honestly, field notes from real floors, no filler.</p>
+        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
+      </div>
+      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+    // (Mobile nav toggle + active-page state live in the shared header partial.)
+  </script>
+</body>
+</html>

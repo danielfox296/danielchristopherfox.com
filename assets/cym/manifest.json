@@ -114,6 +114,11 @@
     "file": "assets/cym/store-music-and-retail-media.svg",
     "stroke": "#B1832F"
   },
+  "the-basis-of-practical-intellect": {
+    "category": "essay",
+    "file": "assets/cym/the-basis-of-practical-intellect.svg",
+    "stroke": "#C03A78"
+  },
   "the-fools-errand": {
     "category": "essay",
     "file": "assets/cym/the-fools-errand.svg",
@@ -152,6 +157,11 @@
   "when-does-fast-music-help-a-store": {
     "category": "note",
     "file": "assets/cym/when-does-fast-music-help-a-store.svg",
+    "stroke": "#2E7D46"
+  },
+  "why-is-restaurant-music-so-loud": {
+    "category": "note",
+    "file": "assets/cym/why-is-restaurant-music-so-loud.svg",
     "stroke": "#2E7D46"
   },
   "your-worth-was-never-the-work": {

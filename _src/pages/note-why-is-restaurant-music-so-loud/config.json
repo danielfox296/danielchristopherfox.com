@@ -1,0 +1,18 @@
+{
+  "title": "Why is restaurant music so loud? — Daniel Fox",
+  "meta_description": "Operators turn the music up to turn tables faster. The one field experiment that measured restaurant volume found the tab ran about 16 percent higher when the volume came down.",
+  "output": "notes/why-is-restaurant-music-so-loud.html",
+  "date_published": "2026-08-24",
+  "date_modified": "2026-08-24",
+  "schema": {
+    "type": "Article",
+    "headline": "Why is restaurant music so loud?",
+    "description": "What the field research says about restaurant volume, why the turn-tables-faster theory does not survive the one experiment that tested it, and where the studies still disagree.",
+    "about": [
+      "Restaurant music",
+      "Music volume",
+      "Consumer behavior",
+      "Environmental psychology"
+    ]
+  }
+}
