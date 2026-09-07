@@ -95,6 +95,10 @@ CATEGORIES = {
             "what-music-should-i-play-in-my-store",
             "when-does-fast-music-help-a-store",
             "why-is-restaurant-music-so-loud",
+            # Appended, not alphabetised: assign_params() resolves collisions in
+            # list order, so a slug inserted mid-list reshuffles every slug after
+            # it. Appending leaves all 18 existing figures byte-identical.
+            "does-music-help-you-sleep",
         ],
     },
 }

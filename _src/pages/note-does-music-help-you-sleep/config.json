@@ -1,0 +1,19 @@
+{
+  "title": "Does music help you sleep? — Daniel Fox",
+  "meta_description": "The Cochrane review pooled 13 trials and 1,007 people. Sleep quality improved by 2.79 points on the PSQI. The objective sleep measures barely moved, and the gap between the two is the finding.",
+  "output": "notes/does-music-help-you-sleep.html",
+  "date_published": "2026-09-07",
+  "date_modified": "2026-09-07",
+  "schema": {
+    "type": "Article",
+    "headline": "Does music help you sleep?",
+    "description": "What the 2022 Cochrane review of music for insomnia found, what it did not find, why the subjective and objective measures disagree, and what the trials actually asked people to do.",
+    "about": [
+      "Music and sleep",
+      "Insomnia",
+      "Cochrane review",
+      "Music listening",
+      "Evidence quality"
+    ]
+  }
+}
