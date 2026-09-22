@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>What is dwell time, and why does it predict sales? | Daniel Fox</title>
+  <meta name="description" content="Dwell time is how long a customer stays, and it predicts spending better than almost any other retail metric. Here&#x27;s what the research says about using music to control it, and when longer isn&#x27;t better.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/notes/what-is-dwell-time-in-retail.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is dwell time, and why does it predict sales? | Daniel Fox">
+  <meta property="og:description" content="Dwell time is how long a customer stays, and it predicts spending better than almost any other retail metric. Here&#x27;s what the research says about using music to control it, and when longer isn&#x27;t better.">
+  <meta property="og:url" content="https://danielchristopherfox.com/notes/what-is-dwell-time-in-retail.html">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What is dwell time, and why does it predict sales?","description":"Dwell time predicts retail spending. How music controls it, and when longer dwell signals frustration instead of interest.","author":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","address":{"@type":"PostalAddress","addressLocality":"Denver","addressRegion":"CO","addressCountry":"US"},"worksFor":[{"@type":"Organization","@id":"https://entuned.co/#organization","name":"Entuned","url":"https://entuned.co/"},{"@type":"LocalBusiness","@id":"https://signetartists.com/#business","name":"Signet Artists","url":"https://signetartists.com/"}],"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music","Live music for events"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.youtube.com/@danielchristopherfox","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/notes/what-is-dwell-time-in-retail.html","about":["Dwell time","Retail music","Consumer behavior","Conversion"],"datePublished":"2026-05-31","dateModified":"2026-05-31"}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="../contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <img class="cym-mark" src="../assets/cym/what-is-dwell-time-in-retail.svg" alt="" aria-hidden="true">
+    <span class="eyebrow fade-up">Research note &middot; Published May 2026</span>
+    <h1 class="fade-up page-title">What is dwell time, and why does it predict sales?</h1>
+    <p class="subhead fade-up measure">Dwell time is the number that forecasts spending better than foot traffic. In a 550-shopper study, music versus silence added about eight minutes per visit, and the minutes came with money. Music is the most accessible lever on it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose fade-up">
+      <p class="lead">Dwell time is how long a customer stays, entry to exit. Across almost every study of in-store behavior the same pattern shows up: more time, more spending. It isn't always proportional, but it's one of the most durable findings in retail research. Of all the inputs that move it, music is the most accessible.</p>
+
+      <h2>The eight-minute baseline</h2>
+      <p>A <a href="https://doi.org/10.1016/j.jretconser.2012.06.010" target="_blank" rel="noopener noreferrer">2012 study in the Journal of Retailing and Consumer Services</a> made it concrete. Across 550 shoppers, music versus silence, any music added about eight minutes of dwell on average, and those minutes came with more spending. The music hypnotized nobody; it just meant more time in front of more products and more chances to decide.</p>
+
+      <h2>Real time and felt time aren't the same</h2>
+      <p>A <a href="https://doi.org/10.1016/S0148-2963(99)00003-X" target="_blank" rel="noopener noreferrer">2000 study in the Journal of Business Research</a> found something counterintuitive. Unfamiliar music made shoppers stay longer while perceiving the visit as shorter. Familiar music did the opposite, they left sooner but felt they'd overstayed. The sweet spot is a customer who browses 45 minutes and feels like 20. They've seen the whole store and walk out thinking it was quick. The recognizable hits work against that.</p>
+
+      <h2>In a restaurant, dwell time is the mechanism</h2>
+      <p>A <a href="https://doi.org/10.1086/209068" target="_blank" rel="noopener noreferrer">1986 study in the Journal of Consumer Research</a> found slow music extended the average meal by 11 minutes, which translated into more rounds ordered and roughly 40 percent more bar revenue. The music made them comfortable enough not to rush, and more time at the table meant more rounds.</p>
+
+      <h2>The ceiling is capacity rather than spend</h2>
+      <p>A <a href="https://www.semanticscholar.org/paper/Play-That-One-Again:-the-Effect-of-Music-Tempo-on-a-Caldwell-Hibbert/6c2d9fb581ede2e618d03affab7756f33d949b13" target="_blank" rel="noopener noreferrer">1999 study in the European Advances in Consumer Research</a> found slow music extended stays about fourteen minutes, and spending rose with the time, significantly more on food and drink. The extra dwell paid for itself. Where dwell does hit a ceiling is capacity: a fuller, slower room can cost you the next table on a busy night, so the lever is set to the night rather than the math of spend-per-minute.</p>
+
+      <h2>A mechanism worth flagging</h2>
+      <p>One angle hasn't been tested in stores but is too relevant to skip. A <a href="https://doi.org/10.1093/acprof:oso/9780199990825.001.0001" target="_blank" rel="noopener noreferrer">2014 book from Oxford University Press</a> argues that musical repetition pulls a listener into a state of absorption, a kind of flow where you lose track of time, and about 94 percent of the world's music leans on repetition. There's no retail data on it yet. It maps onto what the familiarity studies already found.</p>
+
+      <h2>The actual point</h2>
+      <p>Dwell time is the container every other metric sits inside. You can't convert a browser who left after 90 seconds, or upsell a diner who's already asked for the check. Music keeps the container open, eight minutes at baseline and more with the right approach.</p>
+
+      <p>Dwell time is one piece of the larger picture. The full field guide to <a href="../store-music-and-customer-behavior.html">store music and customer behavior</a> sets the research in order, and for the practical playbook, here's how to <a href="../increase-retail-dwell-time.html">increase retail dwell time</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section flush-top">
+  <div class="container">
+    <div class="prose">
+      <h2>Watch the breakdown</h2>
+    </div>
+    <div class="video-wrap fade-up" style="margin-top:1.2rem;">
+      <iframe
+        src="https://www.youtube.com/embed/kxG8In4KgHI"
+        title="What Is Dwell Time and Why Does It Matter?"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>This is the work I do for stores.</strong> Entuned, founded in 2026, makes original, adaptive retail music tuned to a store's specific customers to encourage the behavior the store is after. It's built on the research, and it's the practical version of everything above.</p>
+      <a class="btn btn-primary" href="https://entuned.co" data-cta="note-entuned">See how Entuned works</a>
+      <a class="btn btn-outline" href="../contact.html" data-cta="note-contact">Start a conversation</a>
+    </aside>
+  </div>
+</section>
+
+<section class="note-sources">
+  <h2>Sources</h2>
+  <ol>
+    <li>Andersson, P. K., Kristensson, P., Wästlund, E., &amp; Gustafsson, A. (2012). "Let the music play or not: The influence of background music on consumer behavior." Journal of Retailing and Consumer Services, 19(6), 553–560. https://doi.org/10.1016/j.jretconser.2012.06.010 <a href="https://doi.org/10.1016/j.jretconser.2012.06.010" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Yalch, R. F., &amp; Spangenberg, E. R. (2000). The Effects of Music in a Retail Setting on Real and Perceived Shopping Times. Journal of Business Research, 49(2), 139-147. <a href="https://doi.org/10.1016/S0148-2963(99)00003-X" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Milliman, Ronald E. (1986). "The Influence of Background Music on the Behavior of Restaurant Patrons." Journal of Consumer Research, 13(2), 286–289. <a href="https://doi.org/10.1086/209068" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Caldwell, C. &amp; Hibbert, S. A. (1999). "Play That One Again: the Effect of Music Tempo on Consumer Behaviour in a Restaurant." In B. Dubois, T. M. Lowrey, L. J. Shrum &amp; M. Vanhuele (Eds.), European Advances in Consumer Research, Vol. 4 (pp. 58-62). Provo, UT: Association for Consumer Research. <a href="https://www.semanticscholar.org/paper/Play-That-One-Again:-the-Effect-of-Music-Tempo-on-a-Caldwell-Hibbert/6c2d9fb581ede2e618d03affab7756f33d949b13" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Elizabeth Hellmuth Margulis, On Repeat: How Music Plays the Mind (New York: Oxford University Press, 2014). Online edition on Oxford Academic (Oxford Scholarship Online), published 23 January 2014. The 94% statistic originates in David Huron &amp; Joy Ollen (2004), cited within the book. <a href="https://doi.org/10.1093/acprof:oso/9780199990825.001.0001" target="_blank" rel="noopener noreferrer">View source</a></li>
+  </ol>
+</section>
+
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/how-music-affects-customer-behavior.html"><img class="thumb" src="../assets/cym/how-music-affects-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>How does music affect customer behavior in retail?</h3><p>What controlled studies show about how store music changes dwell time, product choice, and spend.</p></a><a class="card" href="../notes/best-music-tempo-for-retail.html"><img class="thumb" src="../assets/cym/best-music-tempo-for-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What&#x27;s the right music tempo for a retail store?</h3><p>What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.</p></a><a class="card" href="../notes/first-five-minutes-in-store.html"><img class="thumb" src="../assets/cym/first-five-minutes-in-store.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Why the first five minutes in your store decide the sale</h3><p>How music shapes the whole customer visit, from entry pace and dwell to the buying decision and the perceived wait at checkout.</p></a></div></div></section>
+  </main>
+
+  <section class="section-tight">
+  <div class="container">
+    <div class="subscribe-band fade-up">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Retail music, from the floor.</h2>
+        <p>A producer's notes on what your store sounds like and what it's costing you. The research, read with its limits named, and field notes from real floors.</p>
+        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
+      </div>
+      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+    // (Mobile nav toggle + active-page state live in the shared header partial.)
+  </script>
+</body>
+</html>

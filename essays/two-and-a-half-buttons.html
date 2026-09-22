@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>Two and a Half Buttons | Daniel Fox</title>
+  <meta name="description" content="A person holds several versions of themselves at once: a need, an identity, a value. Touch enough of those at the same time and the person feels met. Music is one of those buttons, sometimes only half of one.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/essays/two-and-a-half-buttons.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Two and a Half Buttons | Daniel Fox">
+  <meta property="og:description" content="A person holds several versions of themselves at once: a need, an identity, a value. Touch enough of those at the same time and the person feels met. Music is one of those buttons, sometimes only half of one.">
+  <meta property="og:url" content="https://danielchristopherfox.com/essays/two-and-a-half-buttons.html">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Two and a Half Buttons","description":"A shopper carries a need, an identity, and a value at the same time. Touch enough of them at once and they feel met. Music is one of those buttons, sometimes only half.","author":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","address":{"@type":"PostalAddress","addressLocality":"Denver","addressRegion":"CO","addressCountry":"US"},"worksFor":[{"@type":"Organization","@id":"https://entuned.co/#organization","name":"Entuned","url":"https://entuned.co/"},{"@type":"LocalBusiness","@id":"https://signetartists.com/#business","name":"Signet Artists","url":"https://signetartists.com/"}],"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music","Live music for events"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.youtube.com/@danielchristopherfox","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/essays/two-and-a-half-buttons.html","about":["Music and behavior","Consumer behavior","Retail music","Music psychology","Sound design"],"datePublished":"2026-05-31","dateModified":"2026-05-31"}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="../contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <img class="cym-mark" src="../assets/cym/two-and-a-half-buttons.svg" alt="" aria-hidden="true">
+    <span class="eyebrow fade-up">Essay</span>
+    <h1 class="fade-up page-title">Two and a Half Buttons</h1>
+    <p class="subhead fade-up measure">A person walks in as several people at once. The store that touches enough of them at the same time is the one they stay in.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose fade-up">
+      <p class="lead">You went into a store last month for one thing and walked out feeling like the place knew you. The product was right, sure, but it was more than the product. Something on the wall agreed with how you see yourself. Something playing overhead agreed with it too. You did not stop to add any of that up. You just felt met, and you bought, and you went back. The store had reached more than one of you at the same time, and that is the whole trick.</p>
+
+      <p>A person is never just one thing in a doorway. You walk in with a need (I want a hat), with an identity (I am a country guy), and with a value (I lean progressive, and I want the room to know it without my having to announce it). Those are three different people you are at the same second, and a store can speak to any of them. The hat answers the need. The denim and the boots and the photo behind the register answer the identity. The way the place treats people, what it puts its name behind, answers the value. None of these is loud on its own. Together they decide whether you belong there.</p>
+
+      <p>I started counting this at Skreened, the apparel company I built and sold. We turned cultural moments into shirts, hundreds of them, and most ended up somewhere between fine and forgotten. Then one would hit. When I went back to look at the ones that hit, the pattern was the same every time. The shirt was answering two things about a person, sometimes a little more, rather than one: a need and an identity, or an identity and a value. The winners touched two and a half of the ways someone already saw themselves, and the half mattered as much as the count.</p>
+
+      <h2>Why the half</h2>
+      <p>Some signals in a store are a whole button. The product is a whole button when it is the thing you came for. The sign on the wall that says exactly what you believe is a whole button. You can point at those and name them out loud, and they press all the way down.</p>
+
+      <p>Music is usually the half. It almost never closes the sale by itself, and nobody walks out saying they bought because of the song. What it does is confirm. You already suspected this place was for you, and the sound told you that you were right before you could put words to it. A country guy hears the genre and the room stops being a question. A progressive shopper catches a lyric that lines up with what they care about and relaxes a notch they did not know was tight. That is half a button, pressed at the exact moment the other buttons are being pressed, and it is the difference between a person who is comfortable and a person who is sold.</p>
+
+      <h2>Whose job is which</h2>
+      <p>Here is where the line sits. Anchoring all of who a person is across a whole store is the retailer's job rather than mine. The product mix, the wall, the staff, the values the owner is willing to stand behind, all of that belongs to the person who runs the place, and they should own it. I understand the whole board. I can see how the buttons fit together and which ones a store is leaving unpressed. But I am not hired to redesign your shelves or write your mission.</p>
+
+      <p>I am hired for one button, the music. At Entuned, founded in 2026, the entire job is original, adaptive retail music that confirms who the shopper already is, re-chosen as the floor fills with a different crowd at a different hour. A morning customer and an evening customer are not the same person, and the half button that confirms the first one might say nothing to the second. So the music moves. The work is built on the research, and if you want to know a half button is doing anything in your own store, run it against a control and watch what changes. I would rather know than hope.</p>
+
+      <h2>The musician's reason it works</h2>
+      <p>I can do this part because I have made music my whole life. A producer learns that a track is a stack of small choices about timing and arrangement, about when to bring an element in and when to hold it back. The same instinct that tells you a song needs the bass to drop in on the second verse tells you a store needs the sound to shift when the after-work crowd arrives. I know sound from where it gets made rather than from reading about it, and that is where this work is done from.</p>
+
+      <p>So the next time a store makes you feel like it was built with you in mind, slow down for a second and count. The thing you came for is one. The thing on the wall might be another. And underneath both, the song you were not paying attention to was agreeing with all of it. That is the half. Listen for it the next time a place feels like home, and ask who pressed it.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>If this was worth your time,</strong> the newsletter is where the thinking continues, and the talks are where it gets argued in person.</p>
+      <a class="btn btn-primary" href="https://entuned.substack.com/subscribe" data-cta="essay-subscribe">Get the newsletter</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/danielcfox/" data-cta="essay-linkedin">Connect on LinkedIn</a>
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <section class="section-tight">
+  <div class="container">
+    <div class="subscribe-band fade-up">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Retail music, from the floor.</h2>
+        <p>A producer's notes on what your store sounds like and what it's costing you. The research, read with its limits named, and field notes from real floors.</p>
+        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
+      </div>
+      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+    // (Mobile nav toggle + active-page state live in the shared header partial.)
+  </script>
+</body>
+</html>

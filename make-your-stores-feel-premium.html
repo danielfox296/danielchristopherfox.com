@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>Premium is partly the music. | Daniel Fox</title>
+  <meta name="description" content="How do you make your stores feel more premium? The usual answers are all visual. The music does the same work, gets none of the credit, and a screen cannot copy it.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/make-your-stores-feel-premium.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Premium is partly the music. | Daniel Fox">
+  <meta property="og:description" content="How do you make your stores feel more premium? The usual answers are all visual. The music does the same work, gets none of the credit, and a screen cannot copy it.">
+  <meta property="og:url" content="https://danielchristopherfox.com/make-your-stores-feel-premium.html">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Premium is partly the music.","description":"How do you make your stores feel more premium? The usual answers are all visual. The music does the same work, gets none of the credit, and a screen cannot copy it.","author":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","address":{"@type":"PostalAddress","addressLocality":"Denver","addressRegion":"CO","addressCountry":"US"},"worksFor":[{"@type":"Organization","@id":"https://entuned.co/#organization","name":"Entuned","url":"https://entuned.co/"},{"@type":"LocalBusiness","@id":"https://signetartists.com/#business","name":"Signet Artists","url":"https://signetartists.com/"}],"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music","Live music for events"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.youtube.com/@danielchristopherfox","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/make-your-stores-feel-premium.html","about":["How music affects customer behavior","Retail music","Music psychology","Store atmospherics","Consumer behavior"]}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <img class="cym-mark" src="assets/cym/make-your-stores-feel-premium.svg" alt="" aria-hidden="true">
+    <span class="eyebrow fade-up">For multi-store leaders</span>
+    <h1 class="fade-up page-title">Premium is partly the music.</h1>
+    <p class="subhead fade-up measure">Ask how to make your stores feel more premium and every answer comes back to something you can see. The one premium signal a screen can't reproduce is the one nobody on the team owns.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose fade-up">
+      <p class="lead">When a brand decides its stores should feel more premium, the plan that comes back is always visual: better lighting, heavier fixtures, real materials instead of laminate, fewer things on the floor set further apart, staff in better clothes who approach you differently. All of it's sound thinking and all of it's expensive, and all of it leaves out the one element that has been playing every hour the doors are open, reaching every person who walks in, doing the same work as the lighting and getting none of the credit for it.</p>
+
+      <p>I came to this as a working musician, which means I think about a store from where the sound gets made. So when I walk a floor that someone has spent a fortune making look expensive, I notice that the music is usually the part nobody touched. It shipped on a head-office playlist and it has sat there since the rollout. The brand spent a year specifying what the customer would see and left what she would hear on the default. That's a strange thing to do, because what she hears is setting the price in her head as much as what she sees is.</p>
+
+      <h2>The evidence is cleaner than people expect</h2>
+      <p><a href="https://www.acrwebsite.org/volumes/7467/volumes/v20/NA-200" target="_blank" rel="noopener noreferrer">Areni and Kim</a> ran the test that makes this concrete. They put classical music in a wine shop, then switched it to top-40, and watched what people pulled off the shelf. With the classical playing, shoppers moved toward the more expensive bottles. Same store, same wine, same prices. The only thing that changed was what was in the air, and it moved the bottle people felt comfortable buying. Nobody on the floor announced an upgrade. With classical in the air, the better bottle felt like the obvious one to pick up, and people picked it up.</p>
+
+      <p><a href="https://doi.org/10.1037/0021-9010.84.2.271" target="_blank" rel="noopener noreferrer">North, Hargreaves, and McKendrick</a> found the mechanism underneath it. They played French music in a wine aisle and French wine sold. They switched to German music and the German bottles moved. The music matched what people already associated with the bottle, and the match made the choice feel obvious. That's the whole point, and it's the part most brands get wrong when they hear this. The lesson is fit. Classical worked in the wine shop because it agreed with what the shopper already believed about the bottle, and it would do nothing in a room that sells something else. The match is what does the work, and the match is particular to what you sell.</p>
+
+      <h2>Why this is the cheapest premium signal you have</h2>
+      <p>Set the music beside the rest of the premium budget. New fixtures are capital and weeks of fit-out. Better materials run through every store in the fleet. A staffing standard is a hiring and training cost that never ends. The music is none of that, because it's already playing. The cost is choosing it on purpose instead of leaving it on shuffle, which is a decision rather than a renovation. You're paying for the speakers either way. Most brands are getting a flat playlist out of equipment that could be setting the price ceiling in the customer's head.</p>
+
+      <p>It also does something the visual budget can't. A customer can pull up your product on her phone and see the same photographs, the same materials, the same fixtures rendered better than your store will ever light them. What she can't get on the phone is the room. The screen flattens everything to a feed. Sound is the part of the premium signal that doesn't survive the trip through a screen, which makes it exactly the element worth owning when the job is to give a person a reason to stand in your store instead of scrolling past it.</p>
+
+      <h2>What this asks of a serious operator</h2>
+      <p>Treat the music as a thing the brand owns and chooses, on the same list as the lighting and the materials, instead of a thing that happens to be playing. Then accept the harder part. There's no genre that means premium. What lifts the perceived value of your store depends on the brand it sits inside, on who is actually on the floor at eleven in the morning versus six at night, and on what those people already associate with what you sell. Fit is the entire game, and fit is specific to your store. That's what a music behaviorist works out, which is what your customers came in believing and what sound agrees with it. If you want to know the choice actually moved the needle in your store rather than just feeling good in the meeting, run it against a control.</p>
+
+      <p>You can read the whole case, including where these effects hold and where they fall apart at scale, in <a href="store-music-and-customer-behavior.html">the field guide on store music and customer behavior</a>. For a leader deciding where the next premium dollar goes, the short version is to pull up what's playing across your stores right now, before you spec another fixture, and ask who chose it and what they chose it for. Most of the time the answer is that nobody did.</p>
+
+      <p>If you want to work that out for your stores, the <a href="speaking.html">talks</a> lay out the argument, and <a href="contact.html">you can reach me here</a>.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>If you run stores, this is a conversation worth having.</strong> I also give talks on exactly this, the behavioral science of the room, grounded in the research.</p>
+      <a class="btn btn-primary" href="contact.html" data-cta="guide-contact">Start a conversation</a>
+      <a class="btn btn-outline" href="speaking.html" data-cta="guide-speaking">Invite me to speak</a>
+    </aside>
+  </div>
+</section>
+
+<section class="note-sources">
+  <h2>Sources</h2>
+  <ol>
+    <li>Areni, Charles S., and David Kim (1993), "The Influence of Background Music on Shopping Behavior: Classical Versus Top-Forty Music in a Wine Store," in NA - Advances in Consumer Research, Volume 20, eds. Leigh McAlister and Michael L. Rothschild, Provo, UT: Association for Consumer Research, pp. 336-340. <a href="https://www.acrwebsite.org/volumes/7467/volumes/v20/NA-200" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>North, A. C., Hargreaves, D. J., &amp; McKendrick, J. (1999). The influence of in-store music on wine selections. Journal of Applied Psychology, 84(2), 271-276. (Precursor brief: North, A. C., Hargreaves, D. J., &amp; McKendrick, J. (1997). In-store music affects product choice. Nature, 390, 132.) <a href="https://doi.org/10.1037/0021-9010.84.2.271" target="_blank" rel="noopener noreferrer">View source</a></li>
+  </ol>
+</section>
+
+  </main>
+
+  <section class="section-tight">
+  <div class="container">
+    <div class="subscribe-band fade-up">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Retail music, from the floor.</h2>
+        <p>A producer's notes on what your store sounds like and what it's costing you. The research, read with its limits named, and field notes from real floors.</p>
+        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
+      </div>
+      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+    // (Mobile nav toggle + active-page state live in the shared header partial.)
+  </script>
+</body>
+</html>

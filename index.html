@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>Daniel Fox, Music Behaviorist</title>
+  <meta name="description" content="Daniel Fox helps brands engineer music that sells, researching how music moves people, then designing and building it for brands. Founder of Entuned.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daniel Fox, Music Behaviorist">
+  <meta property="og:description" content="Daniel Fox helps brands engineer music that sells, researching how music moves people, then designing and building it for brands. Founder of Entuned.">
+  <meta property="og:url" content="https://danielchristopherfox.com/">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <link rel="stylesheet" href="light.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","address":{"@type":"PostalAddress","addressLocality":"Denver","addressRegion":"CO","addressCountry":"US"},"worksFor":[{"@type":"Organization","@id":"https://entuned.co/#organization","name":"Entuned","url":"https://entuned.co/"},{"@type":"LocalBusiness","@id":"https://signetartists.com/#business","name":"Signet Artists","url":"https://signetartists.com/"}],"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music","Live music for events"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.youtube.com/@danielchristopherfox","https://www.linkedin.com/in/danielcfox/"]}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <div class="page">
+    <!-- ===================== HERO ===================== -->
+<section class="hero">
+  <canvas class="cymatics hero-cymatics" id="cymatics" aria-hidden="true"></canvas>
+  <div class="inner">
+    <div class="hero-grid" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow">Music Behaviorist · Founder, Entuned</span>
+        <h1>Daniel Fox helps brands engineer music that <em class="emph">sells</em>.</h1>
+        <p class="sub">He researches how music moves people, designs the systems, and builds the music that puts it to work for brands.</p>
+      </div>
+      <div class="hero-portrait">
+        <img class="portrait-img" src="assets/daniel-headshot.jpg" alt="Daniel Christopher Fox" width="1536" height="2048" loading="eager">
+        <span class="portrait-cap">Daniel Christopher Fox</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHOTO BREAK ===================== -->
+<section class="break">
+  <div class="break-bg" aria-hidden="true" style="background-image: linear-gradient(120deg, rgba(20,17,13,0.45), rgba(20,17,13,0.12) 60%), url('assets/daniel-live.jpg'); background-size: cover; background-position: center 40%;"></div>
+  <div class="break-line">I learned what sound does to a room from the stage, years before I could measure it.</div>
+</section>
+
+<!-- ===================== TRACK RECORD ===================== -->
+<section class="track" id="track">
+  <div class="inner">
+    <div class="split">
+    <div class="lead split-head"><span class="eyebrow split-eye">What I've built</span><h2>Track record</h2></div>
+    <div class="split-body">
+    <div class="rows">
+      <div class="row">
+        <span class="yr">Current</span>
+        <span class="nm">Entuned</span>
+        <span class="rl">Founder &amp; CEO</span>
+        <span class="nt">Original, adaptive retail music, tuned to each store's customers, and the applied outgrowth of the research.</span>
+        <span class="tag live">Live</span>
+      </div>
+      <div class="row">
+        <span class="yr">Public space</span>
+        <span class="nm">Dizzy Charlie's</span>
+        <span class="rl">Music &amp; events</span>
+        <span class="nt">A summer concert series I designed with the founder to build a neighborhood that kept coming back.</span>
+        <span class="tag">Community</span>
+      </div>
+      <div class="row">
+        <span class="yr">Built &amp; sold</span>
+        <span class="nm">Skreened</span>
+        <span class="rl">Founder &amp; CEO</span>
+        <span class="nt">Custom apparel from cultural moments. Grew past $16M, acquired by Gooten.</span>
+        <span class="tag">Exit</span>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WRITING ===================== -->
+<section class="writing" id="writing">
+  <div class="inner">
+    <div class="split">
+    <div class="lead split-head"><span class="eyebrow split-eye">From the desk</span><h2>Selected writing</h2></div>
+    <div class="split-body">
+    <div class="warlist">
+      <a class="warl" href="store-music-and-customer-behavior.html">
+        <span class="wt">Store music and customer behavior</span>
+        <span class="wm">Field guide</span>
+      </a>
+      <a class="warl" href="essays/the-rooms-that-cant-say-no.html">
+        <span class="wt">The rooms that can't say no</span>
+        <span class="wm">Essay · 2026</span>
+      </a>
+      <a class="warl" href="essays/designing-for-permission.html">
+        <span class="wt">Designing for permission</span>
+        <span class="wm">Essay · 2026</span>
+      </a>
+      <a class="warl" href="essays/every-room-is-already-scored.html">
+        <span class="wt">Every room is already scored</span>
+        <span class="wm">Essay · 2026</span>
+      </a>
+      <a class="warl" href="essays/your-worth-was-never-the-work.html">
+        <span class="wt">Your worth was never the work</span>
+        <span class="wm">Essay · 2025</span>
+      </a>
+      <a class="warl" href="notes/does-music-affect-retail-sales.html">
+        <span class="wt">Does music actually affect retail sales?</span>
+        <span class="wm">Research note · 2025</span>
+      </a>
+      <a class="warl" href="notes/what-music-should-i-play-in-my-store.html">
+        <span class="wt">What music should I actually play in my store?</span>
+        <span class="wm">Research note · 2026</span>
+      </a>
+      <a class="warl" href="notes/can-music-make-your-store-feel-premium.html">
+        <span class="wt">Can music make your store feel more expensive?</span>
+        <span class="wm">Research note · 2026</span>
+      </a>
+    </div>
+    <a class="warl-more" href="writing.html">All writing &rarr;</a>
+    <a class="warl-more" href="notes/">All research notes &rarr;</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="inner">
+    <span class="eyebrow contact-eye">Contact</span>
+    <h2>Let's <em class="emph">talk</em>.</h2>
+    <a class="mail" href="contact.html">Start a conversation &rarr;</a>
+  </div>
+  <div class="footer">
+    <div class="l">
+      <a href="the-work.html">The Work</a>
+      <a href="about.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </div>
+    <div class="c">© 2026 Daniel Christopher Fox · danielchristopherfox.com</div>
+  </div>
+</section>
+
+  </div>
+
+  <script src="cymatics.js"></script>
+  <script src="light.js"></script>
+</body>
+</html>

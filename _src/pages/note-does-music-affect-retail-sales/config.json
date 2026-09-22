@@ -1,0 +1,19 @@
+{
+  "title": "Does music actually affect retail sales, or is it a myth? | Daniel Fox",
+  "meta_description": "Yes, the research is strong, but it's conditional. A 38% supermarket swing, 15% higher checks from lower volume, 40% more bar revenue from slow tempo, and a 140-store study that found no overall effect. What the research says about whether store music moves sales.",
+  "output": "notes/does-music-affect-retail-sales.html",
+  "date_published": "2026-05-31",
+  "date_modified": "2026-06-06",
+  "schema": {
+    "type": "Article",
+    "headline": "Does music actually affect retail sales, or is it a myth?",
+    "description": "Whether store music moves sales, on the evidence: real but conditional, from a 38% supermarket effect to a 140-store null result.",
+    "about": [
+      "Retail music",
+      "Retail sales",
+      "Revenue",
+      "Consumer behavior",
+      "Music tempo"
+    ]
+  }
+}

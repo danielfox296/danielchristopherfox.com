@@ -1,0 +1,18 @@
+{
+  "title": "Why the first five minutes in your store decide the sale | Daniel Fox",
+  "meta_description": "The pleasure a customer feels five minutes into a visit predicts their unplanned spending. From there, music shapes time perception, the sensory mix, volume, and brand fit across the whole experience.",
+  "output": "notes/first-five-minutes-in-store.html",
+  "date_published": "2026-05-31",
+  "date_modified": "2026-05-31",
+  "schema": {
+    "type": "Article",
+    "headline": "Why the first five minutes in your store decide the sale",
+    "description": "How music shapes the whole customer visit, from entry pace and dwell to the buying decision and the perceived wait at checkout.",
+    "about": [
+      "Retail music",
+      "Customer experience",
+      "Dwell time",
+      "Conversion"
+    ]
+  }
+}

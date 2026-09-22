@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2LCQFZ9SG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2LCQFZ9SG');
+  </script>
+
+  <title>How does music affect customer behavior in retail? | Daniel Fox</title>
+  <meta name="description" content="What forty years of controlled studies show about how store music changes dwell time, product choice, spend, and how a store feels, and why most retailers leave it on shuffle.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://danielchristopherfox.com/notes/how-music-affects-customer-behavior.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How does music affect customer behavior in retail? | Daniel Fox">
+  <meta property="og:description" content="What forty years of controlled studies show about how store music changes dwell time, product choice, spend, and how a store feels, and why most retailers leave it on shuffle.">
+  <meta property="og:url" content="https://danielchristopherfox.com/notes/how-music-affects-customer-behavior.html">
+  <meta property="og:site_name" content="Daniel Fox">
+  <meta property="og:image" content="https://danielchristopherfox.com/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Daniel Fox, the Music Behaviorist">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://danielchristopherfox.com/og-default.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How does music affect customer behavior in retail?","description":"What controlled studies show about how store music changes dwell time, product choice, and spend.","author":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox","alternateName":"Daniel Fox","jobTitle":["Music Behaviorist","Retail Music Behaviorist"],"slogan":"Daniel Fox helps brands engineer music that sells.","url":"https://danielchristopherfox.com","description":"Daniel Fox helps brands engineer music that sells. He researches how music moves people, designs the systems, and builds the music that puts it to work for brands. Known as the Music Behaviorist, he is the founder of Entuned.","address":{"@type":"PostalAddress","addressLocality":"Denver","addressRegion":"CO","addressCountry":"US"},"worksFor":[{"@type":"Organization","@id":"https://entuned.co/#organization","name":"Entuned","url":"https://entuned.co/"},{"@type":"LocalBusiness","@id":"https://signetartists.com/#business","name":"Signet Artists","url":"https://signetartists.com/"}],"knowsAbout":["How music affects customer behavior","Music and behavior","Retail music","Music psychology","Consumer behavior","Store atmospherics","Sensory marketing","Generative music","Live music for events"],"sameAs":["https://www.wikidata.org/wiki/Q140128155","https://entuned.co","https://www.youtube.com/@entuned","https://www.youtube.com/@danielchristopherfox","https://www.linkedin.com/in/danielcfox/"]},"publisher":{"@type":"Person","@id":"https://danielchristopherfox.com/#person","name":"Daniel Christopher Fox"},"mainEntityOfPage":"https://danielchristopherfox.com/notes/how-music-affects-customer-behavior.html","about":["Retail music","Consumer behavior","Dwell time","Conversion"],"datePublished":"2026-05-31","dateModified":"2026-06-06"}</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a class="btn btn-primary btn-nav" href="../contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<script>
+  // Shared header behavior: mobile toggle + active-page state (single source of truth).
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if (a.classList.contains('btn')) return;
+      var target = (a.getAttribute('href') || '').split('/').pop();
+      if (target === current) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+
+    // GA4 event layer (no-ops if gtag absent)
+    function track(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
+      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
+      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
+      else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
+      else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
+    });
+    var form = document.querySelector('.contact-form');
+    if (form) form.addEventListener('submit', function () { track('contact_submit', { page_path: location.pathname }); });
+    if (/thanks\.html$/.test(location.pathname)) track('generate_lead', { page_path: location.pathname });
+  })();
+</script>
+
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <img class="cym-mark" src="../assets/cym/how-music-affects-customer-behavior.svg" alt="" aria-hidden="true">
+    <span class="eyebrow fade-up">Research note &middot; Updated June 2026</span>
+    <h1 class="fade-up page-title">How does music affect customer behavior in retail?</h1>
+    <p class="subhead fade-up" style="max-width:50ch;">In the first controlled test, slow music lifted a supermarket's daily sales 38 percent, about $4,600 a day. Forty years of studies since put numbers on pace, dwell, basket, and willingness to pay, almost all of it unnoticed by the shopper.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose fade-up">
+      <p class="lead">Most stores set their pricing with a spreadsheet and their music with whoever's phone is closest. One of those decisions has forty years of controlled research behind it. It isn't the pricing.</p>
+
+      <p>The first controlled study on music and retail ran in a supermarket and published in the <a href="https://doi.org/10.1177/002224298204600313" target="_blank" rel="noopener noreferrer">Journal of Marketing in 1982</a>. Slow tempo music raised daily gross sales by 38 percent against the fast condition, about $4,600 more in a single day. The detail that matters most came from the exit survey. Of the 216 shoppers, the large majority couldn't say what had been playing, or whether anything had been playing at all. The music changed how they moved through the store and what they put in the cart, and they never noticed it happening.</p>
+
+      <p>That study gets quoted everywhere, usually shortened to "play slow music." Keep reading, because the work since then is more interesting than the slogan.</p>
+
+      <h2>Pace: volume and tempo are two different levers</h2>
+      <p>Research going back to a <a href="https://doi.org/10.1037/h0023326" target="_blank" rel="noopener noreferrer">1966 study in the Journal of Applied Psychology</a> found that loud music sent people toward the exit faster without lowering how much they bought. So volume sets the pace people move at. Tempo sets how long they're willing to stay, which is to say it sets dwell time. Two controls, two outcomes, and a store needs to know which one it's reaching for at any given hour.</p>
+
+      <h2>Product choice: music steers what lands in the basket</h2>
+      <p>The wine-aisle experiments are the cleanest demonstration. In one, French music produced a roughly five-to-one preference for French wine over German. Switch the music to German and the ratio flipped (<a href="https://doi.org/10.1037/0021-9010.84.2.271" target="_blank" rel="noopener noreferrer">Journal of Applied Psychology</a>). The music primed a cultural association below the level the shopper was aware of, and the bottle in their hand followed. A separate study in <a href="https://www.acrwebsite.org/volumes/7467/volumes/v20/NA-200" target="_blank" rel="noopener noreferrer">Advances in Consumer Research</a> put classical music into a wine shop and watched customers move toward more expensive bottles. The number of purchases held and the price per bottle rose. The classical music worked as a quality signal, telling people, without a word, what kind of place they were standing in.</p>
+
+      <h2>Emotion: the reason any of this works</h2>
+      <p>Retail behavior runs on emotion more than retailers like to admit. A <a href="https://www.semanticscholar.org/paper/Store-atmosphere:-an-environmental-psychology-Donovan-Rossiter/17a677f2402802c7b1559a286791530ca5487527" target="_blank" rel="noopener noreferrer">framework in the Journal of Retailing</a> lays out the chain: a shopper forms a feeling in response to the space, pleasure and arousal, and that feeling predicts whether they spend or leave. A <a href="https://doi.org/10.1016/0022-4359(94)90037-X" target="_blank" rel="noopener noreferrer">follow-up working from real purchase data</a> found that the pleasure a customer feels in the first five minutes predicts their unplanned spending across the whole visit. Of every input into that feeling, music is the one a store can change in a second. You can't relight the store at 3 p.m. or re-scent it for the after-work crowd, but you can change what's playing.</p>
+
+      <h2>The downside: getting it wrong is worse than doing nothing</h2>
+      <p>This is the part the slogan skips. Research in the <a href="https://doi.org/10.1016/j.jbusres.2006.07.001" target="_blank" rel="noopener noreferrer">Journal of Business Research</a> found that music which clashes with the brand lowers what shoppers think of the store, beyond simply failing to help. <a href="https://doi.org/10.1016/j.jbusres.2004.09.005" target="_blank" rel="noopener noreferrer">The same body of work tested Christmas music against a Christmas scent</a> and found the scent on its own, without matching music, backfired and left customers uneasy. A <a href="https://doi.org/10.1016/j.jretconser.2020.102154" target="_blank" rel="noopener noreferrer">2020 study in the Journal of Retailing and Consumer Services</a> pushed it further: stack enough high-arousal signals and shoppers tip from approach into avoidance. They leave. Sound chosen badly is a cost rather than a neutral.</p>
+
+      <h2>What I take from all of it</h2>
+      <p>Music touches pace, product choice, emotion, brand perception, and dwell time at the same time. No other single variable in a store reaches all five. It's also the one most stores manage least. The science here's good, it's old, and most of it's sitting unused on a Bluetooth speaker set to shuffle.</p>
+
+      <p>Each of those five threads has a note of its own. The full field guide to <a href="../store-music-and-customer-behavior.html">store music and customer behavior</a> ties them together in order.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section flush-top">
+  <div class="container">
+    <div class="prose">
+      <h2>Watch the breakdown</h2>
+    </div>
+    <div class="video-wrap fade-up" style="margin-top:1.2rem;">
+      <iframe
+        src="https://www.youtube.com/embed/QEITnlgW4os"
+        title="Why Music Is the Most Underrated Tool in Retail"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p class="muted fade-up" style="margin-top:1.4rem;font-size:0.95rem;"><a href="../notes/">&larr; All research notes</a></p>
+  </div>
+
+  <div class="container">
+    <aside class="cta-block fade-up">
+      <p><strong>This is the work I do for stores.</strong> Entuned, founded in 2026, makes original, adaptive retail music tuned to a store's specific customers to encourage the behavior the store is after. It's built on the research, and it's the practical version of everything above.</p>
+      <a class="btn btn-primary" href="https://entuned.co" data-cta="note-entuned">See how Entuned works</a>
+      <a class="btn btn-outline" href="../contact.html" data-cta="note-contact">Start a conversation</a>
+    </aside>
+  </div>
+</section>
+
+<section class="note-sources">
+  <h2>Sources</h2>
+  <ol>
+    <li>Milliman, Ronald E. (1982). "Using Background Music to Affect the Behavior of Supermarket Shoppers." Journal of Marketing, Vol. 46, No. 3, pp. 86-91. DOI: 10.1177/002224298204600313 (JSTOR DOI: 10.2307/1251706). <a href="https://doi.org/10.1177/002224298204600313" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Smith, P. C., &amp; Curnow, R. (1966). "Arousal hypothesis" and the effects of music on purchasing behavior. Journal of Applied Psychology, 50(3), 255-256. https://doi.org/10.1037/h0023326 (PMID: 5936035). <a href="https://doi.org/10.1037/h0023326" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>North, A. C., Hargreaves, D. J., &amp; McKendrick, J. (1999). The influence of in-store music on wine selections. Journal of Applied Psychology, 84(2), 271-276. (Precursor brief: North, A. C., Hargreaves, D. J., &amp; McKendrick, J. (1997). In-store music affects product choice. Nature, 390, 132.) <a href="https://doi.org/10.1037/0021-9010.84.2.271" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Areni, Charles S., and David Kim (1993), "The Influence of Background Music on Shopping Behavior: Classical Versus Top-Forty Music in a Wine Store," in NA - Advances in Consumer Research, Volume 20, eds. Leigh McAlister and Michael L. Rothschild, Provo, UT: Association for Consumer Research, pp. 336-340. <a href="https://www.acrwebsite.org/volumes/7467/volumes/v20/NA-200" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Donovan, R. J., &amp; Rossiter, J. R. (1982). Store Atmosphere: An Environmental Psychology Approach. Journal of Retailing, 58(1), 34-57. (Applies the Pleasure-Arousal-Dominance / Mehrabian-Russell model, originally introduced in Mehrabian, A., &amp; Russell, J. A. (1974). An Approach to Environmental Psychology. Cambridge, MA: MIT Press.) <a href="https://www.semanticscholar.org/paper/Store-atmosphere:-an-environmental-psychology-Donovan-Rossiter/17a677f2402802c7b1559a286791530ca5487527" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Donovan, R. J., Rossiter, J. R., Marcoolyn, G., &amp; Nesdale, A. (1994). Store atmosphere and purchasing behavior. Journal of Retailing, 70(3), 283-294. <a href="https://doi.org/10.1016/0022-4359(94)90037-X" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Beverland, M., Lim, E. A. C., Morrison, M., &amp; Terziovski, M. (2006). In-store music and consumer-brand relationships: Relational transformation following experiences of (mis)fit. Journal of Business Research, 59(9), 982-989. <a href="https://doi.org/10.1016/j.jbusres.2006.07.001" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Spangenberg, E. R., Grohmann, B., &amp; Sprott, D. E. (2005). It's beginning to smell (and sound) a lot like Christmas: the interactive effects of ambient scent and music in a retail setting. Journal of Business Research, 58(11), 1583-1589. <a href="https://doi.org/10.1016/j.jbusres.2004.09.005" target="_blank" rel="noopener noreferrer">View source</a></li>
+    <li>Doucé, Lieve &amp; Adams, Carmen (2020). "Sensory overload in a shopping environment: Not every sensory modality leads to too much stimulation." Journal of Retailing and Consumer Services, Vol. 57, article 102154. <a href="https://doi.org/10.1016/j.jretconser.2020.102154" target="_blank" rel="noopener noreferrer">View source</a></li>
+  </ol>
+</section>
+
+<section class="section"><div class="container"><span class="eyebrow fade-up">Keep reading</span><div class="grid grid-2 fade-up" style="margin-top:1.2rem;"><a class="card" href="../store-music-and-customer-behavior.html"><img class="thumb" src="../assets/cym/store-music-and-customer-behavior.svg" alt="" aria-hidden="true"><span class="kicker kicker-guide">Field guide</span><h3>Store music and customer behavior: what the research shows</h3><p>Forty years of studies on how store music moves dwell, basket size, spend, and how premium a store feels.</p></a><a class="card" href="../notes/what-is-dwell-time-in-retail.html"><img class="thumb" src="../assets/cym/what-is-dwell-time-in-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What is dwell time, and why does it predict sales?</h3><p>Dwell time predicts retail spending. How music controls it, and when longer dwell signals frustration instead of interest.</p></a><a class="card" href="../notes/is-your-music-driving-customers-away.html"><img class="thumb" src="../assets/cym/is-your-music-driving-customers-away.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>Is your store&#x27;s music driving customers out the door?</h3><p>How mismatched and overly loud music shortens dwell time and pushes customers to leave faster.</p></a><a class="card" href="../notes/best-music-tempo-for-retail.html"><img class="thumb" src="../assets/cym/best-music-tempo-for-retail.svg" alt="" aria-hidden="true"><span class="kicker kicker-note">Research note</span><h3>What&#x27;s the right music tempo for a retail store?</h3><p>What music tempo does to shoppers depends on musical key, how crowded the store is, and who is in it.</p></a></div></div></section>
+  </main>
+
+  <section class="section-tight">
+  <div class="container">
+    <div class="subscribe-band fade-up">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Retail music, from the floor.</h2>
+        <p>A producer's notes on what your store sounds like and what it's costing you. The research, read with its limits named, and field notes from real floors.</p>
+        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
+      </div>
+      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-name">Daniel Christopher Fox</div>
+    <nav class="footer-links">
+      <a href="../the-work.html">The Work</a>
+      <a href="../about.html">About</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://entuned.co" rel="me">Entuned</a>
+      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
+    </nav>
+    <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+  <script>
+    // Fade-up on scroll
+    (function () {
+      var els = document.querySelectorAll('.fade-up');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      // Low threshold on purpose: a fractional threshold never fires for
+      // elements much taller than the viewport (e.g. the note card grids on
+      // mobile), which left them stuck invisible.
+      }, { threshold: 0.01 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+    // (Mobile nav toggle + active-page state live in the shared header partial.)
+  </script>
+</body>
+</html>
