@@ -99,6 +99,7 @@ CATEGORIES = {
             # list order, so a slug inserted mid-list reshuffles every slug after
             # it. Appending leaves all 18 existing figures byte-identical.
             "does-music-help-you-sleep",
+            "does-music-help-with-anxiety-before-surgery",
         ],
     },
 }

@@ -1,0 +1,19 @@
+{
+  "title": "Does music help with anxiety before surgery? | Daniel Fox",
+  "meta_description": "The 2013 Cochrane review found people who listened to music before surgery reported less anxiety than standard care, by 5.72 points on the STAI across 13 trials, graded low certainty. What the 2015 and 2018 reviews added, what the one blank-CD trial showed, and what the 2013 trials never measured.",
+  "output": "notes/does-music-help-with-anxiety-before-surgery.html",
+  "date_published": "2026-09-28",
+  "date_modified": "2026-09-28",
+  "schema": {
+    "type": "Article",
+    "headline": "Does music help with anxiety before surgery?",
+    "description": "What the 2013 Cochrane review of music for preoperative anxiety found and how it graded its own evidence, the one trial that compared music with a sedative, the blank-CD control arms, and what the 2015 and 2018 meta-analyses added.",
+    "about": [
+      "Music and anxiety",
+      "Preoperative anxiety",
+      "Cochrane review",
+      "Music listening",
+      "Evidence quality"
+    ]
+  }
+}
