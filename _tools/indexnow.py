@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """IndexNow ping — submits sitemap URLs after a deploy; changed-only when a
-pre-deploy baseline is supplied. Ported from the thefirstwater.co kit.
+pre-deploy baseline is supplied.
 
 Runs in CI after the Pages deploy step (see .github/workflows/deploy.yml).
 ORDERING MATTERS: the workflow snapshots the LIVE sitemap to a file BEFORE
