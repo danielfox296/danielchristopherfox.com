@@ -50,14 +50,11 @@ LIFTABLE = (
 # publisher Person; define them once and inject at render time so configs only
 # carry the per-page fields (headline/description/about).
 # The one Person node. Its @id is the shared identifier every other property
-# points at (entuned.co's Organization.founder and signetartists.com's
-# LocalBusiness.founder both reference it), so the three sites resolve to one
-# founder. Change the @id nowhere else without changing it there too.
+# points at (signetartists.com's LocalBusiness.founder references it), so the
+# sites resolve to one founder. Change the @id nowhere else without changing it there too.
 PERSON_ID = f"{SITE_URL}/#person"
-# The ventures' own entity ids, exactly as each site emits them: entuned.co
-# uses #organization, signetartists.com uses #business (every Service and
-# Article there references it, so it cannot be renamed to match).
-ENTUNED_ID = "https://entuned.co/#organization"
+# The venture's own entity id, exactly as the site emits it: signetartists.com
+# uses #business (every Service and Article there references it).
 SIGNET_ID = "https://signetartists.com/#business"
 SCHEMA_AUTHOR = {
     "@type": "Person",
@@ -75,8 +72,6 @@ SCHEMA_AUTHOR = {
         "addressCountry": "US",
     },
     "worksFor": [
-        {"@type": "Organization", "@id": ENTUNED_ID, "name": "Entuned",
-         "url": "https://entuned.co/"},
         {"@type": "LocalBusiness", "@id": SIGNET_ID, "name": "Signet Artists",
          "url": "https://signetartists.com/"},
     ],
@@ -97,8 +92,7 @@ SCHEMA_AUTHOR = {
     # Add producer profiles / bylines here only once they link back (reciprocity).
     "sameAs": [
         "https://www.wikidata.org/wiki/Q140128155",
-        "https://entuned.co",
-        "https://www.youtube.com/@entuned",
+        "https://signetartists.com/",
         "https://www.youtube.com/@danielchristopherfox",
         "https://www.linkedin.com/in/danielcfox/",
     ],

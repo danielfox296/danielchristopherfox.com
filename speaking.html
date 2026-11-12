@@ -82,8 +82,7 @@
       if (!a) return;
       var href = a.getAttribute('href') || '';
       if (a.dataset && a.dataset.cta) track('cta_click', { cta: a.dataset.cta, page_path: location.pathname });
-      else if (href.indexOf('entuned.co') !== -1) track('outbound_entuned', { page_path: location.pathname });
-      else if (href.indexOf('substack.com') !== -1) track('outbound_substack', { page_path: location.pathname });
+      else if (href.indexOf('signetartists.com') !== -1) track('outbound_signet', { page_path: location.pathname });
       else if (href.indexOf('youtube.com') !== -1) track('outbound_youtube', { page_path: location.pathname });
       else if (href.indexOf('linkedin.com') !== -1) track('outbound_linkedin', { page_path: location.pathname });
       else if (href.indexOf('contact.html') !== -1) track('contact_click', { page_path: location.pathname, source: a.className || 'link' });
@@ -117,7 +116,7 @@
       <div class="bio-text measure">
         <h2 class="bio-name">Daniel Fox</h2>
         <p class="muted bio-role">Music Behaviorist</p>
-        <p>I came to this craft-first. I build the music myself, and I've played live since I was a kid, which is where I learned, before I ever read a study, how a room of strangers can move the same way at the same moment. Then I went looking for why. Now I study how music shapes customer behavior, and I read what the peer-reviewed work actually says, naming the authors, the journals, and the limits, before I make a claim from a stage. The retail floor is where the field ran most of its experiments, so on that turf I'm a Retail Music Behaviorist. I'm the founder and CEO of Entuned, where this turned into a business.</p>
+        <p>I came to this craft-first. I build the music myself, and I've played live since I was a kid, which is where I learned, before I ever read a study, how a room of strangers can move the same way at the same moment. Then I went looking for why. Now I study how music shapes customer behavior, and I read what the peer-reviewed work actually says, naming the authors, the journals, and the limits, before I make a claim from a stage. The retail floor is where the field ran most of its experiments, so on that turf I'm a Retail Music Behaviorist. I'm the founder of Signet Artists, a Denver live music agency that books musicians for private and corporate events.</p>
         <p>My argument is simple. Music is a language and a mastered pattern, and its effect on behavior can be designed on purpose. What I bring to a stage is the part most behavioral-science talks are missing, a working musician who has watched it happen from up there.</p>
       </div>
     </div>
@@ -164,7 +163,7 @@
     <span class="eyebrow fade-up">Signature talk</span>
     <div class="talk fade-up">
       <h3>Designing for Permission: Moving People Without Manipulating Them</h3>
-      <p class="muted">Good design removes the friction between a person and the thing they already want. It doesn't push them toward something they don't. That line is the whole ethic, and it's the line between this work and manipulation. It runs through the retail floor at Entuned, where the right sound gives a shopper permission to buy, and through public space at Dizzy Charlie's summer concerts, where it gives a crowd permission to move. It's the same respect for what a person came in wanting, from the shelf to the public square.</p>
+      <p class="muted">Good design removes the friction between a person and the thing they already want. It doesn't push them toward something they don't. That line is the whole ethic, and it's the line between this work and manipulation. It runs through the retail floor, where the right sound gives a shopper permission to buy, and through public space at Dizzy Charlie's summer concerts, where it gives a crowd permission to move. It's the same respect for what a person came in wanting, from the shelf to the public square.</p>
       <p class="room">Any stage · the ethic underneath the work</p>
     </div>
   </div>
@@ -223,21 +222,7 @@
 
   </main>
 
-  <section class="section-tight">
-  <div class="container">
-    <div class="subscribe-band fade-up">
-      <div>
-        <span class="eyebrow">Newsletter</span>
-        <h2>Retail music, from the floor.</h2>
-        <p>A producer's notes on what your store sounds like and what it's costing you. The research, read with its limits named, and field notes from real floors.</p>
-        <p class="subscribe-fine">Free, via the Entuned Substack.</p>
-      </div>
-      <iframe class="embed" src="https://entuned.substack.com/embed" title="Subscribe to Entuned on Substack" loading="lazy" scrolling="no"></iframe>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
+  <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-name">Daniel Christopher Fox</div>
     <nav class="footer-links">
@@ -246,8 +231,7 @@
       <a href="writing.html">Writing</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
-      <a href="https://entuned.co" rel="me">Entuned</a>
-      <a href="https://www.youtube.com/@entuned" rel="me">YouTube</a>
+      <a href="https://www.youtube.com/@danielchristopherfox" rel="me">YouTube</a>
       <a href="https://www.linkedin.com/in/danielcfox/" rel="me">LinkedIn</a>
     </nav>
     <div class="footer-fine">© <span id="yr">2026</span> Daniel Christopher Fox · Music Behaviorist</div>
