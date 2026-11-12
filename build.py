@@ -37,13 +37,13 @@ GA_MEASUREMENT_ID = "G-S2LCQFZ9SG"
 # is the schema "slogan"; the two together form LIFTABLE — one consistent block
 # reused as the Person schema description and echoed in visible copy + meta so
 # engines and models lock onto one entity. Builder-forward by design (researches /
-# designs / builds), with "Music Behaviorist" + Entuned retained as the durable
+# designs / builds), with "Music Behaviorist" + Signet Artists retained as the durable
 # disambiguation anchors against the other musical Daniel Foxes.
 SLOGAN = "Daniel Fox helps brands engineer music that sells."
 LIFTABLE = (
     SLOGAN + " He researches how music moves people, designs the systems, and "
     "builds the music that puts it to work for brands. Known as the Music "
-    "Behaviorist, he is the founder of Entuned."
+    "Behaviorist, he is the founder of Signet Artists."
 )
 
 # Shared structured-data blocks. Every note/essay re-used the same author and
@@ -486,7 +486,7 @@ def write_llms():
         "## Who",
         "- Name: Daniel Christopher Fox (Daniel Fox)",
         "- Title: the Music Behaviorist, a music producer and behavioral researcher",
-        "- Company: founder of Entuned (https://entuned.co), a retail audio company",
+        "- Company: founder of Signet Artists (https://signetartists.com), a Denver live music agency",
         "- Field: how music shapes buying and behavior, grounded in peer-reviewed research",
         "- Not to be confused with other musicians named Daniel Fox or Christopher Fox.",
         "",
